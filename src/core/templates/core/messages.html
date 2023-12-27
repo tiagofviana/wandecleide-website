@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Mensagem{% endblock %}
+
+{% block menu %} {% endblock menu %}
+
+{% block extra_head %}
+    <script src="{% static 'core/_js/messages/delete_alert.js' %}" defer></script>
+{% endblock extra_head %}
+
+{% block content %}
+    <div class="flex flex-col items-center justify-between min-h-screen pb-12">
+        <div class="max-w-2xl w-1/4 flex flex-col justify-center items-center py-2">
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+
+                    <!-- Success -->
+                    <div class="mt-4 w-full">
+                        {% include "core/components/messages/success.html" with message=message %}
+                    </div>
+
+                {% elif message.tags == "warning" %}
+
+                    <!-- Warning -->
+                    <div class="mt-4 w-full">
+                        {% include "core/components/messages/warning.html" with message=message %}
+                    </div>
+                
+                {% elif message.tags == "error" %}
+                    
+                    <!-- Erro -->
+                    <div class="mt-4 w-full">
+                        {% include "core/components/messages/danger.html" with message=message %}
+                    </div>
+                {% else %}
+
+                    <!-- Default -->
+                    <div class="mt-4 w-full">
+                        {% include "core/components/messages/alert.html" with message=message %}
+                    </div>
+
+                {% endif %}
+
+            {% empty %}
+                <div class="mt-4 w-full">
+                    {% include "core/components/messages/warning.html" with message='Você não possui nenhuma mensagem' %}
+                </div>
+            {% endfor %}    
+        </div>
+        
+        <div class="mb-8">
+            <p class="text-center text-lg">
+                Clique em "Continuar"
+            </p>
+            
+            <a
+                id="button-continue"
+                href="{{ url|default:'/' }}"
+                class="btn btn-primary table mx-auto mt-4"
+            >
+                Continuar
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock footer %}

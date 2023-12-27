@@ -1,0 +1,134 @@
+{% extends 'core/base.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% translate "Contact"%}
+{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="{% static 'users/_js/contact.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+    <div class=" min-h-[var(--screen-height)] flex items-center justify-center bg-neutral-100">
+        <div 
+            class="flex flex-col-reverse items-stretch w-11/12 max-w-5xl my-8 rounded-xl shadow border border-gray-200 overflow-hidden lg:flex-row"
+        >
+            <div class="flex-1 relative z-10 flex flex-col items-center justify-center px-2">
+                <img 
+                    src="{% static 'users/_img/contact/clinic.webp' %}"
+                    alt="{% translate 'Clinic' %}"
+                    class="absolute -z-10 h-full w-full object-cover object-center brightness-30"   
+                />
+
+                <div>
+                    <a 
+                        href="https://maps.app.goo.gl/K39ykK5NKcEgBUoy8"
+                        target="_blank"
+                        class="table cursor-pointer"
+                    >
+                        <div class="flex flex-row flex-nowrap items-start justify-start m-4 py-2">
+                            <i class="fa-solid fa-location-dot mr-4 text-lg mt-1 text-red-600"></i>
+                            
+                            <div>
+                                <h2 class="text-white text-xl">
+                                    {% translate "Address" %}
+                                </h2>
+        
+                                <p class="text-gray-400">
+                                    Avenida Euzely Fabrício de Souza, 445, Manaíra
+                                </p>
+
+                                <p class="text-gray-400">João Pessoa – PB</p>
+                                <p class="text-gray-400 tracking-wider">58038-410</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a 
+                        href="https://api.whatsapp.com/send/?phone=5583981718520"
+                        target="_blank"
+                        class="table cursor-pointer"
+                    >
+                        <div class="flex flex-row flex-nowrap items-start justify-start m-4 py-2">
+                            <i class="fa-brands fa-whatsapp mr-3 text-3xl text-green-500"></i>
+                            
+                            <div>
+                                <h2 class="text-white text-xl">
+                                    WhatsApp
+                                </h2>
+                                
+                                <p class="text-green-500 tracking-wider">+55 83 98171-8520</p>
+
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                    <div
+                        id="phone-container"
+                        class="flex flex-row items-start justify-start m-4 py-2 cursor-pointer"
+                    >
+                        <i class="fa-solid fa-phone mr-4 text-lg mt-1.5 text-yellow-500"></i>
+                        
+                        <div>
+                            <h2 class="text-white text-xl">
+                                {% translate "Telephone" %}
+                            </h2>
+                            
+                            <p id="phone-container__number" class="text-yellow-500 tracking-wider">
+                                +55 83 3245-8983
+                            </p>
+                            <p id="copied-message" class="w-full text-yellow-300 invisible">
+                                <i class="fa-regular fa-copy"></i>
+                                {% translate "Copied" %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form method="post" class="bg-white px-4 sm:px-6 py-12 md:px-14">
+                <h1 
+                    class="uppercase text-4xl font-title font-bold select-none text-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800"
+                >
+                    {% translate "Get in touch" %}
+                </h1>
+
+                <p class="text-center text-gray-400 mb-4">
+                    {% translate "Feel free to send me a message" %}
+                </p>
+
+                {% csrf_token %}
+
+                {% for error in form.non_field_errors %}
+                    {% include "core/components/messages/danger.html" with message=error %}
+                {% endfor %}
+
+                {% for field in form %}
+                    <label class="form-label text-gray-700" >
+                        {{ field.label|striptags }}
+                    </label>
+
+                    {{ field }}
+
+                    {% if field.errors %}
+                        <small class="field-error">{{ field.errors|striptags }}</small> 
+                    {% endif %}
+                    
+                {% endfor %}
+                    
+        
+                <button type="submit" class="btn btn-primary mx-auto mt-6">
+                    {% translate "Submit" %}
+                </button>
+            </form>
+        </div>
+        
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock footer %}

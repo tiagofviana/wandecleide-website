@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Nunito&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --menu-height: 70px;
+    --screen-height: calc(100vh - var(--menu-height));
+}
+
+@layer base 
+{  
+    * {
+        @apply font-default;
+    }
+
+    /* Menu */
+
+    #menu {
+        height: var(--menu-height);
+        @apply flex items-stretch justify-between flex-nowrap shadow bg-stone-50 hover:shadow-lg transition-all;
+    }
+
+
+    #menu__hamburguer {
+        @apply px-4 flex flex-col justify-center items-center cursor-pointer bg-gray-100 lg:hidden;
+
+        & > span {
+            @apply block relative h-0.5 w-7 bg-black mt-2 transition
+        }
+
+    }
+
+    #menu__hamburguer__checkbox:checked ~ #menu__hamburguer > span:nth-child(1){@apply rotate-45 mt-2.5}
+    #menu__hamburguer__checkbox:checked ~ #menu__hamburguer > span:nth-child(2){@apply -rotate-45 bottom-2.5}
+    #menu__hamburguer__checkbox:checked ~ #menu__hamburguer > span:nth-child(3){@apply hidden}
+
+    #menu__list { 
+        /* small */
+        @apply flex flex-col flex-nowrap absolute z-30 top-20 right-4 shadow bg-white rounded;
+        /* middle */
+        @apply lg:flex-row lg:static lg:shadow-transparent lg:bg-transparent;
+
+        & > li:not(:last-of-type) {
+            @apply h-full border-b border-gray-200;
+            /* middle */
+            @apply lg:border-none;
+        }
+
+        & > li > a {
+            /* small */
+            @apply h-full flex items-center justify-center px-4 py-2 text-gray-400 text-xl hover:text-gray-950 font-semibold font-default xl:px-6;
+            /* middle */
+            @apply lg:py-0;
+        } 
+    }
+
+    #menu__hamburguer__checkbox:checked ~ #menu__list
+    {
+        /*small*/
+        @apply border border-gray-200;
+
+        /* middle */
+        @apply lg:border-none;
+    }
+
+    #menu__hamburguer__checkbox:not(:checked) ~ #menu__list 
+    {
+        /* small */
+        @apply max-h-0 overflow-hidden;
+    
+        /* middle */
+        @apply lg:max-h-full;
+    }
+
+}
+
+
+@layer components {
+    /* Buttons */
+    
+    .btn
+    {
+        @apply table no-underline uppercase tracking-wider leading-normal px-4 py-2 text-sm cursor-pointer relative rounded font-bold border text-center;
+    }
+
+    .btn-primary
+    {
+       
+        @apply bg-blue-500 hover:bg-blue-700 border-blue-700 text-white text-shadow
+    }
+
+    .btn-danger
+    {
+        @apply text-white bg-red-600 hover:bg-red-700 border-red-700
+    }
+
+    .btn-light
+    {
+        @apply bg-neutral-100 hover:bg-neutral-300 text-neutral-900 font-bold border-gray-300
+    }
+
+    /* Form */
+
+    .form 
+    {
+        @apply my-4 w-11/12 max-w-sm shadow bg-white p-4 border border-gray-200 
+    }
+
+    .form-label
+    {
+        @apply table font-bold select-none;
+
+        &:not(:first-of-type) {
+            @apply mt-3
+        }
+    }
+
+    /* fields */
+
+    .form-input
+    {
+        @apply appearance-none rounded-full w-full py-2 px-3 text-gray-700 leading-tight border border-gray-300 outline-none focus:ring-2 bg-gray-100;
+    }
+
+    .form-textarea
+    {   
+
+        @apply bg-gray-100 w-full p-2 border border-gray-300 outline-none max-h-96 focus:ring-2;
+    }
+
+    /* errors */
+     
+    .invalid-field
+    {
+        @apply border border-red-500
+    }
+
+    .field-error 
+    {
+        @apply table text-red-500 text-sm italic
+    }
+    
+}
+
+@layer utilities {
+    @keyframes fadeIn {
+        from{ @apply opacity-0;}
+        to {@apply opacity-100;}
+    }
+      
+    @keyframes fadeIn-bottom{
+        from {@apply relative -bottom-48 opacity-0;}
+        to {@apply relative bottom-0 opacity-100;}
+    }
+    
+    @keyframes fadeIn-right{
+        from {@apply relative left-48 opacity-0;}
+        to {@apply relative left-0 opacity-100;}
+    }
+}

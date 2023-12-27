@@ -1,0 +1,57 @@
+
+{% load i18n translate_url %}
+{% get_current_language as CURRENT_LANGUAGE_CODE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+
+<style>
+    .top-100 {top: 100%}
+    .bottom-100 {bottom: 100%}
+    .max-h-select {
+        max-height: 300px;
+    }
+
+    #menu__language__checkbox:checked ~ ol {display: block;}
+
+    #menu__language__checkbox:checked ~ label > svg {transform: rotate(0deg);}
+
+</style>
+
+<div class="flex items-center justify-center w-24 relative z-10 uppercase">  
+    <input type="checkbox" id="menu__language__checkbox" class="hidden"> 
+
+    <label
+        for="menu__language__checkbox"
+        class="w-full flex flex-nowrap justify-center items-center border border-gray-300 rounded cursor-pointer"
+    >   
+        <span class="flex-1 border-r border-gray-300 my-1 pl-2 whitespace-nowrap text-gray-500 font-bold">
+            {{ CURRENT_LANGUAGE_CODE }} 
+        </span>
+        
+        <svg 
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+            class="w-4 mx-1 fill-none rotate-180 stroke-2 stroke-gray-400" 
+        >
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </label>
+   
+    <ol 
+        id="menu__languages__list"
+        current-language="{{ CURRENT_LANGUAGE_CODE }}"
+        class="w-full absolute top-20 shadow border border-gray-200 bg-white rounded-md overflow-hidden divide-y divide-gray-300 select-none hidden"
+    >
+        
+        {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+            {% if lang_code != CURRENT_LANGUAGE_CODE %}
+                <li>
+                    <a 
+                        href="{% translate_current_url lang_code %}"
+                        class="block cursor-pointer py-1.5 pl-2 text-gray-400 font-bold hover:bg-teal-600 hover:text-teal-50"
+                    >
+                        {{ lang_code }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+</div>

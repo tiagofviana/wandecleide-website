@@ -1,0 +1,876 @@
+{% extends 'core/base.html' %}
+{% load static i18n %}
+
+{% block title %}{% translate "About"%}{% endblock title %}
+
+{% block extra_head %}{% endblock extra_head %}
+
+{% block content %}
+    <div class="min-h-[var(--screen-height)] relative max-w-screen-3xl mx-auto">
+        <div class="max-w-screen-3xl mx-auto px-4">
+            <h1 
+                class="block text-center text-4xl font-black bg-clip-text text-gray-700 py-10 px-10 uppercase"
+                >
+                {% translate 'About myself' %}
+            </h1>
+            <div 
+                class="flex flex-col flex-nowrap justify-between items-center max-w-3xl w-full mx-auto sm:flex-row"
+            >
+                <img 
+                    src="{% static 'users/_img/about/myself.webp' %}"
+                    alt="{% translate 'Myself picture' %}"
+                    class="w-full p-2 shadow-lg border border-gray-200 sm:w-60"
+                />
+                <p class="text-justify mt-4 sm:ml-8 sm:mt-0">
+                    Me chamo Wandecleide Lucena Fernandes, sou Enfermeira e Terapeuta com mais de 36 anos de experiência profissional e venho procurando os melhores cursos no Brasil e no exterior a fim de contribuir com meus clientes para uma vida mais harmônica e com bem-estar. Abaixo, está a minha formação acadêmica que trilhei ao longo dos anos, com os títulos e as instituições que estudei com o intuito de oferecer uma assistência de qualidade.
+                </p>
+            </div>
+
+            <h2 class="text-center text-2xl mb-8 mt-14 sm:text-3xl">
+                Formação Acadêmica
+            </h2>
+
+            <div 
+                class="flex flex-col flex-wrap justify-start items-stretch max-w-3xl mx-auto relative md:justify-between md:items-start sm:flex-row"
+            >
+                <span class="absolute top-7 bottom-0 w-px left-1/2 -translate-x-1/2 bg-gray-400 hidden md:block"></span>
+                
+                <section class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%]">
+                    <div class="bg-sky-400 p-2 relative">
+                        <span 
+                            class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                        ></span>
+                        <span 
+                            class="absolute bg-sky-400 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                        ></span>
+
+                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                            1ª Graduação
+                        </h3>
+                    </div>
+
+                    <div class="bg-white p-2 text-sm">
+                        <p>
+                            Em 1987 finalizei minha primeira <strong>Graduação em Enfermagem</strong> pela Escola de Enfermagem Santa Emilia de Rodat (EESER), Brasil.
+                        </p>
+                    </div>
+                </section>
+                
+                <section class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:mt-20">
+                    <div class="bg-emerald-400 p-2 relative">
+                        <span 
+                            class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                        ></span>
+                        <span 
+                            class="absolute bg-emerald-400 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                        ></span>
+
+                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                            2ª Graduação
+                        </h3>
+                    </div>
+
+                    <div class="bg-white p-2 text-sm">
+                        <p>
+                            Em 1988, finalizei minha segunda <strong>Graduação em Licenciatura em Enfermagem</strong> pela Universidade Federal da Paraíba (UFPB), Brasil. 
+                        </p>
+                    </div>
+                </section>
+
+                <section class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:-mt-12">
+                    <div class="bg-blue-500 p-2 relative">
+                        <span 
+                            class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                        ></span>
+                        <span 
+                            class="absolute bg-blue-500 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                        ></span>
+
+                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                            Mestrado
+                        </h3>
+                    </div>
+                    
+                    <div class="bg-white p-2 text-sm">
+                        <p>
+                            Em 1995 finalizei meu <strong>Mestrado em Enfermagem</strong> pela Universidade Federal da Paraíba (UFPB), Brasil. Título do trabalho: Assistência de enfermagem ao diabético jovem embasada na teoria do autocuidado.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:mt-10">
+                    <div class="bg-teal-600 p-2 relative">
+                        <span 
+                            class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                        ></span>
+                        <span 
+                            class="absolute bg-teal-600 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                        ></span>
+
+                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                            Doutorado
+                        </h3>
+                    </div>
+
+                    <div class="bg-white p-2 text-sm">
+                        <p>
+                            Em 2016 finalizei meu <strong>Doutorado em Saúde Pública</strong> Universidad de la Integración de las Américas (UNIDA), Paraguai. Título do trabalho: SOMATIC EXPERIENCING® NO TRATAMENTO DO TRANSTORNO DO ESTRESSE PÓS-TRAUMÁTICO: discursividade de servidores públicos federais.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:-mt-28">
+                    <div class="bg-indigo-600 p-2 relative">
+                        <span 
+                            class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                        ></span>
+                        <span 
+                            class="absolute bg-indigo-600 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                        ></span>
+
+                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                            1ª Especialização
+                        </h3>
+                    </div>
+                    
+                    <div class="bg-white p-2 text-sm">
+                        <p>
+                            Em 2017 finalizei minha primeira <strong>Especialização em Naturologia - TERAPIAS HUMANAS E HOLÍSTICAS</strong> pela Estratego Pós-graduação Nacional, EPN, Brasil. Título do trabalho: Estresse adquirido com no Ambiente de Trabalho: tratamento com a Somatic Experiencing.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%]">
+                    <div class="bg-cyan-700 p-2 relative">
+                        <span 
+                            class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                        ></span>
+                        <span 
+                            class="absolute bg-cyan-700 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                        ></span>
+
+                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                            2ª Especialização
+                        </h3>
+                    </div>
+
+                    <div class="bg-white p-2 text-sm">
+                        <p>
+                            Em 2019 finalizei minha segunda <strong>Especialização em Psicotrumatologia</strong> pela Escola Bahiana de Medicina e Saúde Pública (EBMSP), Brasil. Título do trabalho: Servidores Públicos submetidos à Terapêutica da Somatic Experiencing.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+
+        <h2 class="text-center text-2xl mb-8 mt-14 sm:text-3xl">
+            Formação Complementar
+        </h2>
+
+        <div class="max-w-3xl mx-auto w-11/12">
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1985
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Enfermagem em Saúde Pública. (Carga horária: 30h). Centro de Estudos Achilles Leal (CEAL), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1986
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Extensão Universitária em Anatomia Macroscópica do Sistema Nervoso (Carga horária: 30h). Escola de Enfermagem Santa Emilia de Rodat (EESER), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1987
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            VI Curso Nacional de Atualização em Endocrinologia (Carga horária: 32h). Pesquisa Sandoz (PS), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1989
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Curso de Relações Humanas de Chefia/Liderança (Carga horária: 20h). Serviço Nacional de Aprendizagem Comercial (SENAC), Brasil.
+                        </p>
+                    </li>
+                    
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Atualização para Enfermeiro Assistencial (Carga horária: 54h). Centro de Estudos Dr. Francisco Porto (CEFP), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1992
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Capacitação Técnica para Enfermeiros na Área de DST (Carga horária: 200h). Secretaria de Estado da Saúde - PB (SES - PB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1995
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Curso Introdutório para Enfermeiros (Carga horária: 40h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1998
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Desenvolvimento das habilidades administrativas (Carga horária: 20h). Hospital Universitário Lauro Wanderley (HU - UFPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1999
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Qualidade no Atendimento ao Público (Carga horária: 20h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Curso Suporte Avançado de Vida para Enfermeiros (Carga horária: 20h). Hospital Universitário Lauro Wanderley (HU - UFPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2001
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            CAPACITAÇÃO E QUALIFICAÇÃO DE RECURSOS HUMANOS DE (Carga horária: 90h). Universidade Federal da Paraíba (UFPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2002
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Superação de Estresse (Carga horária: 20h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Mobilizando Equipes (Carga horária: 21h). Escola Nacional de Administração Pública (ENAP    ), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Como falar em Público (Carga horária: 20h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Elaboração de Projetos (Carga horária: 30h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2003
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Adelante 8 (Carga horária: 285h). Anglo American Cultural Center Ltda (CCAA), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            A Busca da Excelência no Atendimento ao Cidadão (Carga horária: 25h). Escola Nacional de Administração Pública (ENAP), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2004
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Curso de Base TIP - ADI (Carga horária: 16h). Renate Jost de Moraes (RJM), Brasil
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2005
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            CAPACITAÇÃO TÉCNICA PARA ENFERMEIROS NA ÁREA DE DO.(Carga horária: 200h).SECRETARIA ESTADUAL DE SAÚDE DA PARAÍBA (SES-PB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Capacitação para o Setor Público (Carga horária: 40h). Escola Nacional de Administração Pública (ENAP), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Capacitação para o Setor Público (Carga horária: 40h). Escola Nacional de Administração Pública (ENAP), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Facilitador, um produtor de sonhos (Carga horária: 8h). Faculdades Integradas de Patos (FIP), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2006
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Atualização para Gestores da UFPB (Carga horária: 32h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Étrica e Serviço Público (Carga horária: 10h). Escola Nacional de Administração Pública (ENAP), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Power Point (Carga horária: 15h). Superintendência de Recursos Humanos (SRH - UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Gestão Estratégica de Pessoas e Planos de Carreira (Carga horária: 20h). Escola Nacional de Administração Pública (ENAP), Brasil.
+                        </p>
+                    </li>
+                </ul>
+                
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2007
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Projeto Minotauro - Desafiando os Medos (Carga horária: 16h). Humano Center (HC), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Extensão Universitária em Lei Nº 8.112/90 Reg. Jur. dos Serv. Púb. Federal (Carga horária: 80h).Universidade de Brasília (UnB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Extensão universitária em FACILITADOR DE BIODANZA (Carga horária: 432h). INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2008
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Abordagem de Resol. Traum. - N. Inter. I, II e III (Carga horária: 72h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            EXCELÊNCIA NO ATENDIMENTO AO PÚBLICO (TEORIA E PRÁTICA) (Carga horária: 30h). Universidade Federal da Paraíba (UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            PLANEJAMENTO ESTRATÉGICO (TEORIA E PRÁTICA) MÓDULO. (Carga horária: 60h). Universidade Federal da Paraíba (UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            GESTÃO DA ROTINA (MÓDULO II) (Carga horária: 30h). Universidade Federal da Paraíba (UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            Abordagem de Resol. Traumática - Nível Inter. II (Carga horária: 24h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            Abordagem de Resol. Traumática - Nível Inter. I (Carga horária: 24h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2009
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Abordagem de Resol. Traumática - N. Avan. I e II (Carga horária: 72h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            Extensão universitária em Curso de Especialização em Projeto Minotauro (Carga horária: 90h). Centro de Biodanza e Atividades Biocêntricas de PE (CB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            Extensão universitária em PROFESSOR DIDACTA DE BIODANZA (Carga horária: 180h). International Biocentric Foudation (IBF), Chile.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2010
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            CURSO DE NEUROCIÊNCIA BÁSICA - INTRODUÇÃO AO ESTUDO (Carga horária: 60h). Universidade Federal de Minas Gerais (UFMG), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            Extensão Universitária em DROGADIÇÃO: UMA PROPOSTA DE PREVENÇÃO, REABILITAÇÃ (Carga horária: 56h). Universidade Federal da Paraíba (UFPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2011
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            A CURA DO TRAUMA DESPERTANDO A ESPIRITUALIDADE (Carga horária: 15h). INSTITUTE THE HUMANENRICHMENT (ITH), Estados Unidos.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            II CURSO E CONFERENCIAS EM NEUROCIÊNCIAS E COMPORT (Carga horária: 40h). Universidade Federal da Paraíba (UFPB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            Distúrbios Emocionais e Comportamentais do Cliente (Carga horária: 30h). Conselho Federal de Enfermagem (COFEN), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2012
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            CURSO DE FORMAÇÃO PROFISSIONAL EM TERAPIAS NATURAIS (Carga horária: 1370h). Sindicato dos Terapeutas do Estado da Paraíba (SINTE-PB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Ações Governamentais em Politicas Públicas de Saúde (Carga horária: 30h). Conselho Federal de Enfermagem (COFEN), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Ações Governamentais em Politicas Públicas de Saúde (Carga horária: 30h). Conselho Federal de Enfermagem (COFEN), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Elaboración de artículos científicos para las revi. (Carga horária: 5h). Universidad Americana (UA), Paraguai.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2013
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Somatic Experiencing® Practitioner (SEP) (Carga horária: 216h). Somatic Experiencing® Trauma Institute (SETI), Estados Unidos.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2014
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Curso Livre de Coerência Cardíac. (Carga horária: 20h). Espaço Coerência (EC), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Uso de cardiofeedback em psicologia (Carga horária: 14h). Espaço Trauma (E.A), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            ANÁLISE DO DISCURSO COMO METODOLOGIA DE PESQUISA (Carga horária: 12h). Universidade Federal do Rio Grande do Norte (UFRN), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            Extensão universitária em Terapias Naturais e Holísticas (Carga horária: 1370h). Universidade Estadual da Paraíba (UEPB), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2015
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Biofeedback cardiovascular (Carga horária: 8h). CardioEmotion (C.E), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2016
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Artigo científico: da elaboração à submissão (Carga horária: 30h). Científica Saúde (CS), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2017
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Curso de Aprofundamento em Biodanza (Carga horária: 18h). Museu de Artes Afro-Brsileira e Escola de Biodanza de Pernan (AARTB), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            COMO TORNAR VISÍVEL O INVISÍVEL (Carga horária: 16h). INTELECTUS - Treinamento e Cursos (ITC), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            O Processo da Biodanza e as Neurociências (Carga horária: 72h). Escola de Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2018
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Integral Somatic Psychology Professional Training Module 1 (Carga horária: 74h). Integral Somatic Psychology (ISP), Brasil.
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            Eneaframa-Psicologia dos Eneatipos-Diagnóstico Inicial (Carga horária: 20h). FUNDACION CLAUDIO NARANJO (FCN), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2020
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Treinamento em Constelação Familiar (Carga horária: 90h). UNIPAZ - Pernanbuco (UNIPAZ), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2021
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            Programa de Kindfulness: Mindfulness Integral e Harmonia Emocional (Carga horária: 252h).Instituto de Ciência Contemplativa do Brasil (ICC), Brasil.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+{% endblock %}

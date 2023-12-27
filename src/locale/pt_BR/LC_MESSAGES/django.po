@@ -1,0 +1,234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-19 23:38-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\core\templates\core\base.html:31
+msgid "Wandecleide Lucena Fernandes é uma profissional especializada em..."
+msgstr ""
+
+#: .\core\templates\core\base.html:58
+msgid "Home"
+msgstr "Início"
+
+#: .\core\templates\core\base.html:59 .\users\templates\users\about.html:4
+msgid "About"
+msgstr "Sobre"
+
+#: .\core\templates\core\base.html:60 .\users\templates\users\index.html:84
+#: .\users\templates\users\my-work.html:5
+#: .\users\templates\users\my-work.html:35
+msgid "My work"
+msgstr "Meu trabalho"
+
+#: .\core\templates\core\base.html:61
+msgid "Testimonials"
+msgstr "Depoimentos"
+
+#: .\core\templates\core\base.html:62 .\users\templates\users\contact.html:5
+msgid "Contact"
+msgstr "Contato"
+
+#: .\core\templates\core\base.html:104
+msgid "Nurse"
+msgstr "Enfermeira"
+
+#: .\core\templates\core\errors\404.html:67
+msgid "Page not found"
+msgstr "Página não encontrada"
+
+#: .\core\templates\core\errors\404.html:71
+msgid "Back to start"
+msgstr "Voltar para o início"
+
+#: .\core\templates\core\errors\500.html:15
+msgid "Something went wrong"
+msgstr "Alguma coisa deu errado"
+
+#: .\core\templates\core\errors\500.html:19
+msgid ""
+"Don't worry, an error report has been sent to our team, we will resolve the "
+"issue shortly."
+msgstr ""
+"Não se preocupe, um relatório de erro foi enviado para a nossa equipe, nós "
+"resolveremos o problema o quanto antes."
+
+#: .\users\admin.py:31 .\users\admin.py:44
+msgid "Login data"
+msgstr "Dados de login"
+
+#: .\users\admin.py:35 .\users\admin.py:48
+msgid "Permission"
+msgstr "Permissão"
+
+#: .\users\admin.py:40
+msgid "Identification"
+msgstr "Identificação"
+
+#: .\users\forms.py:18
+msgid "Permissions"
+msgstr "Permissões"
+
+#: .\users\forms.py:24
+msgid "Email and password incorrect, try again"
+msgstr "Email e senha incorretos, tente novamente"
+
+#: .\users\forms.py:25
+msgid "This user does not have access permission"
+msgstr "Este usuário não tem a permissão de acesso"
+
+#: .\users\forms.py:26
+msgid "This account has been deactivated"
+msgstr "Esta conta foi desativada"
+
+#: .\users\forms.py:60
+msgid "Fullname"
+msgstr "Nome completo"
+
+#: .\users\forms.py:72
+msgid "Telephone (optional)"
+msgstr "Telefone (opcional)"
+
+#: .\users\forms.py:78
+msgid "Message"
+msgstr "Mensagem"
+
+#: .\users\templates\users\about.html:14 .\users\templates\users\index.html:69
+msgid "About myself"
+msgstr "Sobre mim"
+
+#: .\users\templates\users\about.html:21 .\users\templates\users\index.html:54
+msgid "Myself picture"
+msgstr "Foto de mim mesmo"
+
+#: .\users\templates\users\contact.html:24
+msgid "Clinic"
+msgstr "Clínica"
+
+#: .\users\templates\users\contact.html:39
+msgid "Address"
+msgstr "Endereço"
+
+#: .\users\templates\users\contact.html:79
+msgid "Telephone"
+msgstr "Telefone"
+
+#: .\users\templates\users\contact.html:87
+msgid "Copied"
+msgstr ""
+
+#: .\users\templates\users\contact.html:98
+msgid "Get in touch"
+msgstr "Entrar em contato"
+
+#: .\users\templates\users\contact.html:102
+msgid "Feel free to send me a message"
+msgstr "Sinta-se a vontade a enviar uma mensagem"
+
+#: .\users\templates\users\contact.html:126
+msgid "Submit"
+msgstr "Enviar"
+
+#: .\users\templates\users\index.html:23
+msgid ""
+"Shock, trauma, anxiety disorders and other types of stress can be overcome "
+"through <strong>Somatic Experiencing &reg;</strong>"
+msgstr ""
+"Choque, trauma, transtornos de ansiedade e outros tipos de estresse podem "
+"ser superados através da <strong>Somatic Experiencing</strong>"
+
+#: .\users\templates\users\index.html:29
+msgid "Read more"
+msgstr "Ler mais"
+
+#: .\users\templates\users\index.html:42
+msgid "Dr."
+msgstr "Dra."
+
+#: .\users\templates\users\index.html:45
+msgid "PhD in Public Health"
+msgstr "Doutora em Saúde Pública"
+
+#: .\users\templates\users\index.html:63
+msgid ""
+"I am a Nurse and Therapist, with a PhD in Public Health. I searched for the "
+"best courses in Brazil and abroad with the aim of helping my clients to lead "
+"a more harmonious and well-being life."
+msgstr ""
+"Sou Enfermeira e Terapeuta, com Doutorado em Saúde Pública. Busquei os "
+"melhores cursos no Brasil e no exterior com a finalidade de contribuir com "
+"meus clientes para uma vida mais harmônica e com bem-estar."
+
+#: .\users\templates\users\index.html:78
+msgid ""
+"My experience is focused on treating stress, trauma, phobias and anxiety "
+"disorders, for adults and seniors."
+msgstr ""
+"Minha experiência é focada no tratamento de estresse, trauma, fobias e "
+"transtornos de ansiedade, para adultos e idosos."
+
+#: .\users\templates\users\my-work.html:45
+msgid "Page sections:"
+msgstr "Seções da página"
+
+#: .\users\templates\users\my-work.html:55
+#: .\users\templates\users\my-work.html:81
+msgid "What is psychotraumatology?"
+msgstr "O que é psicotraumatologia?"
+
+#: .\users\templates\users\my-work.html:63
+#: .\users\templates\users\my-work.html:93
+msgid "What is gerontology?"
+msgstr "O que é gerontologia?"
+
+#: .\users\templates\users\my-work.html:71
+#: .\users\templates\users\my-work.html:110
+msgid "What is Somatic Experience?"
+msgstr "O que é Somatic Experiencing?"
+
+#: .\users\templates\users\my-work.html:99
+msgid "Elderly couple walking"
+msgstr "Casal de idosos caminhando"
+
+#: .\users\templates\users\my-work.html:116
+msgid "Somatic Experience tiger"
+msgstr "Tigre da Somatic Experience"
+
+#: .\users\urls.py:13
+msgid "contact/"
+msgstr "contato/"
+
+#: .\users\urls.py:14
+msgid "about/"
+msgstr "sobre/"
+
+#: .\users\urls.py:15
+msgid "my-work/"
+msgstr "meu-trabalho/"
+
+#: .\users\views.py:38
+msgid "Message received, I will contact you as soon as possible."
+msgstr "Mensagem recebida, entrarei em contato o quanto antes."
+
+#: .\website\settings\default.py:125
+msgid "English"
+msgstr "Inglês"
+
+#: .\website\settings\default.py:126
+msgid "Brazilian Portuguese"
+msgstr "Portugês do Brasil"

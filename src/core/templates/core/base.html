@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy -->
+    <meta 
+        http-equiv="Content-Security-Policy"
+        content="
+            child-src 'none'; 
+            worker-src 'none';
+            font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
+            script-src  'self';
+            form-action 'self';
+            base-uri 'self';
+            upgrade-insecure-requests;
+            block-all-mixed-content;
+        "
+    />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'core/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{% static 'core/favicons/android-chrome-512x512.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'core/favicons/android-chrome-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'core/favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'core/favicons/site.webmanifest' %}">
+    <!-- SEO -->
+    <title>{% block title %}Wandecleide SE{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% translate 'Wandecleide Lucena Fernandes é uma profissional especializada em...' %}{% endblock %}">
+    <link rel="canonical" href="https://{{ request.get_host }}{{ request.path }}" />
+    <!-- Css and Js --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'core/_css/tailwind/output.css' %}" />
+    <script src="{% static 'core/_js/menu.js' %}" defer></script>
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+    <header class="sticky top-0 z-40">
+        {% block menu %}
+            <nav id="menu">
+                <a href="/" class="flex items-center mr-2">
+                    <svg viewBox="0 0 606 606" class="fill-current h-full w-auto p-1">
+                        <path class="fill-teal-600" d="M 323 11 C -2 -33 -153 488 265 597 L 265 590 C 265 436 273 442 144 439 C 131 435 122 420 133 396 L 135 388 L 136 382.397 L 130.378 372.949 L 130 372 C 111 354 122 356 132 351 C 136.1667 347.753 162 342 138 337 C 121 330 108 334 123 314 L 122.884 314.5 L 123.536 309.5 L 124.187 304.5 L 123 314 C 131 307 142 296 111 289 C 62 278 81 260 109 241 C 144 217 135 205 141 183 C 143 164 143.5633 154.1667 148 132 C 179 52 257 10 324 11 M 542 490 C 526 502 522 501 505 502 C 481 504 472 514 472 547 L 443 564 C 458 541 425.2727 528.3837 415 525 L 415 525 C 414 539 407 556 432 568 L 432.416 568.253 L 427.958 570.511 C 371 597 288 598 261 590 L 265 597 C 273 596 373 617 476 549 C 494 554 532 550 542 490" />
+                        
+                        <path class="fill-blue-400" d="M 399 41 C 298 24 168 46 166 182 C 226 162 281 144 292 184 C 287 203 304 236 332 191 C 326 161 347 165 334 190 L 334 190 C 345 221 377 222 391 185 L 391 185 C 385 38 457 68 395 187 L 395 187 C 394 242 405 232 422 216 C 469 183 471 183 520 170 L 520 170 L 509.025 147.064 L 500 128.629 L 500 129 C 483 73 445 48 399 41 M 394 182 C 447 70 392 48 394 182 M 166 184 C 167 198 171 237 244 232 C 246 232 253 231 254 235 L 254 235 L 254 235 C 254 235 261 305 334 270 L 334 270 C 344 289 349 287 355 289 L 358.596 296.189 L 362.5 303.325 L 366.88 308.204 L 371.26 313.083 L 374.005 314.502 L 376.749 315.922 L 386.524 329.711 L 396.3 343.5 L 398.324 345.75 C 408 353 423 349 418 334 L 415.13 326.5 L 412.208 319.5 L 414.947 318.311 L 417.685 317.123 L 420.932 313.425 L 424 310 C 480 313 483 288 484 264 C 513 257 536 230 521 173 C 512 175 468 180 415 226 C 402 237 389 234 392 191 L 392 189 C 374 230 343 219 333 193 L 333 193 C 321 221 287 230 289 184 C 279 149 234 162 166 184 M 333 189 C 342 169 330 167 333 189" />
+                    </svg>
+
+                    <span class="hidden sm:table text-2xl text-blue-500 font-handwrite font-semibold">
+                        Dra. Wandecleide Fernandes
+                    </span>
+                </a>
+
+                {% include "core/components/menu-language-selector.html" %}
+                
+                <input type="checkbox" id="menu__hamburguer__checkbox" class="hidden">
+                <ul id="menu__list">
+                    <li><a href="{% url 'users:index' %}">{% translate "Home" %}</a></li>
+                    <li><a href="{% url 'users:about' %}">{% translate "About" %}</a></li>
+                    <li><a href="{% url 'users:my-work' %}">{% translate "My work" %}</a></li>
+                    <li><a href="#">{% translate "Testimonials" %}</a></li>
+                    <li><a href="{% url 'users:contact' %}">{% translate "Contact" %}</a></li>
+                </ul>
+                
+                <label id="menu__hamburguer" for="menu__hamburguer__checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+            </nav>
+        {% endblock menu %}
+    </header>
+
+    <main class="relative z-0">
+        {% block content %}{% endblock content %}
+    </main>
+    <footer class="relative h-0">
+        {% block footer %}
+            <a 
+                href="https://api.whatsapp.com/send/?phone=5583981718520"
+                target="_blank"
+                class="fixed z-20 left-0 bottom-0 cursor-pointer pb-1"
+            >
+
+                <div class="flex absolute h-4 w-4 right-1 top-1.5">
+                    <span class="absolute h-full w-full rounded-full bg-red-400 opacity-75 animate-ping"></span>
+                    <span class="h-full w-full rounded-full bg-red-500"></span>
+                </div>
+                
+                <svg viewBox="0 0 48 48" class="w-14 h-auto">
+                    <path fill="#cfd8dc" d="M 24.014 42.974 C 24.014 42.974 24.014 42.974 24.014 42.974 M 24.014 42.974 M 24.014 4 C 24.014 4 24.014 4 24.014 4 C 12.998 4 4.032 12.962 4.027 23.979 c -0.001 3.367 0.849 6.685 2.461 9.622 l -2.585 9.439 c -0.094 0.345 0.002 0.713 0.254 0.967 c 0.19 0.192 0.447 0.297 0.711 0.297 c 0.085 0 0.17 -0.011 0.254 -0.033 l 9.687 -2.54 c 2.828 1.468 5.998 2.243 9.197 2.244 c 11.024 0 19.99 -8.963 19.995 -19.98 c 0.002 -5.339 -2.075 -10.359 -5.848 -14.135 C 34.378 6.083 29.357 4.002 24.014 4 L 24.014 4 z"/>
+                
+                    <path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/>
+                
+                    <path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/>
+                
+                    <path fill="#fff" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" />
+                
+                </svg>
+            </a>
+
+            <p class="px-4 py-14 w-full text-center text-slate-500 md:py-0">
+                Copyright &copy; {% now "Y" %}, Wandecleide Lucena Fernandes – {% translate "Nurse" %} COREN-PB 000.040.419-IR
+            </p>
+        {% endblock footer %}
+    </footer>
+</body>
+</html>

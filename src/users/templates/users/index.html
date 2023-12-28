@@ -1,5 +1,6 @@
 {% extends 'core/base.html' %}
 {% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 
 {% block extra_head %}  
     <script src="{% static 'users/_js/index.js' %}" defer></script>
@@ -13,9 +14,31 @@
     >
         <video
             id="view-1__background-video" autoplay loop muted playsinline preload
-            class="absolute top-0 -z-50 h-full w-full object-cover" style="object-position: 32% 0;"
+            class="absolute top-0 h-full w-full object-cover" style="object-position: 32% 0;"
         >
-            <source src="{% static 'users/_video/index/background.mp4#t=0.1' %}" type="video/mp4"/>
+            <source 
+                media="(min-width: 1200px)"
+                src="{% static 'users/_video/index/background.mp4' %}"
+                type="video/mp4"
+            />
+
+            <source 
+                src="{% static 'users/_video/index/background_resized.mp4' %}"
+                type="video/mp4"
+            />
+
+            
+            <track 
+                kind="descriptions" 
+                srclang="en"
+                src="{% static 'users/_video/index/en_descriptions.vtt' %}"
+            >
+
+            <track 
+                kind="captions" 
+                srclang="en"
+                src="{% static 'users/_video/index/en_captions.vtt' %}"
+            >
         </video>
 
         <div class="bg-black bg-opacity-50 max-w-md w-11/12 m-4 p-4 rounded-md xl:mr-40 xl:-mt-60 relative animate-fadeIn-bottom xl:animate-fadeIn-right">
@@ -41,7 +64,7 @@
             <strong class="block text-center text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-teal-800 sm:text-5xl">
                 {% translate 'Dr.' %} Wandecleide Fernandes
             </strong>
-            <span class="block text-center text-2xl text-gray-400">
+            <span class="block text-center text-2xl text-gray-500">
                 {% translate 'PhD in Public Health' %}
             </span>
         </h1>

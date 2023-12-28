@@ -15,6 +15,7 @@
     <!-- SEO -->
     <title>{% block title %}Wandecleide SE{% endblock %}</title>
     <meta name="description" content="{% block meta_description %}{% translate 'Wandecleide Lucena Fernandes é uma profissional especializada em...' %}{% endblock %}">
+    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://{{ request.get_host }}{{ request.path }}" />
     <!-- Css and Js --> 
     <link rel="stylesheet" type="text/css" href="{% static 'core/_css/tailwind/output.css' %}" />
@@ -25,7 +26,11 @@
     <header class="sticky top-0 z-40">
         {% block menu %}
             <nav id="menu">
-                <a href="/" class="flex items-center mr-2">
+                <a 
+                    href="/"
+                    class="flex items-center mr-2"
+                    aria-label="{% translate 'Link to the home page' %}"
+                >
                     <svg viewBox="0 0 606 606" class="fill-current h-full w-auto p-1">
                         <path class="fill-teal-600" d="M 323 11 C -2 -33 -153 488 265 597 L 265 590 C 265 436 273 442 144 439 C 131 435 122 420 133 396 L 135 388 L 136 382.397 L 130.378 372.949 L 130 372 C 111 354 122 356 132 351 C 136.1667 347.753 162 342 138 337 C 121 330 108 334 123 314 L 122.884 314.5 L 123.536 309.5 L 124.187 304.5 L 123 314 C 131 307 142 296 111 289 C 62 278 81 260 109 241 C 144 217 135 205 141 183 C 143 164 143.5633 154.1667 148 132 C 179 52 257 10 324 11 M 542 490 C 526 502 522 501 505 502 C 481 504 472 514 472 547 L 443 564 C 458 541 425.2727 528.3837 415 525 L 415 525 C 414 539 407 556 432 568 L 432.416 568.253 L 427.958 570.511 C 371 597 288 598 261 590 L 265 597 C 273 596 373 617 476 549 C 494 554 532 550 542 490" />
                         
@@ -65,6 +70,7 @@
         {% block footer %}
             <a 
                 href="https://api.whatsapp.com/send/?phone=5583981718520"
+                aria-label="{% translate 'Whatsapp link' %}"
                 target="_blank"
                 class="fixed z-20 left-0 bottom-0 cursor-pointer pb-1"
             >

@@ -5,20 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Content Security Policy -->
-    <meta 
-        http-equiv="Content-Security-Policy"
-        content="
-            child-src 'none'; 
-            worker-src 'none';
-            font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
-            script-src  'self';
-            form-action 'self';
-            base-uri 'self';
-            upgrade-insecure-requests;
-            block-all-mixed-content;
-        "
-    />
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'core/favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="512x512" href="{% static 'core/favicons/android-chrome-512x512.png' %}">

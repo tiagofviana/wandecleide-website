@@ -4,12 +4,6 @@
 {% get_available_languages as AVAILABLE_LANGUAGES %}
 
 <style>
-    .top-100 {top: 100%}
-    .bottom-100 {bottom: 100%}
-    .max-h-select {
-        max-height: 300px;
-    }
-
     #menu__language__checkbox:checked ~ ol {display: block;}
 
     #menu__language__checkbox:checked ~ label > svg {transform: rotate(0deg);}
@@ -38,7 +32,7 @@
     <ol 
         id="menu__languages__list"
         current-language="{{ CURRENT_LANGUAGE_CODE }}"
-        class="w-full absolute top-20 shadow border border-gray-200 bg-white rounded-md overflow-hidden divide-y divide-gray-300 select-none hidden"
+        class="w-full absolute top-20 shadow-lg border border-gray-300 bg-white rounded-md overflow-hidden divide-y divide-gray-300 select-none hidden"
     >
         
         {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
@@ -46,7 +40,7 @@
                 <li>
                     <a 
                         href="{% translate_current_url lang_code %}"
-                        class="block cursor-pointer py-1.5 pl-2 text-gray-400 font-bold hover:bg-teal-600 hover:text-teal-50"
+                        class="block cursor-pointer py-1.5 pl-2 text-gray-500 font-bold hover:bg-teal-600 hover:text-teal-50"
                     >
                         {{ lang_code }}
                     </a>

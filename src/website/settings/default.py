@@ -53,8 +53,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    # Custom
+    'website.middlewares.csp.ContentSecurityPolicyMiddleware',
 ]
 
+# Content Security Policy
+CSP_RULES = """
+    child-src 'none'; 
+    worker-src 'none';
+    font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
+    script-src  'self';
+    object-src 'none';
+    form-action 'self';
+    base-uri 'self';
+    upgrade-insecure-requests;
+    block-all-mixed-content;
+"""
 
 ROOT_URLCONF = 'website.urls'
 

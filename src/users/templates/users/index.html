@@ -2,6 +2,10 @@
 {% load static i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
+{% block meta_description %}{% blocktranslate trimmed %}
+    Wandecleide Lucena Fernandes is a Nurse and Therapist with over 36 years of professional experience who has a PHD in Public Health focused on the treatment of stress, trauma, phobias and anxiety disorders, for adults and the elderly.
+{% endblocktranslate %}{% endblock %}
+
 {% block extra_head %}  
     <script src="{% static 'users/_js/index.js' %}" defer></script>
     <script src="{% static 'core/_js/observed.js' %}" defer></script>
@@ -75,12 +79,11 @@
                 id="view-2__img"
                 src="{% static 'users/_img/index/myself.webp' %}"
                 alt="{% translate 'Myself picture' %}"
-                class="sm:animate-fadeIn observed"
             />
 
             <div>
                 <div 
-                class="max-w-md shadow p-4 border border-gray-200 rounded-md my-6 mx-2 sm:animate-fadeIn-right sm:animation-delay-600 observed"
+                class="max-w-md shadow p-4 border border-gray-200 rounded-md my-6 mx-2 sm:animate-fadeIn-right sm:animation-delay-400 observed"
                 >
                     <p class="text-justify">
                         {% blocktranslate trimmed %}
@@ -115,5 +118,5 @@
 {% endblock content %}
 
 {% block footer %}
-{{ block.super }}
+    {{ block.super }}
 {% endblock %}

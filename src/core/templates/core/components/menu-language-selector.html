@@ -1,5 +1,5 @@
 
-{% load i18n translate_url %}
+{% load i18n core %}
 {% get_current_language as CURRENT_LANGUAGE_CODE %}
 {% get_available_languages as AVAILABLE_LANGUAGES %}
 
@@ -7,16 +7,15 @@
     #menu__language__checkbox:checked ~ ol {display: block;}
 
     #menu__language__checkbox:checked ~ label > svg {transform: rotate(0deg);}
-
 </style>
 
-<div class="flex items-center justify-center w-24 relative z-10 uppercase">  
+<div class="flex flex-col items-center justify-center w-24 relative z-10 uppercase">  
     <input type="checkbox" id="menu__language__checkbox" class="hidden"> 
 
     <label
         for="menu__language__checkbox"
-        class="w-full flex flex-nowrap justify-center items-center border border-gray-300 rounded cursor-pointer"
-    >   
+        class="w-full flex flex-nowrap justify-center items-center mt-2 border border-gray-300 rounded cursor-pointer"
+    >
         <span class="flex-1 border-r border-gray-300 my-1 pl-2 whitespace-nowrap text-gray-500 font-bold">
             {{ CURRENT_LANGUAGE_CODE }} 
         </span>
@@ -32,7 +31,7 @@
     <ol 
         id="menu__languages__list"
         current-language="{{ CURRENT_LANGUAGE_CODE }}"
-        class="w-full absolute top-20 shadow-lg border border-gray-300 bg-white rounded-md overflow-hidden divide-y divide-gray-300 select-none hidden"
+        class="absolute w-full shadow-lg border border-gray-300 bg-white rounded-md overflow-hidden divide-y divide-gray-300 select-none top-14 hidden"
     >
         
         {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}

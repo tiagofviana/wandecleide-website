@@ -9,8 +9,6 @@ class ContentSecurityPolicyMiddleware:
     def __call__(self, request):
         response: HttpResponse = self.get_response(request)
 
-        print('\n\n')
-
         csp_rules = settings.CSP_RULES.replace("\n", "")
         response.headers['Content-Security-Policy'] = csp_rules
 

@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model, admin as auth_admin
 from django.contrib.auth.models import Group
-from .models import CustomGroup, CustomPermission
 from django.utils.translation import gettext_lazy as _
+
+from . import models
 
 
 admin.site.site_header = "Administração"
@@ -10,11 +11,11 @@ admin.site.index_title = ""
 
 admin.site.unregister(Group)
 
-@admin.register(CustomGroup)
+@admin.register(models.CustomGroup)
 class CustomGroupAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(CustomPermission)
+@admin.register(models.CustomPermission)
 class CustomPermissionAdmin(admin.ModelAdmin):
     pass
 
@@ -50,3 +51,16 @@ class UserAdmin(auth_admin.UserAdmin):
         }),
     )
 
+
+@admin.register(models.LikeDislikeCounter)
+class LikeDislikeCounterAdmin(admin.ModelAdmin):
+    list_display = ('id', 'description', 'qt_likes', 'qt_dislikes')
+    readonly_fields = ('id',)
+    fieldsets = (
+        ("Identificação", {
+            'fields': ('id', 'description',),
+        }),
+        ("Contadores", {
+            'fields': ('qt_likes', 'qt_dislikes'),
+        }),
+    )

@@ -146,6 +146,16 @@
         @apply table text-red-500 text-sm italic
     }
     
+    /* Especial */
+    *[like_dislike_counter_id] > div[checked][like_button] > *
+    {
+        @apply text-green-700/90 !important;
+    }
+
+    *[like_dislike_counter_id] > div[checked][dislike_button] > *
+    {
+        @apply text-red-600 !important;
+    }
 }
 
 @layer utilities {

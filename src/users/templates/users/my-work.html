@@ -16,8 +16,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="min-h-[var(--screen-height)] relative max-w-screen-3xl mx-auto">
-        <div class="absolute -z-10 opacity-40 top-36 left-1/2 -translate-x-1/2 max-w-2xl w-11/12">
+    {% csrf_token %}
+    
+    <div class="min-h-[var(--screen-height)] relative max-w-7xl mx-auto">
+        <div class="absolute -z-10 opacity-40 top-36 left-1/2 -translate-x-1/2 max-w-64 w-11/12">
             <svg viewBox="0 0 606 606" class="fill-current h-full w-full opacity-25">
                 <path class="fill-teal-600" d="M 323 11 C -2 -33 -153 488 265 597 L 265 590 C 265 436 273 442 144 439 C 131 435 122 420 133 396 L 135 388 L 136 382.397 L 130.378 372.949 L 130 372 C 111 354 122 356 132 351 C 136.1667 347.753 162 342 138 337 C 121 330 108 334 123 314 L 122.884 314.5 L 123.536 309.5 L 124.187 304.5 L 123 314 C 131 307 142 296 111 289 C 62 278 81 260 109 241 C 144 217 135 205 141 183 C 143 164 143.5633 154.1667 148 132 C 179 52 257 10 324 11 M 542 490 C 526 502 522 501 505 502 C 481 504 472 514 472 547 L 443 564 C 458 541 425.2727 528.3837 415 525 L 415 525 C 414 539 407 556 432 568 L 432.416 568.253 L 427.958 570.511 C 371 597 288 598 261 590 L 265 597 C 273 596 373 617 476 549 C 494 554 532 550 542 490" />
                 
@@ -36,10 +38,14 @@
             <h1 
                 class="block text-center text-4xl font-black bg-clip-text text-gray-700 py-10 px-10 uppercase"
             >
-                {% translate 'My work' %} 
+                {% translate 'My work' %}
             </h1>
 
-            <p class="indent-12">{% lorem 60 w random %}</p>
+            <p class="indent-12 text-lg text-justify">
+                {% blocktranslate trimmed %}
+                    In a short way, I work in the psychotraumatology field, approaching the therapeutic method of Somatic Experiencing® (SE™) and focusing on gerontology. If you are unfamiliar with any of these topics, in the following sections I provide a brief description of each of them with examples and exercises. If you still have questions, please get in touch.
+                {% endblocktranslate %}
+            </p>
 
             <header
                 id="page-sections"
@@ -51,20 +57,14 @@
 
                 <span class="block w-10 h-0.5 bg-emerald-700 mb-4"></span>
 
-                <ul class="pb-2" id="summary-list">
+                <ul class="pb-2 text-lg" id="summary-list">
                     <li 
                         click-go-to="psychotraumatology-section"
                         class="flex items-center justify-between cursor-pointer py-2 hover:scale-105 transition-all"
                     >
-                        <span>{% translate 'What is psychotraumatology?' %}</span>
-                        <i class="fa fa-angle-right ml-4"></i>
-                    </li>
-
-                    <li 
-                        click-go-to="gerontology-section"
-                        class="flex items-center justify-between cursor-pointer py-2 hover:scale-105 transition-all"
-                    >
-                        <span>{% translate 'What is gerontology?' %}</span>
+                        <span>
+                            {% translate 'What is psychotraumatology?' %}
+                        </span>
                         <i class="fa fa-angle-right ml-4"></i>
                     </li>
 
@@ -72,7 +72,19 @@
                         click-go-to="SE-section"
                         class="flex items-center justify-between cursor-pointer py-2 hover:scale-105 transition-all"
                     >
-                        <span>{% translate 'What is Somatic Experience?' %}</span>
+                        <span>
+                            {% translate 'What is Somatic Experience?' %}
+                        </span>
+                        <i class="fa fa-angle-right ml-4"></i>
+                    </li>
+
+                    <li 
+                        click-go-to="gerontology-section"
+                        class="flex items-center justify-between cursor-pointer py-2 hover:scale-105 transition-all"
+                    >
+                        <span>
+                            {% translate 'What is gerontology?' %}
+                        </span>
                         <i class="fa fa-angle-right ml-4"></i>
                     </li>
                 </ul>
@@ -81,46 +93,303 @@
             <section id="psychotraumatology-section">
                 <hr class="mx-6 mt-8 border-none h-0.5 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50"/>
 
-                <h2 class="text-center text-2xl my-8 sm:text-left sm:text-3xl">
+                <h2 class="text-center text-2xl my-8 md:text-left sm:text-3xl">
                     {% translate 'What is psychotraumatology?' %}
                 </h2>
 
-                <p class="indent-12">
-                    {% lorem 500 w random %}
+                <img 
+                    src="{% static 'users/_img/my-work/child.webp' %}" 
+                    alt="{% translate 'Child crying alone in the elevator' %}"
+                    class="p-2 shadow-lg border border-gray-200 object-cover size-64 mx-auto mb-4 sm:mb-0 sm:float-right sm:mx-2 sm:mt-1"
+                >
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Psychotraumatology is the area of science that studies PSYCHOLOGICAL TRAUMA. These, which in turn, are damage to the mind caused by some painful (traumatic) experience, for example, imagine that a child was going up alone in an elevator and, when he least expects it, an error occurs in the system causing a 5-minute stop. At the moment of the incident, because he did not know what to do and did not have an adult to help immediately, the child began to cry. After this event, the child is no longer able to use the elevator due to the association between using it and the great stress faced in the incident.
+                    {% endblocktranslate %}
                 </p>
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        There are other traumas such as those that occur in a car or plane accident, domestic violence, threat to life, among others. Each person has their own different experiences and reactions to each of them, and most people can deal with high levels of stress. But when this level is too high, it can lead to the development of post-traumatic stress disorder (PTSD). Two of the most common symptoms are negative thoughts related to the traumatic event and the effort to move away from the memory of what happened. In the child's story, the effort would be no longer being able to use the elevator.
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Treating a trauma consists of dissociating the negative thoughts from the event that generated it and, consequently, restoring autonomy and well-being. There are several methods that help to deal with trauma, but the support of a professional is essential to apply such methods and help the patient understand the emotions that will appear in the healing process.
+                    {% endblocktranslate %}
+                </p>
+            </section>
+
+            
+            <section id="SE-section">
+                <hr class="mx-6 mt-8 border-none h-0.5 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50"/>
+
+                <h2 class="text-center text-2xl my-8 md:text-left sm:text-3xl">
+                    {% translate 'What is Somatic Experience® (SE™)?' %}
+                </h2>
+
+                <img 
+                    src="{% static 'users/_img/my-work/bengal-tiger.webp' %}" 
+                    alt="{% translate 'Somatic Experience tiger' %}"
+                    class="p-2 shadow-lg border border-gray-200 object-cover size-64 mx-auto mb-4 sm:mb-0 sm:float-right sm:mx-2 sm:mt-1"
+                >
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Somatic Experiencing® (SE) is a therapeutic method for trauma, anxiety, post-traumatic stress disorder (PTSD), chronic pain and grief. Created by PhD Peter Levine who, when analyzing the behavior of wild animals in nature, noticed that such animals did not show signs of trauma, despite the constant threat to life. So, why do human beings acquire trauma so easily? The answer comes from the consequence of the accumulation of stress. The stress of our work, our relationships, our family, the small and large problems that appear on a daily basis, in short.
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Thus, based on the fact that trauma is trapped in the nervous system, SE works by releasing the accumulated of stress in the body using the corporal sensations approach. Below are two examples of exercises that use techniques that are covered in SE. They can be performed by anyone and are not specific to something that is happening to you, but they can help you understand what is happening in your nervous system, choose one and try it.
+                    {% endblocktranslate %}
+                </p>
+                
+                <h3 class="my-4 text-xl font-bold">
+                    {% translate "Observation of current body sensation" %}
+                </h3>
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Disconnect from what you are doing and focus your attention on your body. Take your time with each of the steps below, this will take less than 1 minute.
+                    {% endblocktranslate %}
+                </p>
+
+                <ol class="list-outside list-decimal ml-8 text-lg text-justify">
+                    <li>
+                        {% blocktranslate trimmed %}
+                            I imagine that you are sitting in a chair, stop for a moment, get into the correct posture in the chair and take a deep breath.
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Move your feet on the floor from side to side until you feel like you are connected to the ground (closing your eyes may help), then stand still again.
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Now feel your back and buttocks on the chair you are sitting on to notice how the chair supports you. How does it feel to be sitting on it? Are you comfortable?
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Sit down until you feel comfortable in the chair and, for a brief moment, let yourself enjoy the comfort of being supported in the chair.
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Look around and notice something that makes you feel good (a calming color, a tree in the window, a dog, etc.). Allow yourself to feel this sensation and take a deep breath again.
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            What do you notice about your physical and emotional comfort right now? Do you feel the same or different when you started?
+                        {% endblocktranslate %}
+                    </li>
+                </ol>
+
+                <div class="table mx-auto mt-4">
+                    <div class="text-center text-lg">
+                        {% translate "Did you like this exercise?" %}
+                    </div>
+
+                    <div                         
+                        like_dislike_counter_id="1"
+                        class="flex flex-row items-center justify-center"
+                    >
+                        <div 
+                            {% if request.COOKIES.like_dislike_1 == "like" %}
+                                checked="true"
+                            {% endif %}
+
+                            like_button
+                            class="flex items-center px-2 py-1 m-1 cursor-pointer transition group"
+                        >
+                            <i class="fa-regular fa-thumbs-up text-2xl text-gray-300 group-hover:text-green-700/90"></i>
+                            
+                            <span
+                                like_counter
+                                class="inline-block ml-2 text-gray-400 group-hover:text-green-700/90"
+                            >
+                                {{ like_dislike_1.qt_likes }}
+                            </span>
+                        </div>
+
+                        <hr class="w-px h-10 bg-gray-300">
+                        
+                        <div
+                            {% if request.COOKIES.like_dislike_1 == "dislike" %}
+                                checked="true"
+                            {% endif %}
+                            
+                            dislike_button
+                            class="flex items-center px-2 py-1 m-1 cursor-pointer transition group"
+                        >
+                            <i class="fa-regular fa-thumbs-down text-2xl text-gray-300 group-hover:text-red-600"></i>
+
+                            <span
+                                dislike_counter
+                                class="inline-block ml-2 text-gray-400 group-hover:text-red-600"
+                            >
+                                {{ like_dislike_1.qt_dislikes }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <small
+                        message
+                        class="table mx-auto invisible pl-1"
+
+                        {% if request.COOKIES.like_dislike_1 %}
+                            style="visibility: visible;"
+                        {% endif %}
+                    >
+                        {% translate 'Thanks for the feedback' %}
+                        <span class="text-lg">&#128516;</span>
+                    </small>
+                </div>
+
+                <h3 class="my-4 text-xl font-bold">
+                    {% translate "Awareness of our container" %}
+                </h3>
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Our body is the container for all our sensations and feelings. Based on the idea that touch is a direct form of interaction with the nervous system, this exercise aims to bring awareness to our container. Don’t be in a hurry to complete each step.
+                    {% endblocktranslate %}
+                </p>
+
+                <ol class="list-outside list-decimal ml-8 text-lg text-justify">
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Take a deep breath and keep your body relaxed.
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Place your right hand under your left armpit, keeping your palm in contact with your chest.
+                        {% endblocktranslate %}
+                    </li>
+                    
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Still in this position, take your right hand and place it on the left of your biceps (it can also be on your shoulder or elbow, whichever you find most comfortable).
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Now apply light pressure with your arms for 20 seconds and, in the meantime, try to notice the sensation it brings to your hands, to your shoulder, to the inside of your body. Can you feel your heartbeat? What is the texture of your shirt?
+                        {% endblocktranslate %}
+                    </li>
+
+                    <li>
+                        {% blocktranslate trimmed %}
+                            Do you feel a pleasant sensation? Do you feel the same or different when you started? What happens when you tighten or loosen your hands and arms?
+                        {% endblocktranslate %}
+                    </li>
+                </ol>
+
+                <div class="table mx-auto mt-4">
+                    <div class="text-center text-lg">
+                        {% translate "Did you like this exercise?" %}
+                    </div>
+
+                    <div                         
+                        like_dislike_counter_id="2"
+                        class="flex flex-row items-center justify-center"
+                    >
+                        <div 
+                            {% if request.COOKIES.like_dislike_2 == "like" %}
+                                checked="true"
+                            {% endif %}
+
+                            like_button
+                            class="flex items-center px-2 py-1 m-1 cursor-pointer transition group"
+                        >
+                            <i class="fa-regular fa-thumbs-up text-2xl text-gray-300 group-hover:text-green-700/90"></i>
+                            
+                            <span
+                                like_counter
+                                class="inline-block ml-2 text-gray-400 group-hover:text-green-700/90"
+                            >
+                                {{ like_dislike_2.qt_likes }}
+                            </span>
+                        </div>
+
+                        <hr class="w-px h-10 bg-gray-300">
+                        
+                        <div
+                            {% if request.COOKIES.like_dislike_2 == "dislike" %}
+                                checked="true"
+                            {% endif %}
+                            
+                            dislike_button
+                            class="flex items-center px-2 py-1 m-1 cursor-pointer transition group"
+                        >
+                            <i class="fa-regular fa-thumbs-down text-2xl text-gray-300 group-hover:text-red-600"></i>
+
+                            <span
+                                dislike_counter
+                                class="inline-block ml-2 text-gray-400 group-hover:text-red-600"
+                            >
+                                {{ like_dislike_2.qt_dislikes }}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <small
+                        message
+                        class="table mx-auto invisible pl-1"
+
+                        {% if request.COOKIES.like_dislike_2 %}
+                            style="visibility: visible;"
+                        {% endif %}
+                    >
+                        {% translate 'Thanks for the feedback' %}
+                        <span class="text-lg">&#128516;</span>
+                    </small>
+                </div>
             </section>
 
             <section id="gerontology-section">
                 <hr class="mx-6 mt-8 border-none h-0.5 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50"/>
 
-                <h2 class="text-center text-2xl my-8 sm:text-left sm:text-3xl">
+                <h2 class="text-center text-2xl my-8 md:text-left sm:text-3xl">
                     {% translate 'What is gerontology?' %}
                 </h2>
 
-                <p class="indent-12">
-                    <img 
-                        src="{% static 'users/_img/my-work/elderly walking.webp' %}" 
-                        alt="{% translate 'Elderly couple walking' %}"
-                        class="w-full md:mx-2 md:max-w-xs sm:float-right lg:max-w-sm"
-                    >
-                    {% lorem 500 w random %}
+                <img 
+                    src="{% static 'users/_img/my-work/elderly walking.webp' %}" 
+                    alt="{% translate 'Elderly couple walking' %}"
+                    class="p-2 shadow-lg border border-gray-200 object-cover size-64 mx-auto mb-4 sm:mb-0 sm:float-right sm:mx-2 sm:mt-1 object-right"
+                >
+
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Every day we see the number of elderly people growing worldwide and, consequently, there is a need for understand and adapt to this reality. Based on this, Gerontology is the science that studies human aging and old age in different aspects (biological, psychological, social and others). In other words, it is a scientific and professional field whose purpose is to obtain a description and explanation of the aging process. By its nature, it involves questions from several disciplines.
+                    {% endblocktranslate %}
                 </p>
-            </section>
 
-            <section id="SE-section">
-                <hr class="mx-6 mt-8 border-none h-0.5 bg-gradient-to-r from-gray-50 via-gray-300 to-gray-50"/>
+                <p class="indent-12 text-lg text-justify">
+                    {% blocktranslate trimmed %}
+                        Because it is multidisciplinary, professionals in this area have diverse qualifications such as Nursing, Psychology, Social Work, Nutrition, Law, etc. In the professional area, Gerontology aims to guarantee the best possible quality of life for the elderly and the Gerontologist's work covers prevention, adaptation, rehabilitation and palliative care.
+                    {% endblocktranslate %}
+                </p>
 
-                <h2 class="text-center text-2xl my-8 sm:text-left sm:text-3xl">
-                    {% translate 'What is Somatic Experience?' %}
-                </h2>
-
-                <p class="indent-12">
-                    <img 
-                        src="{% static 'users/_img/my-work/bengal-tiger.webp' %}" 
-                        alt="{% translate 'Somatic Experience tiger' %}"
-                        class="w-full md:mx-2 md:max-w-xs sm:float-right lg:max-w-sm"
-                    >
-                    {% lorem 500 w random %}
+                <p class="indent-12 text-lg text-justify mb-4">
+                    {% blocktranslate trimmed %}
+                        In prevention, the professional proposes educational actions that seek to guide the elderly so that the best conditions are created for quality aging. In the setting, guidance is provided and the creation of better environmental conditions in the spaces where the elderly circulate. Rehabilitation proposes interventions aimed at improving physical, emotional or social conditions. Palliative care is necessary when elderly people have progressive and irreversible illnesses, seeking well-being and dignity in their lives.
+                    {% endblocktranslate %}
                 </p>
             </section>
         </div>
@@ -128,5 +397,5 @@
 {% endblock %}
 
 {% block footer %}
-{{ block.super }}
+    {{ block.super }}
 {% endblock %}

@@ -16,13 +16,20 @@ class CustomUserManager(BaseUserManager):
         other_fields.setdefault('is_superuser', True)
         return self.create_user(email, password, **other_fields)
 
-
-
 class User(AbstractBaseUser, PermissionsMixin):
     # Os campos password, last_login, is_superuser são criados automaticamente do AbstractBaseUser
-    id = models.AutoField(auto_created=True, primary_key=True, verbose_name='ID')
+    id = models.AutoField(
+        auto_created=True,
+        primary_key=True,
+        verbose_name='ID'
+    )
+
     email = models.EmailField(
-        unique=True, max_length=100, blank=False, null=False, db_index=True
+        unique=True,
+        max_length=100,
+        blank=False,
+        null=False,
+        db_index=True
     )
 
     objects = CustomUserManager()
@@ -58,3 +65,40 @@ class CustomPermission(Permission):
         proxy = True
         verbose_name = 'permissão'
         verbose_name_plural = 'permissões'
+
+
+class LikeDislikeCounter(models.Model):
+    id = models.AutoField(
+        auto_created=True,
+        primary_key=True,
+        verbose_name='ID'
+    )
+
+    description = models.TextField(
+        verbose_name='descrição',
+        blank=False,
+        null=False,
+    )
+
+    qt_likes = models.PositiveBigIntegerField(
+        verbose_name='quantidade de likes',
+        default=0,
+        blank=False,
+        null=False
+    )
+
+    qt_dislikes = models.PositiveBigIntegerField(
+        verbose_name='quantidade de dislikes',
+        default=0,
+        blank=False,
+        null=False
+    )
+
+    class Meta:
+        managed = True
+        db_table = 'like_counter'
+        verbose_name = 'contador de like/dislike'
+        verbose_name_plural = 'contador de likes/deslikes'
+
+    def __str__(self):
+        return self.description

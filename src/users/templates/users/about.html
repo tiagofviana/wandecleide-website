@@ -5,6 +5,10 @@
     {% translate "About"%}
 {% endblock title %}
 
+{% block meta_description %}{% blocktranslate trimmed %}
+    Read about my academic education, complementary education and professional activity.
+{% endblocktranslate %}{% endblock %}
+
 {% block extra_head %}
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">

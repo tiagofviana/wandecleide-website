@@ -5,6 +5,10 @@
     {% translate "My work"%}
 {% endblock %}
 
+{% block meta_description %}{% blocktranslate trimmed %}
+    Read more about my area of expertise. Covering topics such as psychotraumatology, Somatic Experience® (SE™) and gerontology.
+{% endblocktranslate %}{% endblock %}
+
 {% block extra_head %}
     <script src="{% static 'users/_js/my-work.js' %}" defer></script>
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">

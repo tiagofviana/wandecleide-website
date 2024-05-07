@@ -14,10 +14,10 @@
     <link rel="manifest" href="{% static 'core/favicons/site.webmanifest' %}">
     <!-- SEO -->
     <title>{% block title %}Wandecleide SE{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}{% translate 'Wandecleide Lucena Fernandes é uma profissional especializada em...' %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://{{ request.get_host }}{{ request.path }}" />
-    <!-- Css and Js --> 
+    <!-- Css and Js -->
     <link rel="stylesheet" type="text/css" href="{% static 'core/_css/tailwind/output.css' %}" />
     <script src="{% static 'core/_js/menu.js' %}" defer></script>
     {% block extra_head %}{% endblock extra_head %}

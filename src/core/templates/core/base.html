@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static i18n %}
+{% load static i18n core %}
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
@@ -45,12 +45,20 @@
                 {% include "core/components/menu-language-selector.html" %}
                 
                 <input type="checkbox" id="menu__hamburguer__checkbox" class="hidden">
+
                 <ul id="menu__list">
-                    <li><a href="{% url 'users:index' %}">{% translate "Home" %}</a></li>
-                    <li><a href="{% url 'users:about' %}">{% translate "About" %}</a></li>
-                    <li><a href="{% url 'users:my-work' %}">{% translate "My work" %}</a></li>
-                    <li><a href="#">{% translate "Testimonials" %}</a></li>
-                    <li><a href="{% url 'users:contact' %}">{% translate "Contact" %}</a></li>
+                    {% menu_list_items as MENU_LIST_ITEMS %}
+                    {% for name, url in MENU_LIST_ITEMS %}
+                        {% if url != request.path  %}
+                            <li>
+                                <a href="{{ url }}"> {{ name }} </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a aria-disabled="true" href="#"> {{ name }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
                 
                 <label id="menu__hamburguer" for="menu__hamburguer__checkbox">

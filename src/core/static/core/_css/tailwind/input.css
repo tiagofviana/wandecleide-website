@@ -37,9 +37,9 @@
 
     #menu__list { 
         /* small */
-        @apply flex flex-col flex-nowrap absolute z-30 top-20 right-4 shadow bg-white rounded;
+        @apply flex flex-col flex-nowrap absolute z-30 top-20 right-4 shadow-lg bg-white rounded;
         /* middle */
-        @apply lg:flex-row lg:static lg:shadow-transparent lg:bg-transparent;
+        @apply lg:flex-row lg:static lg:shadow-none lg:bg-transparent;
 
         & > li:not(:last-of-type) {
             @apply h-full border-b border-gray-200;
@@ -52,7 +52,12 @@
             @apply h-full flex items-center justify-center px-4 py-2 text-gray-400 text-xl hover:text-gray-950 font-semibold font-default xl:px-6;
             /* middle */
             @apply lg:py-0;
-        } 
+        }
+
+
+        & > li > a[aria-disabled="true"]{
+            @apply cursor-default text-gray-950;
+        }
     }
 
     #menu__hamburguer__checkbox:checked ~ #menu__list

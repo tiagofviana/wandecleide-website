@@ -173,6 +173,7 @@ EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
+EMAIL_SUPPORT = os.environ['EMAIL_SUPPORT']
 # A list of all the administrators who get code error notifications.
 ADMINS = getaddresses([os.environ.get('DJANGO_ADMINS', default=None)])
 

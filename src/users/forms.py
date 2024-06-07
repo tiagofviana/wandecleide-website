@@ -126,5 +126,5 @@ class ContactForm(forms.Form):
         self.EmailThread(
             subject='Contact',
             html_message=html_message,
-            recipient_list=[settings.ADMINS[0]],  # First admin
+            recipient_list=[settings.EMAIL_SUPPORT],
         ).start()

@@ -86,7 +86,7 @@
     
     .btn
     {
-        @apply table no-underline uppercase tracking-wider leading-normal px-4 py-2 text-sm cursor-pointer relative rounded font-bold border text-center;
+        @apply table no-underline uppercase tracking-wider leading-normal px-4 py-2 text-sm cursor-pointer relative rounded font-bold border text-center shadow-md;
     }
 
     .btn-primary

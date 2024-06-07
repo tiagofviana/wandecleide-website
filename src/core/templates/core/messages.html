@@ -1,5 +1,5 @@
 {% extends 'core/base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}Mensagem{% endblock %}
 
@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="flex flex-col items-center justify-between min-h-screen pb-12">
-        <div class="max-w-2xl w-1/4 flex flex-col justify-center items-center py-2">
+        <div class=" max-w-2xl p-2 mt-4 flex flex-col justify-center items-center">
             {% for message in messages %}
                 {% if message.tags == "success" %}
 
@@ -43,8 +43,9 @@
                 {% endif %}
 
             {% empty %}
-                <div class="mt-4 w-full">
-                    {% include "core/components/messages/warning.html" with message='Você não possui nenhuma mensagem' %}
+                <div class="mt-4 w-full bg-red-300">
+                    {% translate "You don't have any messages" as DEFAULT_MESSAGE %}
+                    {% include "core/components/messages/warning.html" with message=DEFAULT_MESSAGE %}
                 </div>
             {% endfor %}    
         </div>

@@ -1,0 +1,290 @@
+{% extends 'core/base.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% translate "Books"%}
+{% endblock title %}
+
+{% block meta_description %}{% blocktranslate trimmed %}
+    Check out the books I had the honor of co-authoring, in which I talk about my professional experiences.
+{% endblocktranslate %}{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/_css/books.css' %}" />
+{% endblock extra_head %}
+
+{% block content %}
+    <section>
+        <h1 class="block text-center text-4xl font-black bg-clip-text text-gray-700 py-10 px-10 uppercase">
+            {% translate "Books" %}
+        </h1>
+
+        <p class="text-lg text-justify max-w-7xl px-6 mx-auto lg:text-center">
+            {% blocktranslate trimmed %}
+                Below are the books I had the honor of co-authoring. In them I describe the various experiences that have enriched me as a person and professional, including my greatest passion: working with Post Traumatic Stress Disorder (PTSD) from the office to my doctorate.
+            {% endblocktranslate %}
+        </p>
+
+        <div 
+            class="grid grid-flow-row grid-cols-1 gap-y-16 gap-x-10 px-4 mx-auto mt-10 lg:grid-cols-2 max-w-7xl"
+        >
+            <figure class="flex flex-col-reverse sm:flex-row">
+                <div class="relative h-64 min-w-40 w-40 self-center book">
+                    <div class="inner-book">
+                        <div class="front mt-6 sm:mt-0">
+                            <img 
+                                src="{% static 'users/_img/about/books/book_6.webp' %}"
+                                alt="{% translate 'Cover of the book Knowledge in the Competence of Theory and Practice in Nursing 3' %}"
+                                class="object-cover"
+                                style="object-position: -4px 0"
+                            />
+                            <span></span>
+                        </div>
+                        
+                        <div class="page one"></div>
+                        <div class="page two"></div>
+                        <div class="page three"></div>
+                        <div class="page four"></div>
+                        <div class="page five"></div>
+                        <img 
+                            src="{% static 'users/_img/about/books/book_6.webp' %}"
+                            alt="{% translate 'Cover of the book Knowledge in the Competence of Theory and Practice in Nursing 3' %}"
+                            class="absolute top-0 w-full h-full object-cover back"
+                            style="object-position: -4px 0"
+                        />
+                    </div>
+                </div>
+
+                <figcaption class="px-2 pt-4">
+                    <h2 class="text-blue-800 text-2xl font-bold text-center sm:text-xl sm:text-start">
+                        {% translate "Knowledge in the Competence of Theory and Practice in Nursing 3" %}
+                    </h2>
+
+                    <p class="text-lg text-justify lg:max-w-96">
+                        {% blocktranslate trimmed %}
+                            I contributed to the chapter "<strong>Stress acquired in the workplace: treatment with Somatic</strong>" (page 273)
+                        {% endblocktranslate %}
+                    </p>
+
+                    <a 
+                        href="{% static 'users/_pdf/about/book.pdf' %}"
+                        target="_blank"
+                        class="btn btn-primary mx-auto mt-2"
+                    >
+                        {% translate "Download" %}
+                        <i class="fa-solid fa-arrow-down text-sm pl-1"></i>
+                    </a>
+                </figcaption>
+            </figure>
+
+            <figure class="flex flex-col-reverse sm:flex-row">
+                <div class="relative h-64 min-w-40 w-40 self-center book">
+                    <div class="inner-book">
+                        <div class="front mt-6 sm:mt-0">
+                            <img 
+                                src="{% static 'users/_img/about/books/book_3.webp' %}"
+                                alt="{% translate 'Cover of the book Work, Health and Safety: a collection of experiences' %}"
+                                class="object-cover"
+                                style="object-position: -5px 0"
+                            />
+                            <span></span>
+                        </div>
+                        
+                        <div class="page one"></div>
+                        <div class="page two"></div>
+                        <div class="page three"></div>
+                        <div class="page four"></div>
+                        <div class="page five"></div>
+                        <img 
+                            src="{% static 'users/_img/about/books/book_3.webp' %}"
+                            alt="{% translate 'Cover of the book Work, Health and Safety: a collection of experiences' %}"
+                            class="absolute top-0 w-full h-full object-cover back"
+                            style="object-position: -5px 0"
+                        />
+                    </div>
+                </div>
+
+                <figcaption class="px-2 pt-4">
+                    <h2 class="text-blue-800 text-2xl font-bold text-center sm:text-xl sm:text-start">
+                        {% translate "Work, Health and Safety: a collection of experiences" %}
+                    </h2>
+
+                    <p class="text-lg text-justify lg:max-w-96">
+                        {% blocktranslate trimmed %}
+                            I contributed to the chapter "<strong>Somatic Experiencing® and the approach to neuroscience in worker care</strong>" (page 25)
+                        {% endblocktranslate %}
+                    </p>
+                </figcaption>
+            </figure>
+            
+            <figure class="flex flex-col-reverse sm:flex-row">
+                <div class="relative h-64 min-w-40 w-40 self-center book">
+                    <div class="inner-book">
+                        <div class="front mt-6 sm:mt-0">
+                            <img 
+                                src="{% static 'users/_img/about/books/book_1.webp' %}"
+                                alt="{% translate 'Cover of the book Psychotherapy Practices and Resilience: Dialogues with Somatic Experience' %}"
+                                class="object-cover"
+                                style="object-position: -6px 0"
+                            />
+                            <span></span>
+                        </div>
+                        
+                        <div class="page one"></div>
+                        <div class="page two"></div>
+                        <div class="page three"></div>
+                        <div class="page four"></div>
+                        <div class="page five"></div>
+                        <img 
+                            src="{% static 'users/_img/about/books/book_1.webp' %}"
+                            alt="{% translate 'Cover of the book Psychotherapy Practices and Resilience: Dialogues with Somatic Experience' %}"
+                            class="absolute top-0 w-full h-full object-cover back"
+                            style="object-position: -6px 0"
+                        />
+                    </div>
+                </div>
+
+                <figcaption class="px-2 pt-4">
+                    <h2 class="text-blue-800 text-2xl font-bold text-center sm:text-xl sm:text-start">
+                        {% translate "Psychotherapy Practices and Resilience: Dialogues with Somatic Experience" %}
+                    </h2>
+
+                    <p class="text-lg text-justify lg:max-w-96">
+                        {% blocktranslate trimmed %}
+                            I contributed to the chapter "<strong>Driving Phobia: Trauma Resolution through Somatic Experiencing</strong>" (page 197)
+                        {% endblocktranslate %}
+                    </p>
+                </figcaption>
+            </figure>
+
+            <figure class="flex flex-col-reverse sm:flex-row">
+                <div class="relative h-64 min-w-40 w-40 self-center book">
+                    <div class="inner-book">
+                        <div class="front mt-6 sm:mt-0">
+                            <img 
+                                src="{% static 'users/_img/about/books/book_2.webp' %}"
+                                alt="{% translate 'Cover of the book Extended Dialogues with Somatic Experience' %}"
+                                class="object-cover"
+                                style="object-position: -11px 0"
+                            />
+                            <span></span>
+                        </div>
+                        
+                        <div class="page one"></div>
+                        <div class="page two"></div>
+                        <div class="page three"></div>
+                        <div class="page four"></div>
+                        <div class="page five"></div>
+                        <img 
+                            src="{% static 'users/_img/about/books/book_2.webp' %}"
+                            alt="{% translate 'Cover of the book Extended Dialogues with Somatic Experience' %}"
+                            class="absolute top-0 w-full h-full object-cover back"
+                            style="object-position: -11px 0"
+                        />
+                    </div>
+                </div>
+
+                <figcaption class="px-2 pt-4">
+                    <h2 class="text-blue-800 text-2xl font-bold text-center sm:text-xl sm:text-start">
+                        {% translate "Extended Dialogues with Somatic Experience (SE®)" %}
+                    </h2>
+
+                    <p class="text-lg text-justify lg:max-w-96">
+                        {% blocktranslate trimmed %}
+                            I contributed to the chapters "<strong>Somatic Experience as an adjuvant therapy in psychiatric treatment with conventional pharmacology</strong>" (page 229) and "<strong>Somatic Experiencing: a new treatment method in workers' health</strong>" (page 251)
+                        {% endblocktranslate %}
+                    </p>
+                </figcaption>
+            </figure>
+
+            <figure class="flex flex-col-reverse sm:flex-row">
+                <div class="relative h-64 min-w-40 w-40 self-center book">
+                    <div class="inner-book">
+                        <div class="front mt-6 sm:mt-0">
+                            <img 
+                                src="{% static 'users/_img/about/books/book_5.webp' %}"
+                                alt="{% translate 'Cover of the book Dialogues About Drug Addiction: experiences in combating chemical dependency' %}"
+                                class="object-cover"
+                                style="object-position: -16px 0"
+                            />
+                            <span></span>
+                        </div>
+                        
+                        <div class="page one"></div>
+                        <div class="page two"></div>
+                        <div class="page three"></div>
+                        <div class="page four"></div>
+                        <div class="page five"></div>
+                        <img 
+                            src="{% static 'users/_img/about/books/book_5.webp' %}"
+                            alt="{% translate 'Cover of the book Dialogues About Drug Addiction: experiences in combating chemical dependency' %}"
+                            class="absolute top-0 w-full h-full object-cover back"
+                            style="object-position: -15px 0"
+                        />
+                    </div>
+                </div>
+
+                <figcaption class="px-2 pt-4">
+                    <h2 class="text-blue-800 text-2xl font-bold text-center sm:text-xl sm:text-start">
+                        {% translate "Dialogues About Drug Addiction: experiences in combating chemical dependency" %}
+                    </h2>
+
+                    <p class="text-lg text-justify lg:max-w-96">
+                        {% blocktranslate trimmed %}
+                            I contributed to the chapter "<strong>The organic self-regulation of workers who work with drug addicts and alcoholics: a look through biodanza</strong>" (page 195)
+                        {% endblocktranslate %}
+                    </p>
+                </figcaption>
+            </figure>
+
+            <figure class="flex flex-col-reverse sm:flex-row">
+                <div class="relative h-64 min-w-40 w-40 self-center book">
+                    <div class="inner-book">
+                        <div class="front mt-6 sm:mt-0">
+                            <img 
+                                src="{% static 'users/_img/about/books/book_4.webp' %}"
+                                alt="{% translate 'Cover of the book Drug Addiction: Prevention and Intervention' %}"
+                                class="object-cover"
+                                style="object-position: -16px 0"
+                            />
+                            <span></span>
+                        </div>
+                        
+                        <div class="page one"></div>
+                        <div class="page two"></div>
+                        <div class="page three"></div>
+                        <div class="page four"></div>
+                        <div class="page five"></div>
+                        <img 
+                            src="{% static 'users/_img/about/books/book_4.webp' %}"
+                            alt="{% translate 'Cover of the book Drug Addiction: Prevention and Intervention' %}"
+                            class="absolute top-0 w-full h-full object-cover back"
+                            style="object-position: -16px 0"
+                        />
+                    </div>
+                </div>
+
+                <figcaption class="px-2 pt-4">
+                    <h2 class="text-blue-800 text-2xl font-bold text-center sm:text-xl sm:text-start">
+                        {% translate "Drug Addiction: Prevention and Intervention" %}
+                    </h2>
+
+                    <p class="text-lg text-justify lg:max-w-96">
+                        {% blocktranslate trimmed %}
+                            I contributed to the chapter "<strong>Clinical Biodanza: the affective-motor integration process of a group of drug addicts</strong>" (page 173)
+                        {% endblocktranslate %}
+                    </p>
+                </figcaption>
+            </figure>
+        </div>  
+    </section>
+{% endblock %}
+
+
+{% block footer %}
+    <div class="pt-10">
+        {{ block.super }}
+    </div>
+{% endblock %}

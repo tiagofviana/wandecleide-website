@@ -20,5 +20,6 @@ def menu_list_items() -> tuple:
         (_('Home'), reverse('users:index')),
         (_('About'), reverse('users:about')),
         (_('My work'), reverse('users:my-work')),
+        (_('Books'), reverse('users:books')),
         (_('Contact'), reverse('users:contact')),
     )

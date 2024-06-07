@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 14:47-0300\n"
+"POT-Creation-Date: 2024-06-07 16:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,19 +47,28 @@ msgstr ""
 "Não se preocupe, um relatório de erro foi enviado para a nossa equipe, nós "
 "resolveremos o problema o quanto antes."
 
-#: .\core\templatetags\core.py:21
+#: .\core\templates\core\messages.html:47
+msgid "You don't have any messages"
+msgstr "Você não possui nenhuma mensagem"
+
+#: .\core\templatetags\core.py:20
 msgid "Home"
 msgstr "Início"
 
-#: .\core\templatetags\core.py:22 .\users\templates\users\about.html:5
+#: .\core\templatetags\core.py:21 .\users\templates\users\about.html:5
 msgid "About"
 msgstr "Sobre"
 
-#: .\core\templatetags\core.py:23 .\users\templates\users\index.html:111
+#: .\core\templatetags\core.py:22 .\users\templates\users\index.html:110
 #: .\users\templates\users\my-work.html:5
 #: .\users\templates\users\my-work.html:41
 msgid "My work"
 msgstr "Meu trabalho"
+
+#: .\core\templatetags\core.py:23 .\users\templates\users\books.html:5
+#: .\users\templates\users\books.html:21
+msgid "Books"
+msgstr "Livros"
 
 #: .\core\templatetags\core.py:24 .\users\templates\users\contact.html:5
 msgid "Contact"
@@ -113,7 +122,7 @@ msgstr ""
 "Leia sobre a minha formação acadêmica, formação complementar e atividade "
 "profissional."
 
-#: .\users\templates\users\about.html:23 .\users\templates\users\index.html:96
+#: .\users\templates\users\about.html:23 .\users\templates\users\index.html:95
 msgid "About myself"
 msgstr "Sobre mim"
 
@@ -231,302 +240,163 @@ msgstr "Formação Complementar"
 
 #: .\users\templates\users\about.html:210
 msgid ""
-"Public Health Nursing. (Working hours: 30h). Achilles Leal Study Center "
-"(CEAL), Brazil."
+"Kindness Program: Integral Mindfulness and Emotional Harmony (Working hours: "
+"252h). Instituto de Ciência Contemplativa do Brasil (ICC), Brazil."
 msgstr ""
-"Enfermagem em Saúde Pública. (Carga horária: 30h). Centro de Estudos "
-"Achilles Leal (CEAL), Brasil."
+"Programa de Kindfulness: Mindfulness Integral e Harmonia Emocional (Carga "
+"horária: 252h). Instituto de Ciência Contemplativa do Brasil (ICC), Brasil."
 
 #: .\users\templates\users\about.html:230
 msgid ""
-"University Extension in Macroscopic Anatomy of the Nervous System (Working "
-"hours: 30h). Santa Emilia de Rodat Nursing School (EESER), Brazil."
+"Training in Family Constellation (Working hours: 90h). UNIPAZ - Pernanbuco "
+"(UNIPAZ), Brazil."
 msgstr ""
-"Extensão Universitária em Anatomia Macroscópica do Sistema Nervoso (Carga "
-"horária: 30h). Escola de Enfermagem Santa Emilia de Rodat (EESER), Brasil."
+"Treinamento em Constelação Familiar (Carga horária: 90h). UNIPAZ - "
+"Pernanbuco (UNIPAZ), Brasil."
 
 #: .\users\templates\users\about.html:250
 msgid ""
-"VI National Update Course in Endocrinology (Working hours: 32h). Sandoz "
-"Research (PS), Brazil."
+"Integral Somatic Psychology Professional Training Module 1 (Working hours: "
+"74h). Integral Somatic Psychology (ISP), Brazil."
 msgstr ""
-"VI Curso Nacional de Atualização em Endocrinologia (Carga horária: 32h). "
-"Pesquisa Sandoz (PS), Brasil."
+"Integral Somatic Psychology Professional Training Module 1 (Carga horária: "
+"74h). Integral Somatic Psychology (ISP), Brasil."
 
-#: .\users\templates\users\about.html:270
+#: .\users\templates\users\about.html:258
 msgid ""
-"Management/Leadership Human Relations Course (Working hours: 20h). National "
-"Commercial Learning Service (SENAC), Brazil."
+"Enneaframa-Psychology of Enneatypes-Initial Diagnosis (Working hours: 20h). "
+"FUNDACION CLAUDIO NARANJO (FCN), Brazil."
 msgstr ""
-"Curso de Relações Humanas de Chefia/Liderança (Carga horária: 20h). Serviço "
-"Nacional de Aprendizagem Comercial (SENAC), Brasil."
+"Eneaframa-Psicologia dos Eneatipos-Diagnóstico Inicial (Carga horária: 20h). "
+"FUNDACION CLAUDIO NARANJO (FCN), Brasil."
 
 #: .\users\templates\users\about.html:278
 msgid ""
-"Update to Assistant Nurse (Working hours: 54h). Dr. Francisco Porto Study "
-"Center (CEFP), Brazil."
+"In-depth Course in Biodanza (Working hours: 18h). Museum of Afro-Brazilian "
+"Arts and Biodanza School of Pernanbuco (AARTB), Brazil."
 msgstr ""
-"Atualização para Enfermeiro Assistencial (Carga horária: 54h). Centro de "
-"Estudos Dr. Francisco Porto (CEFP), Brasil."
+"Curso de Aprofundamento em Biodanza (Carga horária: 18h). Museu de Artes "
+"Afro-Brsileira e Escola de Biodanza de Pernanbuco (AARTB), Brasil."
 
-#: .\users\templates\users\about.html:298
+#: .\users\templates\users\about.html:286
 msgid ""
-"Technical Training for Nurses in the STD Area (Working hours: 200h). State "
-"Department of Health - PB (SES - PB), Brazil."
+"HOW TO MAKE THE INVISIBLE VISIBLE (Working hours: 16h). INTELECTUS - "
+"Training and Courses (ITC), Brazil."
 msgstr ""
-"Capacitação Técnica para Enfermeiros na Área de DST (Carga horária: 200h). "
-"Secretaria de Estado da Saúde - PB (SES - PB), Brasil."
+"COMO TORNAR VISÍVEL O INVISÍVEL (Carga horária: 16h). INTELECTUS - "
+"Treinamento e Cursos (ITC), Brasil."
 
-#: .\users\templates\users\about.html:318
+#: .\users\templates\users\about.html:294
 msgid ""
-"Introductory Course for Nurses (Working hours: 40h). Superintendency of "
-"Human Resources (SRH - UFPB), Brazil."
+"The Biodanza Process and Neurosciences (Working hours: 72h). Escola de "
+"Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brazil."
 msgstr ""
-"Curso Introdutório para Enfermeiros (Carga horária: 40h). Superintendência "
-"de Recursos Humanos (SRH - UFPB), Brasil."
+"O Processo da Biodanza e as Neurociências (Carga horária: 72h). Escola de "
+"Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brasil."
 
-#: .\users\templates\users\about.html:338
+#: .\users\templates\users\about.html:314
 msgid ""
-"Development of administrative skills (Working hours: 20h). Lauro Wanderley "
-"University Hospital (HU - UFPB), Brazil."
+"Scientific article: from preparation to submission (Working hours: 30h). "
+"Científica Saúde (CS), Brazil."
 msgstr ""
-"Desenvolvimento das habilidades administrativas (Carga horária: 20h). "
-"Hospital Universitário Lauro Wanderley (HU - UFPB), Brasil."
+"Artigo científico: da elaboração à submissão (Carga horária: 30h). "
+"Científica Saúde (CS), Brasil."
 
-#: .\users\templates\users\about.html:358
+#: .\users\templates\users\about.html:334
 msgid ""
-"Quality in Customer Service (Working hours: 20h). Superintendency of Human "
-"Resources (SRH - UFPB), Brazil."
+"Cardiovascular biofeedback (Working hours: 8h). CardioEmotion (C.E), Brazil."
 msgstr ""
-"Qualidade no Atendimento ao Público (Carga horária: 20h). Superintendência "
-"de Recursos Humanos (SRH - UFPB), Brasil."
+"Biofeedback cardiovascular (Carga horária: 8h). CardioEmotion (C.E), Brasil."
 
-#: .\users\templates\users\about.html:366
+#: .\users\templates\users\about.html:354
 msgid ""
-"Advanced Life Support Course for Nurses (Working hours: 20h). Lauro "
-"Wanderley University Hospital (HU - UFPB), Brazil."
+"Free Cardiac Coherence Course. (Working hours: 20h). Coherence Space (EC), "
+"Brazil."
 msgstr ""
-"Curso Suporte Avançado de Vida para Enfermeiros (Carga horária: 20h). "
-"Hospital Universitário Lauro Wanderley (HU - UFPB), Brasil."
+"Curso Livre de Coerência Cardíac. (Carga horária: 20h). Espaço Coerência "
+"(EC), Brasil."
 
-#: .\users\templates\users\about.html:386
+#: .\users\templates\users\about.html:362
 msgid ""
-"TRAINING AND QUALIFICATION OF HUMAN RESOURCES (Working hours: 90h). Federal "
-"University of Paraíba (UFPB), Brazil."
+"Use of cardiofeedback in psychology (Working hours: 14h). Espaço Trauma (E."
+"A), Brazil."
 msgstr ""
-"CAPACITAÇÃO E QUALIFICAÇÃO DE RECURSOS HUMANOS DE (Carga horária: 90h). "
+"Uso de cardiofeedback em psicologia (Carga horária: 14h). Espaço Trauma (E."
+"A), Brasil."
+
+#: .\users\templates\users\about.html:370
+msgid ""
+"DISCOURSE ANALYSIS AS A RESEARCH METHODOLOGY (Working hours: 12h). Federal "
+"University of Rio Grande do Norte (UFRN), Brazil."
+msgstr ""
+"ANÁLISE DO DISCURSO COMO METODOLOGIA DE PESQUISA (Carga horária: 12h). "
+"Universidade Federal do Rio Grande do Norte (UFRN), Brasil."
+
+#: .\users\templates\users\about.html:378
+msgid ""
+"University extension in Natural and Holistic Therapies (Working hours: "
+"1370h). State University of Paraíba (UEPB), Brazil."
+msgstr ""
+"Extensão universitária em Terapias Naturais e Holísticas (Carga horária: "
+"1370h). Universidade Estadual da Paraíba (UEPB), Brasil."
+
+#: .\users\templates\users\about.html:398
+msgid ""
+"Somatic Experiencing® Practitioner (SEP) (Working hours: 216h). Somatic "
+"Experiencing® Trauma Institute (SETI), United States."
+msgstr ""
+"Somatic Experiencing® Practitioner (SEP) (Carga horária: 216h). Somatic "
+"Experiencing® Trauma Institute (SETI), Estados Unidos."
+
+#: .\users\templates\users\about.html:418
+msgid ""
+"PROFESSIONAL TRAINING COURSE IN NATURAL THERAPIES (Working hours: 1370h). "
+"Union of Therapists of the State of Paraíba (SINTE-PB), Brazil."
+msgstr ""
+"CURSO DE FORMAÇÃO PROFISSIONAL EM TERAPIAS NATURAIS (Carga horária: 1370h). "
+"Sindicato dos Terapeutas do Estado da Paraíba (SINTE-PB), Brasil."
+
+#: .\users\templates\users\about.html:426
+msgid ""
+"Government Actions in Public Health Policies (Working hours: 30h). Federal "
+"Nursing Council (COFEN), Brazil."
+msgstr ""
+"Ações Governamentais em Politicas Públicas de Saúde (Carga horária: 30h). "
+"Conselho Federal de Enfermagem (COFEN), Brasil."
+
+#: .\users\templates\users\about.html:434
+msgid ""
+"Preparation of scientific articles for review. (Working hours: 5h). American "
+"University (UA), Paraguay."
+msgstr ""
+"Elaboración de artículos científicos para las revi. (Carga horária: 5h). "
+"Universidad Americana (UA), Paraguai."
+
+#: .\users\templates\users\about.html:454
+msgid ""
+"HEALING TRAUMA BY AWAKENING SPIRITUALITY (Working hours: 15h). INSTITUTE THE "
+"HUMANENRICHMENT (ITH), United States."
+msgstr ""
+"A CURA DO TRAUMA DESPERTANDO A ESPIRITUALIDADE (Carga horária: 15h). "
+"INSTITUTE THE HUMANENRICHMENT (ITH), Estados Unidos."
+
+#: .\users\templates\users\about.html:462
+msgid ""
+"II COURSE AND CONFERENCES IN NEUROSCIENCES AND BEHAVIOR (Working hours: "
+"40h). Federal University of Paraíba (UFPB), Brazil."
+msgstr ""
+"II CURSO E CONFERENCIAS EM NEUROCIÊNCIAS E COMPORT (Carga horária: 40h). "
 "Universidade Federal da Paraíba (UFPB), Brasil."
 
-#: .\users\templates\users\about.html:406
+#: .\users\templates\users\about.html:470
 msgid ""
-"Overcoming Stress (Working hours: 20h). Superintendency of Human Resources "
-"(SRH - UFPB), Brazil."
+"Client's Emotional and Behavioral Disorders (Working hours: 30h). Federal "
+"Nursing Council (COFEN), Brazil."
 msgstr ""
-"Superação de Estresse (Carga horária: 20h). Superintendência de Recursos "
-"Humanos (SRH - UFPB), Brasil."
+"Distúrbios Emocionais e Comportamentais do Cliente (Carga horária: 30h). "
+"Conselho Federal de Enfermagem (COFEN), Brasil."
 
-#: .\users\templates\users\about.html:414
-msgid ""
-"Mobilizing Teams (Working hours: 9pm). National School of Public "
-"Administration (ENAP), Brazil."
-msgstr ""
-"Mobilizando Equipes (Carga horária: 21h). Escola Nacional de Administração "
-"Pública (ENAP), Brasil."
-
-#: .\users\templates\users\about.html:422
-msgid ""
-"How to speak in public (Working hours: 20h). Superintendency of Human "
-"Resources (SRH - UFPB), Brazil."
-msgstr ""
-"Como falar em Público (Carga horária: 20h). Superintendência de Recursos "
-"Humanos (SRH - UFPB), Brasil."
-
-#: .\users\templates\users\about.html:430
-msgid ""
-"Project Preparation (Working hours: 30h). Superintendency of Human Resources "
-"(SRH - UFPB), Brazil."
-msgstr ""
-"Elaboração de Projetos (Carga horária: 30h). Superintendência de Recursos "
-"Humanos (SRH - UFPB), Brasil."
-
-#: .\users\templates\users\about.html:450
-msgid ""
-"Adelante 8 (Working hours: 285h). Anglo American Cultural Center Ltda "
-"(CCAA), Brazil."
-msgstr ""
-"Adelante 8 (Carga horária: 285h). Anglo American Cultural Center Ltda "
-"(CCAA), Brasil."
-
-#: .\users\templates\users\about.html:458
-msgid ""
-"The Pursuit of Excellence in Citizen Service (Working hours: 25h). National "
-"School of Public Administration (ENAP), Brazil."
-msgstr ""
-"A Busca da Excelência no Atendimento ao Cidadão (Carga horária: 25h). Escola "
-"Nacional de Administração Pública (ENAP), Brasil."
-
-#: .\users\templates\users\about.html:478
-msgid ""
-"TIP Base Course - ADI (Working hours: 16h). Renate Jost de Moraes (RJM), "
-"Brazil"
-msgstr ""
-"Curso de Base TIP - ADI (Carga horária: 16h). Renate Jost de Moraes (RJM), "
-"Brasil"
-
-#: .\users\templates\users\about.html:498
-msgid ""
-"TECHNICAL TRAINING FOR NURSES IN THE AREA OF DO. (Working hours: 200h). "
-"STATE SECRETARIAT OF HEALTH OF PARAÍBA (SES-PB), Brazil."
-msgstr ""
-"CAPACITAÇÃO TÉCNICA PARA ENFERMEIROS NA ÁREA DE DO.(Carga horária: 200h)."
-"SECRETARIA ESTADUAL DE SAÚDE DA PARAÍBA (SES-PB), Brasil."
-
-#: .\users\templates\users\about.html:506
-msgid ""
-"Training for the Public Sector (Working hours: 40h). National School of "
-"Public Administration (ENAP), Brazil."
-msgstr ""
-"Capacitação para o Setor Público (Carga horária: 40h). Escola Nacional de "
-"Administração Pública (ENAP), Brasil."
-
-#: .\users\templates\users\about.html:514
-msgid ""
-"Facilitator, a producer of dreams (Working hours: 8h). Integrated Colleges "
-"of Patos (FIP), Brazil."
-msgstr ""
-"Facilitador, um produtor de sonhos (Carga horária: 8h). Faculdades "
-"Integradas de Patos (FIP), Brasil."
-
-#: .\users\templates\users\about.html:534
-msgid ""
-"Update for UFPB Managers (Working hours: 32h). Superintendency of Human "
-"Resources (SRH - UFPB), Brazil."
-msgstr ""
-"Atualização para Gestores da UFPB (Carga horária: 32h). Superintendência de "
-"Recursos Humanos (SRH - UFPB), Brasil."
-
-#: .\users\templates\users\about.html:542
-msgid ""
-"Ethics and Public Service (Working hours: 10h). National School of Public "
-"Administration (ENAP), Brazil."
-msgstr ""
-"Ética e Serviço Público (Carga horária: 10h). Escola Nacional de "
-"Administração Pública (ENAP), Brasil."
-
-#: .\users\templates\users\about.html:550
-msgid ""
-"PowerPoint (Working hours: 15h). Superintendency of Human Resources (SRH - "
-"UFPB), Brazil."
-msgstr ""
-"PowerPoint (Carga horária: 15h). Superintendência de Recursos Humanos (SRH - "
-"UFPB), Brasil."
-
-#: .\users\templates\users\about.html:558
-msgid ""
-"Strategic People Management and Career Plans (Working hours: 20h). National "
-"School of Public Administration (ENAP), Brazil."
-msgstr ""
-"Gestão Estratégica de Pessoas e Planos de Carreira (Carga horária: 20h). "
-"Escola Nacional de Administração Pública (ENAP), Brasil."
-
-#: .\users\templates\users\about.html:579
-msgid ""
-"Minotauro Project - Challenging Fears (Working hours: 16h). Human Center "
-"(HC), Brazil."
-msgstr ""
-"Projeto Minotauro - Desafiando os Medos (Carga horária: 16h). Humano Center "
-"(HC), Brasil."
-
-#: .\users\templates\users\about.html:587
-msgid ""
-"University Extension in Law No. 8,112/90 Legal Regime for Federal Public "
-"Servants (Working hours: 80h).University of Brasília (UnB), Brazil."
-msgstr ""
-"Extensão Universitária em Lei Nº 8.112/90 Regime Jurídico dos Servidores "
-"Públicos Federal (Carga horária: 80h).Universidade de Brasília (UnB), Brasil."
-
-#: .\users\templates\users\about.html:595
-msgid ""
-"University extension in BIODANZA FACILITATOR (Working hours: 432h). "
-"INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile."
-msgstr ""
-"Extensão universitária em FACILITADOR DE BIODANZA (Carga horária: 432h). "
-"INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile."
-
-#: .\users\templates\users\about.html:615
-msgid ""
-"Resolution Approach. Trauma. - N. Inter. I, II and III (Working hours: 72h). "
-"Association of Somatic Experiencing in Brazil (ASEB), Brazil."
-msgstr ""
-"Abordagem de Resol. Traum. - N. Inter. I, II e III (Carga horária: 72h). "
-"Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
-
-#: .\users\templates\users\about.html:623
-msgid ""
-"EXCELLENCE IN CUSTOMER SERVICE (THEORY AND PRACTICE) (Working load: 30h). "
-"Federal University of Paraíba (UFPB), Brazil."
-msgstr ""
-"EXCELÊNCIA NO ATENDIMENTO AO PÚBLICO (TEORIA E PRÁTICA) (Carga horária: "
-"30h). Universidade Federal da Paraíba (UFPB), Brasil."
-
-#: .\users\templates\users\about.html:631
-msgid ""
-"STRATEGIC PLANNING (THEORY AND PRACTICE) MODULE. (Working hours: 60h). "
-"Federal University of Paraíba (UFPB), Brazil."
-msgstr ""
-"PLANEJAMENTO ESTRATÉGICO (TEORIA E PRÁTICA) MÓDULO. (Carga horária: 60h). "
-"Universidade Federal da Paraíba (UFPB), Brasil."
-
-#: .\users\templates\users\about.html:639
-msgid ""
-"ROUTINE MANAGEMENT (MODULE II) (Working hours: 30h). Federal University of "
-"Paraíba (UFPB), Brazil."
-msgstr ""
-"GESTÃO DA ROTINA (MÓDULO II) (Carga horária: 30h). Universidade Federal da "
-"Paraíba (UFPB), Brasil."
-
-#: .\users\templates\users\about.html:647
-msgid ""
-"Traumatic Resolution Approach - Intermediate Level II (Working hours: 24h). "
-"Association of Somatic Experiencing in Brazil (ASEB), Brazil."
-msgstr ""
-"Abordagem de Resolução Traumática - Nível Intermediário II (Carga horária: "
-"24h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
-
-#: .\users\templates\users\about.html:655
-msgid ""
-"Traumatic Resolution Approach - Intermediate Level I (Working hours: 24h). "
-"Association of Somatic Experiencing in Brazil (ASEB), Brazil."
-msgstr ""
-"Abordagem de Resolução Traumática - Nível Intermediário I (Carga horária: "
-"24h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
-
-#: .\users\templates\users\about.html:675
-msgid ""
-"Traumatic Resolution Approach - Advanced Level I and II (Working hours: "
-"72h). Association of Somatic Experiencing in Brazil (ASEB), Brazil."
-msgstr ""
-"Abordagem de Resolução Traumática - Nível Avançado I e II (Carga horária: "
-"72h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
-
-#: .\users\templates\users\about.html:683
-msgid ""
-"University Extension in Specialization Course in Minotauro Project (Court "
-"load: 90h). Center for Biodanza and Biocentric Activities of PE (CB), Brazil."
-msgstr ""
-"Extensão Universitária em Curso de Especialização em Projeto Minotauro "
-"(Carga horária: 90h). Centro de Biodanza e Atividades Biocêntricas de PE "
-"(CB), Brasil."
-
-#: .\users\templates\users\about.html:691
-msgid ""
-"University Extension in TEACHING PROFESSOR OF BIODANZA (Course load: 180h). "
-"International Biocentric Foundation (IBF), Chile."
-msgstr ""
-"Extensão Universitária em PROFESSOR DIDACTA DE BIODANZA (Carga horária: "
-"180h). International Biocentric Foudation (IBF), Chile."
-
-#: .\users\templates\users\about.html:711
+#: .\users\templates\users\about.html:490
 msgid ""
 "BASIC NEUROSCIENCE COURSE - INTRODUCTION TO THE STUDY (Working hours: 60h). "
 "Federal University of Minas Gerais (UFMG), Brazil."
@@ -534,7 +404,7 @@ msgstr ""
 "CURSO DE NEUROCIÊNCIA BÁSICA - INTRODUÇÃO AO ESTUDO (Carga horária: 60h). "
 "Universidade Federal de Minas Gerais (UFMG), Brasil."
 
-#: .\users\templates\users\about.html:719
+#: .\users\templates\users\about.html:498
 msgid ""
 "University Extension in DRUG ADDICTION: A PROPOSAL FOR PREVENTION, "
 "REHABILITATION (Working hours: 56h). Federal University of Paraíba (UFPB), "
@@ -543,390 +413,308 @@ msgstr ""
 "Extensão Universitária em DROGADIÇÃO: UMA PROPOSTA DE PREVENÇÃO, REABILITAÇÃ "
 "(Carga horária: 56h). Universidade Federal da Paraíba (UFPB), Brasil."
 
-#: .\users\templates\users\about.html:739
+#: .\users\templates\users\about.html:518
 msgid ""
-"HEALING TRAUMA BY AWAKENING SPIRITUALITY (Working hours: 15h). INSTITUTE THE "
-"HUMANENRICHMENT (ITH), United States."
+"Traumatic Resolution Approach - Advanced Level I and II (Working hours: "
+"72h). Association of Somatic Experiencing in Brazil (ASEB), Brazil."
 msgstr ""
-"A CURA DO TRAUMA DESPERTANDO A ESPIRITUALIDADE (Carga horária: 15h). "
-"INSTITUTE THE HUMANENRICHMENT (ITH), Estados Unidos."
+"Abordagem de Resolução Traumática - Nível Avançado I e II (Carga horária: "
+"72h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
 
-#: .\users\templates\users\about.html:747
+#: .\users\templates\users\about.html:526
 msgid ""
-"II COURSE AND CONFERENCES IN NEUROSCIENCES AND BEHAVIOR (Working hours: "
-"40h). Federal University of Paraíba (UFPB), Brazil."
+"University Extension in Specialization Course in Minotauro Project (Court "
+"load: 90h). Center for Biodanza and Biocentric Activities of PE (CB), Brazil."
 msgstr ""
-"II CURSO E CONFERENCIAS EM NEUROCIÊNCIAS E COMPORT (Carga horária: 40h). "
+"Extensão Universitária em Curso de Especialização em Projeto Minotauro "
+"(Carga horária: 90h). Centro de Biodanza e Atividades Biocêntricas de PE "
+"(CB), Brasil."
+
+#: .\users\templates\users\about.html:534
+msgid ""
+"University Extension in TEACHING PROFESSOR OF BIODANZA (Course load: 180h). "
+"International Biocentric Foundation (IBF), Chile."
+msgstr ""
+"Extensão Universitária em PROFESSOR DIDACTA DE BIODANZA (Carga horária: "
+"180h). International Biocentric Foudation (IBF), Chile."
+
+#: .\users\templates\users\about.html:554
+msgid ""
+"Resolution Approach. Trauma. - N. Inter. I, II and III (Working hours: 72h). "
+"Association of Somatic Experiencing in Brazil (ASEB), Brazil."
+msgstr ""
+"Abordagem de Resol. Traum. - N. Inter. I, II e III (Carga horária: 72h). "
+"Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
+
+#: .\users\templates\users\about.html:562
+msgid ""
+"EXCELLENCE IN CUSTOMER SERVICE (THEORY AND PRACTICE) (Working load: 30h). "
+"Federal University of Paraíba (UFPB), Brazil."
+msgstr ""
+"EXCELÊNCIA NO ATENDIMENTO AO PÚBLICO (TEORIA E PRÁTICA) (Carga horária: "
+"30h). Universidade Federal da Paraíba (UFPB), Brasil."
+
+#: .\users\templates\users\about.html:570
+msgid ""
+"STRATEGIC PLANNING (THEORY AND PRACTICE) MODULE. (Working hours: 60h). "
+"Federal University of Paraíba (UFPB), Brazil."
+msgstr ""
+"PLANEJAMENTO ESTRATÉGICO (TEORIA E PRÁTICA) MÓDULO. (Carga horária: 60h). "
 "Universidade Federal da Paraíba (UFPB), Brasil."
 
-#: .\users\templates\users\about.html:755
+#: .\users\templates\users\about.html:578
 msgid ""
-"Client's Emotional and Behavioral Disorders (Working hours: 30h). Federal "
-"Nursing Council (COFEN), Brazil."
+"ROUTINE MANAGEMENT (MODULE II) (Working hours: 30h). Federal University of "
+"Paraíba (UFPB), Brazil."
 msgstr ""
-"Distúrbios Emocionais e Comportamentais do Cliente (Carga horária: 30h). "
-"Conselho Federal de Enfermagem (COFEN), Brasil."
+"GESTÃO DA ROTINA (MÓDULO II) (Carga horária: 30h). Universidade Federal da "
+"Paraíba (UFPB), Brasil."
 
-#: .\users\templates\users\about.html:775
+#: .\users\templates\users\about.html:586
 msgid ""
-"PROFESSIONAL TRAINING COURSE IN NATURAL THERAPIES (Working hours: 1370h). "
-"Union of Therapists of the State of Paraíba (SINTE-PB), Brazil."
+"Traumatic Resolution Approach - Intermediate Level II (Working hours: 24h). "
+"Association of Somatic Experiencing in Brazil (ASEB), Brazil."
 msgstr ""
-"CURSO DE FORMAÇÃO PROFISSIONAL EM TERAPIAS NATURAIS (Carga horária: 1370h). "
-"Sindicato dos Terapeutas do Estado da Paraíba (SINTE-PB), Brasil."
+"Abordagem de Resolução Traumática - Nível Intermediário II (Carga horária: "
+"24h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
 
-#: .\users\templates\users\about.html:783
+#: .\users\templates\users\about.html:594
 msgid ""
-"Government Actions in Public Health Policies (Working hours: 30h). Federal "
-"Nursing Council (COFEN), Brazil."
+"Traumatic Resolution Approach - Intermediate Level I (Working hours: 24h). "
+"Association of Somatic Experiencing in Brazil (ASEB), Brazil."
 msgstr ""
-"Ações Governamentais em Politicas Públicas de Saúde (Carga horária: 30h). "
-"Conselho Federal de Enfermagem (COFEN), Brasil."
+"Abordagem de Resolução Traumática - Nível Intermediário I (Carga horária: "
+"24h). Associação de Somatic Experiencing no Brasil (ASEB), Brasil."
 
-#: .\users\templates\users\about.html:791
+#: .\users\templates\users\about.html:614
 msgid ""
-"Preparation of scientific articles for review. (Working hours: 5h). American "
-"University (UA), Paraguay."
+"Minotauro Project - Challenging Fears (Working hours: 16h). Human Center "
+"(HC), Brazil."
 msgstr ""
-"Elaboración de artículos científicos para las revi. (Carga horária: 5h). "
-"Universidad Americana (UA), Paraguai."
+"Projeto Minotauro - Desafiando os Medos (Carga horária: 16h). Humano Center "
+"(HC), Brasil."
 
-#: .\users\templates\users\about.html:811
+#: .\users\templates\users\about.html:622
 msgid ""
-"Somatic Experiencing® Practitioner (SEP) (Working hours: 216h). Somatic "
-"Experiencing® Trauma Institute (SETI), United States."
+"University Extension in Law No. 8,112/90 Legal Regime for Federal Public "
+"Servants (Working hours: 80h).University of Brasília (UnB), Brazil."
 msgstr ""
-"Somatic Experiencing® Practitioner (SEP) (Carga horária: 216h). Somatic "
-"Experiencing® Trauma Institute (SETI), Estados Unidos."
+"Extensão Universitária em Lei Nº 8.112/90 Regime Jurídico dos Servidores "
+"Públicos Federal (Carga horária: 80h).Universidade de Brasília (UnB), Brasil."
 
-#: .\users\templates\users\about.html:831
+#: .\users\templates\users\about.html:630
 msgid ""
-"Free Cardiac Coherence Course. (Working hours: 20h). Coherence Space (EC), "
-"Brazil."
+"University extension in BIODANZA FACILITATOR (Working hours: 432h). "
+"INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile."
 msgstr ""
-"Curso Livre de Coerência Cardíac. (Carga horária: 20h). Espaço Coerência "
-"(EC), Brasil."
+"Extensão universitária em FACILITADOR DE BIODANZA (Carga horária: 432h). "
+"INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile."
 
-#: .\users\templates\users\about.html:839
+#: .\users\templates\users\about.html:650
 msgid ""
-"Use of cardiofeedback in psychology (Working hours: 14h). Espaço Trauma (E."
-"A), Brazil."
+"Update for UFPB Managers (Working hours: 32h). Superintendency of Human "
+"Resources (SRH - UFPB), Brazil."
 msgstr ""
-"Uso de cardiofeedback em psicologia (Carga horária: 14h). Espaço Trauma (E."
-"A), Brasil."
+"Atualização para Gestores da UFPB (Carga horária: 32h). Superintendência de "
+"Recursos Humanos (SRH - UFPB), Brasil."
 
-#: .\users\templates\users\about.html:847
+#: .\users\templates\users\about.html:658
 msgid ""
-"DISCOURSE ANALYSIS AS A RESEARCH METHODOLOGY (Working hours: 12h). Federal "
-"University of Rio Grande do Norte (UFRN), Brazil."
+"Ethics and Public Service (Working hours: 10h). National School of Public "
+"Administration (ENAP), Brazil."
 msgstr ""
-"ANÁLISE DO DISCURSO COMO METODOLOGIA DE PESQUISA (Carga horária: 12h). "
-"Universidade Federal do Rio Grande do Norte (UFRN), Brasil."
+"Ética e Serviço Público (Carga horária: 10h). Escola Nacional de "
+"Administração Pública (ENAP), Brasil."
 
-#: .\users\templates\users\about.html:855
+#: .\users\templates\users\about.html:666
 msgid ""
-"University extension in Natural and Holistic Therapies (Working hours: "
-"1370h). State University of Paraíba (UEPB), Brazil."
+"PowerPoint (Working hours: 15h). Superintendency of Human Resources (SRH - "
+"UFPB), Brazil."
 msgstr ""
-"Extensão universitária em Terapias Naturais e Holísticas (Carga horária: "
-"1370h). Universidade Estadual da Paraíba (UEPB), Brasil."
+"PowerPoint (Carga horária: 15h). Superintendência de Recursos Humanos (SRH - "
+"UFPB), Brasil."
 
-#: .\users\templates\users\about.html:875
+#: .\users\templates\users\about.html:674
 msgid ""
-"Cardiovascular biofeedback (Working hours: 8h). CardioEmotion (C.E), Brazil."
+"Strategic People Management and Career Plans (Working hours: 20h). National "
+"School of Public Administration (ENAP), Brazil."
 msgstr ""
-"Biofeedback cardiovascular (Carga horária: 8h). CardioEmotion (C.E), Brasil."
+"Gestão Estratégica de Pessoas e Planos de Carreira (Carga horária: 20h). "
+"Escola Nacional de Administração Pública (ENAP), Brasil."
 
-#: .\users\templates\users\about.html:895
+#: .\users\templates\users\about.html:694
 msgid ""
-"Scientific article: from preparation to submission (Working hours: 30h). "
-"Científica Saúde (CS), Brazil."
+"TECHNICAL TRAINING FOR NURSES IN THE AREA OF DO. (Working hours: 200h). "
+"STATE SECRETARIAT OF HEALTH OF PARAÍBA (SES-PB), Brazil."
 msgstr ""
-"Artigo científico: da elaboração à submissão (Carga horária: 30h). "
-"Científica Saúde (CS), Brasil."
+"CAPACITAÇÃO TÉCNICA PARA ENFERMEIROS NA ÁREA DE DO.(Carga horária: 200h)."
+"SECRETARIA ESTADUAL DE SAÚDE DA PARAÍBA (SES-PB), Brasil."
 
-#: .\users\templates\users\about.html:915
+#: .\users\templates\users\about.html:702
 msgid ""
-"In-depth Course in Biodanza (Working hours: 18h). Museum of Afro-Brazilian "
-"Arts and Biodanza School of Pernanbuco (AARTB), Brazil."
+"Training for the Public Sector (Working hours: 40h). National School of "
+"Public Administration (ENAP), Brazil."
 msgstr ""
-"Curso de Aprofundamento em Biodanza (Carga horária: 18h). Museu de Artes "
-"Afro-Brsileira e Escola de Biodanza de Pernanbuco (AARTB), Brasil."
+"Capacitação para o Setor Público (Carga horária: 40h). Escola Nacional de "
+"Administração Pública (ENAP), Brasil."
 
-#: .\users\templates\users\about.html:923
+#: .\users\templates\users\about.html:710
 msgid ""
-"HOW TO MAKE THE INVISIBLE VISIBLE (Working hours: 16h). INTELECTUS - "
-"Training and Courses (ITC), Brazil."
+"Facilitator, a producer of dreams (Working hours: 8h). Integrated Colleges "
+"of Patos (FIP), Brazil."
 msgstr ""
-"COMO TORNAR VISÍVEL O INVISÍVEL (Carga horária: 16h). INTELECTUS - "
-"Treinamento e Cursos (ITC), Brasil."
+"Facilitador, um produtor de sonhos (Carga horária: 8h). Faculdades "
+"Integradas de Patos (FIP), Brasil."
 
-#: .\users\templates\users\about.html:931
+#: .\users\templates\users\about.html:730
 msgid ""
-"The Biodanza Process and Neurosciences (Working hours: 72h). Escola de "
-"Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brazil."
+"TIP Base Course - ADI (Working hours: 16h). Renate Jost de Moraes (RJM), "
+"Brazil"
 msgstr ""
-"O Processo da Biodanza e as Neurociências (Carga horária: 72h). Escola de "
-"Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brasil."
+"Curso de Base TIP - ADI (Carga horária: 16h). Renate Jost de Moraes (RJM), "
+"Brasil"
 
-#: .\users\templates\users\about.html:951
+#: .\users\templates\users\about.html:750
 msgid ""
-"Integral Somatic Psychology Professional Training Module 1 (Working hours: "
-"74h). Integral Somatic Psychology (ISP), Brazil."
+"Adelante 8 (Working hours: 285h). Anglo American Cultural Center Ltda "
+"(CCAA), Brazil."
 msgstr ""
-"Integral Somatic Psychology Professional Training Module 1 (Carga horária: "
-"74h). Integral Somatic Psychology (ISP), Brasil."
+"Adelante 8 (Carga horária: 285h). Anglo American Cultural Center Ltda "
+"(CCAA), Brasil."
 
-#: .\users\templates\users\about.html:959
+#: .\users\templates\users\about.html:758
 msgid ""
-"Enneaframa-Psychology of Enneatypes-Initial Diagnosis (Working hours: 20h). "
-"FUNDACION CLAUDIO NARANJO (FCN), Brazil."
+"The Pursuit of Excellence in Citizen Service (Working hours: 25h). National "
+"School of Public Administration (ENAP), Brazil."
 msgstr ""
-"Eneaframa-Psicologia dos Eneatipos-Diagnóstico Inicial (Carga horária: 20h). "
-"FUNDACION CLAUDIO NARANJO (FCN), Brasil."
+"A Busca da Excelência no Atendimento ao Cidadão (Carga horária: 25h). Escola "
+"Nacional de Administração Pública (ENAP), Brasil."
 
-#: .\users\templates\users\about.html:979
+#: .\users\templates\users\about.html:778
 msgid ""
-"Training in Family Constellation (Working hours: 90h). UNIPAZ - Pernanbuco "
-"(UNIPAZ), Brazil."
+"Overcoming Stress (Working hours: 20h). Superintendency of Human Resources "
+"(SRH - UFPB), Brazil."
 msgstr ""
-"Treinamento em Constelação Familiar (Carga horária: 90h). UNIPAZ - "
-"Pernanbuco (UNIPAZ), Brasil."
+"Superação de Estresse (Carga horária: 20h). Superintendência de Recursos "
+"Humanos (SRH - UFPB), Brasil."
 
-#: .\users\templates\users\about.html:999
+#: .\users\templates\users\about.html:786
 msgid ""
-"Kindness Program: Integral Mindfulness and Emotional Harmony (Working hours: "
-"252h). Instituto de Ciência Contemplativa do Brasil (ICC), Brazil."
+"Mobilizing Teams (Working hours: 9pm). National School of Public "
+"Administration (ENAP), Brazil."
 msgstr ""
-"Programa de Kindfulness: Mindfulness Integral e Harmonia Emocional (Carga "
-"horária: 252h). Instituto de Ciência Contemplativa do Brasil (ICC), Brasil."
+"Mobilizando Equipes (Carga horária: 21h). Escola Nacional de Administração "
+"Pública (ENAP), Brasil."
 
-#: .\users\templates\users\about.html:1011
+#: .\users\templates\users\about.html:794
+msgid ""
+"How to speak in public (Working hours: 20h). Superintendency of Human "
+"Resources (SRH - UFPB), Brazil."
+msgstr ""
+"Como falar em Público (Carga horária: 20h). Superintendência de Recursos "
+"Humanos (SRH - UFPB), Brasil."
+
+#: .\users\templates\users\about.html:802
+msgid ""
+"Project Preparation (Working hours: 30h). Superintendency of Human Resources "
+"(SRH - UFPB), Brazil."
+msgstr ""
+"Elaboração de Projetos (Carga horária: 30h). Superintendência de Recursos "
+"Humanos (SRH - UFPB), Brasil."
+
+#: .\users\templates\users\about.html:822
+msgid ""
+"TRAINING AND QUALIFICATION OF HUMAN RESOURCES (Working hours: 90h). Federal "
+"University of Paraíba (UFPB), Brazil."
+msgstr ""
+"CAPACITAÇÃO E QUALIFICAÇÃO DE RECURSOS HUMANOS DE (Carga horária: 90h). "
+"Universidade Federal da Paraíba (UFPB), Brasil."
+
+#: .\users\templates\users\about.html:842
+msgid ""
+"Quality in Customer Service (Working hours: 20h). Superintendency of Human "
+"Resources (SRH - UFPB), Brazil."
+msgstr ""
+"Qualidade no Atendimento ao Público (Carga horária: 20h). Superintendência "
+"de Recursos Humanos (SRH - UFPB), Brasil."
+
+#: .\users\templates\users\about.html:850
+msgid ""
+"Advanced Life Support Course for Nurses (Working hours: 20h). Lauro "
+"Wanderley University Hospital (HU - UFPB), Brazil."
+msgstr ""
+"Curso Suporte Avançado de Vida para Enfermeiros (Carga horária: 20h). "
+"Hospital Universitário Lauro Wanderley (HU - UFPB), Brasil."
+
+#: .\users\templates\users\about.html:870
+msgid ""
+"Development of administrative skills (Working hours: 20h). Lauro Wanderley "
+"University Hospital (HU - UFPB), Brazil."
+msgstr ""
+"Desenvolvimento das habilidades administrativas (Carga horária: 20h). "
+"Hospital Universitário Lauro Wanderley (HU - UFPB), Brasil."
+
+#: .\users\templates\users\about.html:890
+msgid ""
+"Introductory Course for Nurses (Working hours: 40h). Superintendency of "
+"Human Resources (SRH - UFPB), Brazil."
+msgstr ""
+"Curso Introdutório para Enfermeiros (Carga horária: 40h). Superintendência "
+"de Recursos Humanos (SRH - UFPB), Brasil."
+
+#: .\users\templates\users\about.html:910
+msgid ""
+"Technical Training for Nurses in the STD Area (Working hours: 200h). State "
+"Department of Health - PB (SES - PB), Brazil."
+msgstr ""
+"Capacitação Técnica para Enfermeiros na Área de DST (Carga horária: 200h). "
+"Secretaria de Estado da Saúde - PB (SES - PB), Brasil."
+
+#: .\users\templates\users\about.html:930
+msgid ""
+"Management/Leadership Human Relations Course (Working hours: 20h). National "
+"Commercial Learning Service (SENAC), Brazil."
+msgstr ""
+"Curso de Relações Humanas de Chefia/Liderança (Carga horária: 20h). Serviço "
+"Nacional de Aprendizagem Comercial (SENAC), Brasil."
+
+#: .\users\templates\users\about.html:938
+msgid ""
+"Update to Assistant Nurse (Working hours: 54h). Dr. Francisco Porto Study "
+"Center (CEFP), Brazil."
+msgstr ""
+"Atualização para Enfermeiro Assistencial (Carga horária: 54h). Centro de "
+"Estudos Dr. Francisco Porto (CEFP), Brasil."
+
+#: .\users\templates\users\about.html:958
+msgid ""
+"VI National Update Course in Endocrinology (Working hours: 32h). Sandoz "
+"Research (PS), Brazil."
+msgstr ""
+"VI Curso Nacional de Atualização em Endocrinologia (Carga horária: 32h). "
+"Pesquisa Sandoz (PS), Brasil."
+
+#: .\users\templates\users\about.html:978
+msgid ""
+"University Extension in Macroscopic Anatomy of the Nervous System (Working "
+"hours: 30h). Santa Emilia de Rodat Nursing School (EESER), Brazil."
+msgstr ""
+"Extensão Universitária em Anatomia Macroscópica do Sistema Nervoso (Carga "
+"horária: 30h). Escola de Enfermagem Santa Emilia de Rodat (EESER), Brasil."
+
+#: .\users\templates\users\about.html:998
+msgid ""
+"Public Health Nursing. (Working hours: 30h). Achilles Leal Study Center "
+"(CEAL), Brazil."
+msgstr ""
+"Enfermagem em Saúde Pública. (Carga horária: 30h). Centro de Estudos "
+"Achilles Leal (CEAL), Brasil."
+
+#: .\users\templates\users\about.html:1010
 msgid "Professional Activity"
 msgstr "Atuação Profissional"
 
-#: .\users\templates\users\about.html:1026
-#: .\users\templates\users\about.html:1068
-#: .\users\templates\users\about.html:1110
-#: .\users\templates\users\about.html:1152
-#: .\users\templates\users\about.html:1194
-#: .\users\templates\users\about.html:1236
-#: .\users\templates\users\about.html:1271
-#: .\users\templates\users\about.html:1313
-#: .\users\templates\users\about.html:1355
-#: .\users\templates\users\about.html:1397
-#: .\users\templates\users\about.html:1439
-#: .\users\templates\users\about.html:1481
-#: .\users\templates\users\about.html:1523
-#: .\users\templates\users\about.html:1565
-#: .\users\templates\users\about.html:1607
-#: .\users\templates\users\about.html:1649
-#: .\users\templates\users\about.html:1691
-#: .\users\templates\users\about.html:1733
-#: .\users\templates\users\about.html:1775
-msgid "Brazil"
-msgstr "Brasil"
-
-#: .\users\templates\users\about.html:1039
-#: .\users\templates\users\about.html:1081
-#: .\users\templates\users\about.html:1165
-msgid "General Edson Ramalho Hospital (HGER)"
-msgstr "Hospital General Edson Ramalho (HGER) "
-
-#: .\users\templates\users\about.html:1046
-#: .\users\templates\users\about.html:1088
-#: .\users\templates\users\about.html:1130
-#: .\users\templates\users\about.html:1172
-#: .\users\templates\users\about.html:1375
-msgid "Worked as a <span>Nurse</span>"
-msgstr "Trabalhei como <span>Enfermeira</span>"
-
-#: .\users\templates\users\about.html:1053
-msgid "Internship in the Gynecology and Obstetrics Sector"
-msgstr "Estágio no Setor de Ginecologia e Obstetrícia"
-
-#: .\users\templates\users\about.html:1095
-msgid "In the Intensive Care Center"
-msgstr "No Centro de Tratamento Itensivo"
-
-#: .\users\templates\users\about.html:1123
-msgid "Pension Institute of the State of Paraíba (IPEP)"
-msgstr "Instituto de Previdência do Estado da Paraíba (IPEP)"
-
-#: .\users\templates\users\about.html:1137
-msgid "Internship in the Diabetes Unit"
-msgstr "Estágio na Unidade de Diabetes"
-
-#: .\users\templates\users\about.html:1179
-msgid ""
-"Founder of the nursing service to assist diabetic patients at the hospital"
-msgstr ""
-"Fundadora do serviço de enfermagem para assistência aos pacientes diabéticos "
-"no hospital"
-
-#: .\users\templates\users\about.html:1207
-msgid "Department of Health of the State of Paraíba (SES/PB)"
-msgstr "Secretaria de Saúde do Estado da Paraíba (SES/PB)"
-
-#: .\users\templates\users\about.html:1214
-msgid "Was a <span>Member of the State Health Council</span>"
-msgstr "Fui <span>Membro Titular do Conselho Estadual de Saúde</span>"
-
-#: .\users\templates\users\about.html:1221
-msgid ""
-"Representing the follow-up of Health Workers through the Regional Nursing "
-"Council"
-msgstr ""
-"Representando o seguimento dos Trabalhadores de Saúde através do Conselho "
-"Regional de Enfermagem"
-
-#: .\users\templates\users\about.html:1249
-#: .\users\templates\users\about.html:1410
-#: .\users\templates\users\about.html:1452
-#: .\users\templates\users\about.html:1494
-#: .\users\templates\users\about.html:1536
-#: .\users\templates\users\about.html:1578
-#: .\users\templates\users\about.html:1620
-msgid "Human Resources Superintendence (SRH - UFPB)"
-msgstr "Superintendência de Recursos Humanos (SRH - UFPB)"
-
-#: .\users\templates\users\about.html:1256
-msgid "Workedg as a <span>Nurse</span>"
-msgstr "Trabalhei como <span>Enfermeira</span>"
-
-#: .\users\templates\users\about.html:1284
-msgid "Health Sciences Center (CCS - UFPB)"
-msgstr "Centro de Ciências da Saúde (CSS - UFPB)"
-
-#: .\users\templates\users\about.html:1291
-msgid "Workedg as a <span>Substitute Teacher</span>"
-msgstr "Trabalhei como <span>Professora Substituta</span>"
-
-#: .\users\templates\users\about.html:1298
-msgid ""
-"I taught the subjects: Semiology and Semiotechnics in Nursing I and Clinical "
-"Nursing"
-msgstr ""
-"Eu lecionei as disciplinas: Semiologia e Semiotécnica em Enfermagem e "
-"Enfermagem Clínica"
-
-#: .\users\templates\users\about.html:1326
-msgid "Regional Nursing Council of Paraíba (COREN-PB)"
-msgstr "Conselho Regional de Enfermagem da Paraíba (COREN-PB)"
-
-#: .\users\templates\users\about.html:1333
-msgid "Worked as the <span>Editor</span>"
-msgstr "Trabalhei como <span>Editora</span>"
-
-#: .\users\templates\users\about.html:1340
-msgid "Was the member of the Editorial Committee of the COREN-PB Newsletter"
-msgstr "Fui membro da Comissão de Editoração do Informativo COREN-PB"
-
-#: .\users\templates\users\about.html:1368
-msgid "Universitary Hospital Lauro Wanderley (HU - UFPB)"
-msgstr "Hospital Universitário Lauro Wanderley (HU - UFPB)"
-
-#: .\users\templates\users\about.html:1382
-msgid ""
-"Worked in the Surgical Center caring for patients of all ages, including the "
-"elderly."
-msgstr ""
-"Atuação no Centro Cirúrgico atendendo pacientes de todas as idades, "
-"inclusive idosos."
-
-#: .\users\templates\users\about.html:1417
-msgid "Worked in the <span>Probationary Internship Committee</span>"
-msgstr "Trabalhei na <span>Comissão de Estágio Probatório</span>"
-
-#: .\users\templates\users\about.html:1424
-msgid "Probationary Internship Committee for Technical-Administrative Services"
-msgstr "Comissão de Estágio Probatório dos servidores Técnicos-Administrativos"
-
-#: .\users\templates\users\about.html:1459
-msgid "Worked as a <span>Director</span>"
-msgstr "Trabalhei como <span>Diretora</span>"
-
-#: .\users\templates\users\about.html:1466
-msgid ""
-"Director of the Selection and Improvement Division / Human Resources "
-"Superintendence (SRH)"
-msgstr ""
-"Diretora da Divisão de Seleção e Aferfeiçoamento / Superintendência de "
-"Recursos Humanos (SRH)"
-
-#: .\users\templates\users\about.html:1501
-msgid "Worked as the <span>Commission President</span>"
-msgstr "Trabalhei como <span>Presidente da Comissão</span>"
-
-#: .\users\templates\users\about.html:1508
-msgid ""
-"President of the Commission for the implementation of UFPB Occupational "
-"Health and Assistance Policies"
-msgstr ""
-"Presidente da Comisão de implantação das Políticas de Assistência e Saúde "
-"Ocupacional da UFPB"
-
-#: .\users\templates\users\about.html:1543
-msgid "Worked as the <span>Head of Training and Improvement</span>"
-msgstr "Trabalhei como <span>Chefe de Treinamento e Aperfeiçoamento</span>"
-
-#: .\users\templates\users\about.html:1550
-msgid ""
-"Head of Training and Improvement / Selection and Improvement Division (DSA)"
-msgstr ""
-"Chefe de Treinamento e Aperfeiçoamento / Divisão de Seleção e Aperfeiçoamento"
-
-#: .\users\templates\users\about.html:1585
-msgid "Worked as the <span>Coordinator</span>"
-msgstr "Trabalhei como <span>Coordenadora</span>"
-
-#: .\users\templates\users\about.html:1592
-msgid ""
-"Coordinator of Comprehensive Care Program for Alcoholics and Other Drug "
-"Dependents (PAIAD) / Human Resources Superintendence (SRH)"
-msgstr ""
-"Programa de Atenção Integral ao Alcoolista e outros Dependentes Químicos "
-"(PAIAD) / Superintendência de Recursos Humanos (SRH)"
-
-#: .\users\templates\users\about.html:1627
-#: .\users\templates\users\about.html:1669
-#: .\users\templates\users\about.html:1711
-#: .\users\templates\users\about.html:1753
-msgid "Worked as a <span>Visiting Professor</span>"
-msgstr "Trabalhei como <span>Professor Visitante</span>"
-
-#: .\users\templates\users\about.html:1634
-msgid "Discipline: PSYCHONEUROIMMUNOLOGY"
-msgstr "Disciplina: PSICONEUROIMUNOLOGIA"
-
-#: .\users\templates\users\about.html:1662
-#: .\users\templates\users\about.html:1704
-#: .\users\templates\users\about.html:1746
-msgid "Amazon College (FAAM)"
-msgstr "Faculdade da Amazônia (FAAM)"
-
-#: .\users\templates\users\about.html:1676
-#: .\users\templates\users\about.html:1718
-msgid "Module of Ethics in Therapeutic Practice"
-msgstr "Módulo de Ética na Prática Terapêutica"
-
-#: .\users\templates\users\about.html:1760
-msgid "Module of psychoneuroimmunology"
-msgstr "Módulo de psiconeuroimunologia"
-
-#: .\users\templates\users\about.html:1788
-msgid "Paulista University (UNIP)"
-msgstr "Universidade Paulista (UNIP)"
-
-#: .\users\templates\users\about.html:1795
-msgid "Worked as a <span>Guest</span>"
-msgstr "Trabalhei como <span>Convidada</span>"
-
-#: .\users\templates\users\about.html:1802
-msgid "SIMPSE III Scientific Committee"
-msgstr "Comissão Científica do SIMPSE III"
-
-#: .\users\templates\users\about.html:1812
+#: .\users\templates\users\about.html:1021
 msgid ""
 "Since <span>2017</span> I'm working as a self-employed <span>Nurse and "
 "Holistic Therapist</span>"
@@ -934,9 +722,377 @@ msgstr ""
 "Desde <span>2017</span> venho tabalhando de forma autônoma como "
 "<span>Enfermeira e Terapeuta Holistica </span>"
 
-#: .\users\templates\users\about.html:1821
+#: .\users\templates\users\about.html:1030
 msgid "Read More"
 msgstr "Ler Mais"
+
+#: .\users\templates\users\about.html:1046
+#: .\users\templates\users\about.html:1088
+#: .\users\templates\users\about.html:1130
+#: .\users\templates\users\about.html:1172
+#: .\users\templates\users\about.html:1214
+#: .\users\templates\users\about.html:1256
+#: .\users\templates\users\about.html:1298
+#: .\users\templates\users\about.html:1340
+#: .\users\templates\users\about.html:1382
+#: .\users\templates\users\about.html:1424
+#: .\users\templates\users\about.html:1466
+#: .\users\templates\users\about.html:1508
+#: .\users\templates\users\about.html:1550
+#: .\users\templates\users\about.html:1592
+#: .\users\templates\users\about.html:1627
+#: .\users\templates\users\about.html:1669
+#: .\users\templates\users\about.html:1711
+#: .\users\templates\users\about.html:1753
+#: .\users\templates\users\about.html:1795
+msgid "Brazil"
+msgstr "Brasil"
+
+#: .\users\templates\users\about.html:1059
+msgid "Paulista University (UNIP)"
+msgstr "Universidade Paulista (UNIP)"
+
+#: .\users\templates\users\about.html:1066
+msgid "Worked as a <span>Guest</span>"
+msgstr "Trabalhei como <span>Convidada</span>"
+
+#: .\users\templates\users\about.html:1073
+msgid "SIMPSE III Scientific Committee"
+msgstr "Comissão Científica do SIMPSE III"
+
+#: .\users\templates\users\about.html:1101
+#: .\users\templates\users\about.html:1143
+#: .\users\templates\users\about.html:1185
+msgid "Amazon College (FAAM)"
+msgstr "Faculdade da Amazônia (FAAM)"
+
+#: .\users\templates\users\about.html:1108
+#: .\users\templates\users\about.html:1150
+#: .\users\templates\users\about.html:1192
+#: .\users\templates\users\about.html:1234
+msgid "Worked as a <span>Visiting Professor</span>"
+msgstr "Trabalhei como <span>Professor Visitante</span>"
+
+#: .\users\templates\users\about.html:1115
+msgid "Module of psychoneuroimmunology"
+msgstr "Módulo de psiconeuroimunologia"
+
+#: .\users\templates\users\about.html:1157
+#: .\users\templates\users\about.html:1199
+msgid "Module of Ethics in Therapeutic Practice"
+msgstr "Módulo de Ética na Prática Terapêutica"
+
+#: .\users\templates\users\about.html:1227
+#: .\users\templates\users\about.html:1269
+#: .\users\templates\users\about.html:1311
+#: .\users\templates\users\about.html:1353
+#: .\users\templates\users\about.html:1395
+#: .\users\templates\users\about.html:1437
+#: .\users\templates\users\about.html:1605
+msgid "Human Resources Superintendence (SRH - UFPB)"
+msgstr "Superintendência de Recursos Humanos (SRH - UFPB)"
+
+#: .\users\templates\users\about.html:1241
+msgid "Discipline: PSYCHONEUROIMMUNOLOGY"
+msgstr "Disciplina: PSICONEUROIMUNOLOGIA"
+
+#: .\users\templates\users\about.html:1276
+msgid "Worked as the <span>Coordinator</span>"
+msgstr "Trabalhei como <span>Coordenadora</span>"
+
+#: .\users\templates\users\about.html:1283
+msgid ""
+"Coordinator of Comprehensive Care Program for Alcoholics and Other Drug "
+"Dependents (PAIAD) / Human Resources Superintendence (SRH)"
+msgstr ""
+"Programa de Atenção Integral ao Alcoolista e outros Dependentes Químicos "
+"(PAIAD) / Superintendência de Recursos Humanos (SRH)"
+
+#: .\users\templates\users\about.html:1318
+msgid "Worked as the <span>Head of Training and Improvement</span>"
+msgstr "Trabalhei como <span>Chefe de Treinamento e Aperfeiçoamento</span>"
+
+#: .\users\templates\users\about.html:1325
+msgid ""
+"Head of Training and Improvement / Selection and Improvement Division (DSA)"
+msgstr ""
+"Chefe de Treinamento e Aperfeiçoamento / Divisão de Seleção e Aperfeiçoamento"
+
+#: .\users\templates\users\about.html:1360
+msgid "Worked as the <span>Commission President</span>"
+msgstr "Trabalhei como <span>Presidente da Comissão</span>"
+
+#: .\users\templates\users\about.html:1367
+msgid ""
+"President of the Commission for the implementation of UFPB Occupational "
+"Health and Assistance Policies"
+msgstr ""
+"Presidente da Comisão de implantação das Políticas de Assistência e Saúde "
+"Ocupacional da UFPB"
+
+#: .\users\templates\users\about.html:1402
+msgid "Worked as a <span>Director</span>"
+msgstr "Trabalhei como <span>Diretora</span>"
+
+#: .\users\templates\users\about.html:1409
+msgid ""
+"Director of the Selection and Improvement Division / Human Resources "
+"Superintendence (SRH)"
+msgstr ""
+"Diretora da Divisão de Seleção e Aferfeiçoamento / Superintendência de "
+"Recursos Humanos (SRH)"
+
+#: .\users\templates\users\about.html:1444
+msgid "Worked in the <span>Probationary Internship Committee</span>"
+msgstr "Trabalhei na <span>Comissão de Estágio Probatório</span>"
+
+#: .\users\templates\users\about.html:1451
+msgid "Probationary Internship Committee for Technical-Administrative Services"
+msgstr "Comissão de Estágio Probatório dos servidores Técnicos-Administrativos"
+
+#: .\users\templates\users\about.html:1479
+msgid "Universitary Hospital Lauro Wanderley (HU - UFPB)"
+msgstr "Hospital Universitário Lauro Wanderley (HU - UFPB)"
+
+#: .\users\templates\users\about.html:1486
+#: .\users\templates\users\about.html:1689
+#: .\users\templates\users\about.html:1731
+#: .\users\templates\users\about.html:1773
+#: .\users\templates\users\about.html:1815
+msgid "Worked as a <span>Nurse</span>"
+msgstr "Trabalhei como <span>Enfermeira</span>"
+
+#: .\users\templates\users\about.html:1493
+msgid ""
+"Worked in the Surgical Center caring for patients of all ages, including the "
+"elderly."
+msgstr ""
+"Atuação no Centro Cirúrgico atendendo pacientes de todas as idades, "
+"inclusive idosos."
+
+#: .\users\templates\users\about.html:1521
+msgid "Regional Nursing Council of Paraíba (COREN-PB)"
+msgstr "Conselho Regional de Enfermagem da Paraíba (COREN-PB)"
+
+#: .\users\templates\users\about.html:1528
+msgid "Worked as the <span>Editor</span>"
+msgstr "Trabalhei como <span>Editora</span>"
+
+#: .\users\templates\users\about.html:1535
+msgid "Was the member of the Editorial Committee of the COREN-PB Newsletter"
+msgstr "Fui membro da Comissão de Editoração do Informativo COREN-PB"
+
+#: .\users\templates\users\about.html:1563
+msgid "Health Sciences Center (CCS - UFPB)"
+msgstr "Centro de Ciências da Saúde (CSS - UFPB)"
+
+#: .\users\templates\users\about.html:1570
+msgid "Workedg as a <span>Substitute Teacher</span>"
+msgstr "Trabalhei como <span>Professora Substituta</span>"
+
+#: .\users\templates\users\about.html:1577
+msgid ""
+"I taught the subjects: Semiology and Semiotechnics in Nursing I and Clinical "
+"Nursing"
+msgstr ""
+"Eu lecionei as disciplinas: Semiologia e Semiotécnica em Enfermagem e "
+"Enfermagem Clínica"
+
+#: .\users\templates\users\about.html:1612
+msgid "Workedg as a <span>Nurse</span>"
+msgstr "Trabalhei como <span>Enfermeira</span>"
+
+#: .\users\templates\users\about.html:1640
+msgid "Department of Health of the State of Paraíba (SES/PB)"
+msgstr "Secretaria de Saúde do Estado da Paraíba (SES/PB)"
+
+#: .\users\templates\users\about.html:1647
+msgid "Was a <span>Member of the State Health Council</span>"
+msgstr "Fui <span>Membro Titular do Conselho Estadual de Saúde</span>"
+
+#: .\users\templates\users\about.html:1654
+msgid ""
+"Representing the follow-up of Health Workers through the Regional Nursing "
+"Council"
+msgstr ""
+"Representando o seguimento dos Trabalhadores de Saúde através do Conselho "
+"Regional de Enfermagem"
+
+#: .\users\templates\users\about.html:1682
+#: .\users\templates\users\about.html:1766
+#: .\users\templates\users\about.html:1808
+msgid "General Edson Ramalho Hospital (HGER)"
+msgstr "Hospital General Edson Ramalho (HGER) "
+
+#: .\users\templates\users\about.html:1696
+msgid ""
+"Founder of the nursing service to assist diabetic patients at the hospital"
+msgstr ""
+"Fundadora do serviço de enfermagem para assistência aos pacientes diabéticos "
+"no hospital"
+
+#: .\users\templates\users\about.html:1724
+msgid "Pension Institute of the State of Paraíba (IPEP)"
+msgstr "Instituto de Previdência do Estado da Paraíba (IPEP)"
+
+#: .\users\templates\users\about.html:1738
+msgid "Internship in the Diabetes Unit"
+msgstr "Estágio na Unidade de Diabetes"
+
+#: .\users\templates\users\about.html:1780
+msgid "In the Intensive Care Center"
+msgstr "No Centro de Tratamento Itensivo"
+
+#: .\users\templates\users\about.html:1822
+msgid "Internship in the Gynecology and Obstetrics Sector"
+msgstr "Estágio no Setor de Ginecologia e Obstetrícia"
+
+#: .\users\templates\users\books.html:8
+msgid ""
+"Check out the books I had the honor of co-authoring, in which I talk about "
+"my professional experiences."
+msgstr ""
+"Confira os livros que tive a hora que ser coautora, no qual conto minhas "
+"experiências profissionais."
+
+#: .\users\templates\users\books.html:25
+msgid ""
+"Below are the books I had the honor of co-authoring. In them I describe the "
+"various experiences that have enriched me as a person and professional, "
+"including my greatest passion: working with Post Traumatic Stress Disorder "
+"(PTSD) from the office to my doctorate."
+msgstr ""
+"Segue abaixo os livros que tive a honra de ser coautora. Neles descrevo as "
+"várias experiências que me enriqueceram como pessoa e profissional, "
+"inclusive a minha maior paixão: o trabalho com Transtorno do Estresse Pós "
+"Traumático (TEPT) desde o consultório até o doutorado."
+
+#: .\users\templates\users\books.html:39 .\users\templates\users\books.html:53
+msgid ""
+"Cover of the book Knowledge in the Competence of Theory and Practice in "
+"Nursing 3"
+msgstr ""
+"Capa do livro O Conhecimento na Competência da Teoria e da Prática em "
+"Enfermagem 3"
+
+#: .\users\templates\users\books.html:62
+msgid "Knowledge in the Competence of Theory and Practice in Nursing 3"
+msgstr "O Conhecimento na Competência da Teoria e da Prática em Enfermagem 3"
+
+#: .\users\templates\users\books.html:66
+msgid ""
+"I contributed to the chapter \"<strong>Stress acquired in the workplace: "
+"treatment with Somatic</strong>\" (page 273)"
+msgstr ""
+"Contribuí com o capítulo \"<strong>Estrese adquirido no ambiente de "
+"trabalho: tratamento com a Somatic Experiencing®</strong>\" (página 197)"
+
+#: .\users\templates\users\books.html:76
+msgid "Download"
+msgstr "Baixar"
+
+#: .\users\templates\users\books.html:88 .\users\templates\users\books.html:102
+msgid "Cover of the book Work, Health and Safety: a collection of experiences"
+msgstr "Capa do livro Trabalho, Saúde e Segurança: coletânea de experiência"
+
+#: .\users\templates\users\books.html:111
+msgid "Work, Health and Safety: a collection of experiences"
+msgstr "Trabalho, Saúde e Segurança: coletânea de experiência"
+
+#: .\users\templates\users\books.html:115
+msgid ""
+"I contributed to the chapter \"<strong>Somatic Experiencing® and the "
+"approach to neuroscience in worker care</strong>\" (page 25)"
+msgstr ""
+"Contribuí com o capítulo \"<strong>Somatic Experiencing® e a aproximação da "
+"neurociência no cuidado voltado para o trabalhador</strong>\" (página 25)"
+
+#: .\users\templates\users\books.html:128
+#: .\users\templates\users\books.html:142
+msgid ""
+"Cover of the book Psychotherapy Practices and Resilience: Dialogues with "
+"Somatic Experience"
+msgstr ""
+"Capa do livro Práticas Psicoterápicas e Resiliência: Dialogos com "
+"Experiência Somática"
+
+#: .\users\templates\users\books.html:151
+msgid ""
+"Psychotherapy Practices and Resilience: Dialogues with Somatic Experience"
+msgstr ""
+"Práticas Psicoterápicas e Resiliência: Dialogos com Experiência Somática"
+
+#: .\users\templates\users\books.html:155
+msgid ""
+"I contributed to the chapter \"<strong>Driving Phobia: Trauma Resolution "
+"through Somatic Experiencing</strong>\" (page 197)"
+msgstr ""
+"Contribuí com o capítulo \"<strong>Fobia de dirigir: resolução do trauma "
+"através da Experiência Somática</strong>\" (página 197)"
+
+#: .\users\templates\users\books.html:168
+#: .\users\templates\users\books.html:182
+msgid "Cover of the book Extended Dialogues with Somatic Experience"
+msgstr "Capa do livro Diálogos Estendidos com a Experiência Somática"
+
+#: .\users\templates\users\books.html:191
+msgid "Extended Dialogues with Somatic Experience (SE®)"
+msgstr "Diálogos Estendidos com a Experiência Somática (SE®)"
+
+#: .\users\templates\users\books.html:195
+msgid ""
+"I contributed to the chapters \"<strong>Somatic Experience as an adjuvant "
+"therapy in psychiatric treatment with conventional pharmacology</strong>"
+"\" (page 229) and \"<strong>Somatic Experiencing: a new treatment method in "
+"workers' health</strong>\" (page 251)"
+msgstr ""
+"Contribuí para os capítulos \"<strong>Experiência Somática como terapia "
+"adjuvante no tratamento psiquiátrico com farmacologia convencional</strong>"
+"\" (página 229) e \"<strong>Experiência Somática: um novo método de "
+"tratamento na saúde do trabalhador</strong>\" (página 251)"
+
+#: .\users\templates\users\books.html:208
+#: .\users\templates\users\books.html:222
+msgid ""
+"Cover of the book Dialogues About Drug Addiction: experiences in combating "
+"chemical dependency"
+msgstr ""
+"Capa do livro Dialogos Sobre Drogadição: experiências no combate á "
+"dependência química"
+
+#: .\users\templates\users\books.html:231
+msgid ""
+"Dialogues About Drug Addiction: experiences in combating chemical dependency"
+msgstr ""
+"Dialogos Sobre Drogadição: experiências no combate á dependência química"
+
+#: .\users\templates\users\books.html:235
+msgid ""
+"I contributed to the chapter \"<strong>The organic self-regulation of "
+"workers who work with drug addicts and alcoholics: a look through biodanza</"
+"strong>\" (page 195)"
+msgstr ""
+"Contribuí com o capítulo \"<strong>A auto-regulação orgânica dos "
+"trabalhadores que atuam com dependentes químicos e alcoolistas: um olhar "
+"pela biodanza</strong>\" (página 195)"
+
+#: .\users\templates\users\books.html:248
+#: .\users\templates\users\books.html:262
+msgid "Cover of the book Drug Addiction: Prevention and Intervention"
+msgstr "Capa do livro Toxicomania: Prevenção e Intervenção"
+
+#: .\users\templates\users\books.html:271
+msgid "Drug Addiction: Prevention and Intervention"
+msgstr "Toxicomania: Prevenção e Intervenção"
+
+#: .\users\templates\users\books.html:275
+msgid ""
+"I contributed to the chapter \"<strong>Clinical Biodanza: the affective-"
+"motor integration process of a group of drug addicts</strong>\" (page 173)"
+msgstr ""
+"Contribuí com o capítulo \"<strong>Biodanza clínica: o processo de "
+"integração afetivo-motora de um grupo de dependentes químicos"
+"</strong>\" (página 173)"
 
 #: .\users\templates\users\contact.html:8
 msgid ""
@@ -1021,7 +1177,7 @@ msgstr "Dra."
 msgid "PhD in Public Health"
 msgstr "Doutora em Saúde Pública"
 
-#: .\users\templates\users\index.html:90
+#: .\users\templates\users\index.html:89
 msgid ""
 "I am a Nurse and Therapist, with a PhD in Public Health. I searched for the "
 "best courses in Brazil and abroad with the aim of helping my clients to lead "
@@ -1031,7 +1187,7 @@ msgstr ""
 "melhores cursos no Brasil e no exterior com a finalidade de contribuir com "
 "meus clientes para uma vida com mais equilíbrio e bem estar."
 
-#: .\users\templates\users\index.html:105
+#: .\users\templates\users\index.html:104
 msgid ""
 "My experience is focused on treating stress, trauma, phobias and anxiety "
 "disorders, for adults and seniors."
@@ -1307,9 +1463,9 @@ msgid ""
 "your shirt?"
 msgstr ""
 "Agora faça um leve pressão com os braços por 20 segundos e, enquanto isso, "
-"tente perceber a sensação que isso traz para o suas mãos, para seu ombro, para"
-" dentro do seu corpo. Consegue sentir os batimentos do coração? Qual a textura"
-" da  sua camisa?"
+"tente perceber a sensação que isso traz para o suas mãos, para seu ombro, "
+"para dentro do seu corpo. Consegue sentir os batimentos do coração? Qual a "
+"textura da  sua camisa?"
 
 #: .\users\templates\users\my-work.html:296
 msgid ""
@@ -1387,6 +1543,10 @@ msgstr "sobre/"
 #: .\users\urls.py:15
 msgid "my-work/"
 msgstr "meu-trabalho/"
+
+#: .\users\urls.py:16
+msgid "books/"
+msgstr ""
 
 #: .\users\views.py:36
 msgid "Message received, I will contact you as soon as possible."

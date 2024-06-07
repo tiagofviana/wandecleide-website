@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "tw-dev": "tailwindcss --input src\\core\\static\\core\\_css\\tailwind\\input.css --output src\\core\\static\\core\\_css\\tailwind\\output.css --watch"
+    "tw-dev": "tailwindcss --input src\\core\\static\\core\\_css\\tailwind\\input.css --output src\\core\\static\\core\\_css\\tailwind\\output.css --watch",
+    "tw-prod": "tailwindcss  --input src\\core\\static\\core\\_css\\tailwind\\input.css --output src\\core\\static\\core\\_css\\tailwind\\output.css --minify"
   },
   "author": "",
   "license": "ISC",

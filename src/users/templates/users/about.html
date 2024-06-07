@@ -12,1826 +12,1825 @@
 {% block extra_head %}
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/_css/about.css' %}" />
 {% endblock extra_head %}
 
 {% block content %}
-    <div class="relative">
-        <section class="px-4">
-            <h1 
-                class="block text-center text-4xl font-black bg-clip-text text-gray-700 py-10 px-10 uppercase"
-            >
-                {% translate 'About myself' %}
-            </h1>
+    <section class="px-4">
+        <h1 
+            class="block text-center text-4xl font-black bg-clip-text text-gray-700 py-10 px-10 uppercase"
+        >
+            {% translate 'About myself' %}
+        </h1>
+        
+        <div 
+            class="flex flex-col flex-nowrap justify-between items-center max-w-3xl w-full mx-auto sm:flex-row"
+        >
+            <img 
+                src="{% static 'users/_img/about/myself.webp' %}"
+                alt="{% translate 'Myself picture' %}"
+                class="w-full p-2 shadow-lg border border-gray-200 sm:w-60"
+            />
+            <p class="text-justify text-lg mt-4 sm:ml-8 sm:mt-0">
+                {% blocktranslate trimmed %}
+                    My name is Wandecleide Lucena Fernandes, I am a Nurse and Therapist with over 36 years of professional experience. Over the years I have looked for the best courses in Brazil and abroad. Below is my academic background that I have followed over the years, with the titles and institutions I studied with the aim of offering quality assistance.
+                {% endblocktranslate %}
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-center text-2xl mb-8 mt-14 sm:text-3xl">
+            {% translate 'Academic Education' %}
+        </h2>
+
+        <div 
+            class="flex flex-col flex-wrap justify-center items-stretch max-w-3xl mx-auto relative md:justify-between md:items-start sm:flex-row"
+        >
+            <span class="absolute top-7 bottom-0 w-px left-1/2 -translate-x-1/2 bg-gray-400 hidden md:block"></span>
             
+            <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%]">
+                <div class="bg-sky-400 p-2 relative">
+                    <span 
+                        class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                    ></span>
+                    <span 
+                        class="absolute bg-sky-400 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                    ></span>
+
+                    <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                        {% translate '1st DEGREE' %}
+                    </h3>
+                </div>
+
+                <div class="bg-white p-2">
+                    <p>
+                        {% blocktranslate trimmed %}   
+                            In 1987 I completed my first <strong>Graduation in Nursing</strong> at the Santa Emilia de Rodat School of Nursing (EESER), Brazil.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+            
+            <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:mt-20">
+                <div class="bg-emerald-400 p-2 relative">
+                    <span 
+                        class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                    ></span>
+                    <span 
+                        class="absolute bg-emerald-400 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                    ></span>
+
+                    <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                        {% translate '2nd Degree' %}
+                    </h3>
+                </div>
+
+                <div class="bg-white p-2">
+                    <p>
+                        {% blocktranslate trimmed %}
+                            In 1988, I completed my second <strong>Degree in Nursing</strong> at the Federal University of Paraíba (UFPB), Brazil.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:-mt-12">
+                <div class="bg-blue-500 p-2 relative">
+                    <span 
+                        class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                    ></span>
+                    <span 
+                        class="absolute bg-blue-500 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                    ></span>
+
+                    <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                        {% translate "Master's degree" %}
+                    </h3>
+                </div>
+                
+                <div class="flex-1 flex items-center bg-white p-2">
+                    <p>
+                        {% blocktranslate trimmed %}
+                            In 1995 I completed my <strong>Masters in Nursing</strong> at the Federal University of Paraíba (UFPB), Brazil. Title of work: Nursing care for young diabetics based on the theory of self-care.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:mt-10">
+                <div class="bg-teal-600 p-2 relative">
+                    <span 
+                        class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                    ></span>
+                    <span 
+                        class="absolute bg-teal-600 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                    ></span>
+
+                    <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                        {% translate "Doctorate degree" %}
+                    </h3>
+                </div>
+
+                <div class="bg-white p-2">
+                    <p>
+                        {% blocktranslate trimmed %}
+                            In 2016 I completed my <strong>Doctorate Degree in Public Health</strong>at the Universidad de la Integración de las Américas (UNIDA), Paraguay. Title of work: SOMATIC EXPERIENCING® IN THE TREATMENT OF POST-TRAUMATIC STRESS DISORDER: discourse from federal public servants.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:-mt-28">
+                <div class="bg-indigo-600 p-2 relative">
+                    <span 
+                        class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                    ></span>
+                    <span 
+                        class="absolute bg-indigo-600 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                    ></span>
+
+                    <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                        {% translate "1st Specialization" %}
+                    </h3>
+                </div>
+                
+                <div class="bg-white p-2">
+                    <p>
+                        {% blocktranslate trimmed %}
+                            In 2017 I completed my first <strong>Specialization in Naturology - HUMAN AND HOLISTIC THERAPIES</strong> at Estratego Postgraduate National, EPN, Brazil. Title of work: Stress acquired in the Work Environment: treatment with Somatic Experiencing.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="sm:max-w-xs shadow border border-gray-200 m-2 mt-10 sm:basis-[45%]">
+                <div class="bg-cyan-700 p-2 relative">
+                    <span 
+                        class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
+                    ></span>
+                    <span 
+                        class="absolute bg-cyan-700 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
+                    ></span>
+
+                    <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
+                        {% translate "2nd Specialization" %}
+                    </h3>
+                </div>
+
+                <div class="bg-white p-2">
+                    <p>
+                        {% blocktranslate trimmed %}
+                            In 2019 I completed my second <strong>Specialization in Psychotrumatology</strong> at the Escola Bahiana de Medicina e Saúde Pública (EBMSP), Brazil. Title of work: Public Servants undergoing Somatic Experiencing Therapy.
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2 class="text-center text-2xl mb-8 mt-14 sm:text-3xl">
+            {% translate "Complementary Education" %}
+        </h2>
+
+        <div class="max-w-3xl mx-auto w-11/12">
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2021
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Kindness Program: Integral Mindfulness and Emotional Harmony (Working hours: 252h). Instituto de Ciência Contemplativa do Brasil (ICC), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>  
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2020
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Training in Family Constellation (Working hours: 90h). UNIPAZ - Pernanbuco (UNIPAZ), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2018
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Integral Somatic Psychology Professional Training Module 1 (Working hours: 74h). Integral Somatic Psychology (ISP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Enneaframa-Psychology of Enneatypes-Initial Diagnosis (Working hours: 20h). FUNDACION CLAUDIO NARANJO (FCN), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2017
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                In-depth Course in Biodanza (Working hours: 18h). Museum of Afro-Brazilian Arts and Biodanza School of Pernanbuco (AARTB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                HOW TO MAKE THE INVISIBLE VISIBLE (Working hours: 16h). INTELECTUS - Training and Courses (ITC), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                The Biodanza Process and Neurosciences (Working hours: 72h). Escola de Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2016
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Scientific article: from preparation to submission (Working hours: 30h). Científica Saúde (CS), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2015
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Cardiovascular biofeedback (Working hours: 8h). CardioEmotion (C.E), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2014
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Free Cardiac Coherence Course. (Working hours: 20h). Coherence Space (EC), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Use of cardiofeedback in psychology (Working hours: 14h). Espaço Trauma (E.A), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                DISCOURSE ANALYSIS AS A RESEARCH METHODOLOGY (Working hours: 12h). Federal University of Rio Grande do Norte (UFRN), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University extension in Natural and Holistic Therapies (Working hours: 1370h). State University of Paraíba (UEPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2013
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Somatic Experiencing® Practitioner (SEP) (Working hours: 216h). Somatic Experiencing® Trauma Institute (SETI), United States.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2012
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                PROFESSIONAL TRAINING COURSE IN NATURAL THERAPIES (Working hours: 1370h). Union of Therapists of the State of Paraíba (SINTE-PB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Government Actions in Public Health Policies (Working hours: 30h). Federal Nursing Council (COFEN), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Preparation of scientific articles for review. (Working hours: 5h). American University (UA), Paraguay.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2011
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                HEALING TRAUMA BY AWAKENING SPIRITUALITY (Working hours: 15h). INSTITUTE THE HUMANENRICHMENT (ITH), United States.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                II COURSE AND CONFERENCES IN NEUROSCIENCES AND BEHAVIOR (Working hours: 40h). Federal University of Paraíba (UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Client's Emotional and Behavioral Disorders (Working hours: 30h). Federal Nursing Council (COFEN), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2010
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                BASIC NEUROSCIENCE COURSE - INTRODUCTION TO THE STUDY (Working hours: 60h). Federal University of Minas Gerais (UFMG), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University Extension in DRUG ADDICTION: A PROPOSAL FOR PREVENTION, REHABILITATION (Working hours: 56h). Federal University of Paraíba (UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2009
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Traumatic Resolution Approach - Advanced Level I and II (Working hours: 72h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University Extension in Specialization Course in Minotauro Project (Court load: 90h). Center for Biodanza and Biocentric Activities of PE (CB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University Extension in TEACHING PROFESSOR OF BIODANZA (Course load: 180h). International Biocentric Foundation (IBF), Chile.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2008
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Resolution Approach. Trauma. - N. Inter. I, II and III (Working hours: 72h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                EXCELLENCE IN CUSTOMER SERVICE (THEORY AND PRACTICE) (Working load: 30h). Federal University of Paraíba (UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                STRATEGIC PLANNING (THEORY AND PRACTICE) MODULE. (Working hours: 60h). Federal University of Paraíba (UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                ROUTINE MANAGEMENT (MODULE II) (Working hours: 30h). Federal University of Paraíba (UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Traumatic Resolution Approach - Intermediate Level II (Working hours: 24h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">   
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Traumatic Resolution Approach - Intermediate Level I (Working hours: 24h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2007
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Minotauro Project - Challenging Fears (Working hours: 16h). Human Center (HC), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University Extension in Law No. 8,112/90 Legal Regime for Federal Public Servants (Working hours: 80h).University of Brasília (UnB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University extension in BIODANZA FACILITATOR (Working hours: 432h). INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2006
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Update for UFPB Managers (Working hours: 32h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Ethics and Public Service (Working hours: 10h). National School of Public Administration (ENAP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                PowerPoint (Working hours: 15h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Strategic People Management and Career Plans (Working hours: 20h). National School of Public Administration (ENAP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2005
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                TECHNICAL TRAINING FOR NURSES IN THE AREA OF DO. (Working hours: 200h). STATE SECRETARIAT OF HEALTH OF PARAÍBA (SES-PB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Training for the Public Sector (Working hours: 40h). National School of Public Administration (ENAP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Facilitator, a producer of dreams (Working hours: 8h). Integrated Colleges of Patos (FIP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2004
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                TIP Base Course - ADI (Working hours: 16h). Renate Jost de Moraes (RJM), Brazil
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2003
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Adelante 8 (Working hours: 285h). Anglo American Cultural Center Ltda (CCAA), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">
+                        <p>
+                            {% blocktranslate trimmed %}
+                                The Pursuit of Excellence in Citizen Service (Working hours: 25h). National School of Public Administration (ENAP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2002
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Overcoming Stress (Working hours: 20h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Mobilizing Teams (Working hours: 9pm). National School of Public Administration (ENAP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                How to speak in public (Working hours: 20h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Project Preparation (Working hours: 30h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    2001
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                TRAINING AND QUALIFICATION OF HUMAN RESOURCES (Working hours: 90h). Federal University of Paraíba (UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1999
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Quality in Customer Service (Working hours: 20h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Advanced Life Support Course for Nurses (Working hours: 20h). Lauro Wanderley University Hospital (HU - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1998
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Development of administrative skills (Working hours: 20h). Lauro Wanderley University Hospital (HU - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1995
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Introductory Course for Nurses (Working hours: 40h). Superintendency of Human Resources (SRH - UFPB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1992
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Technical Training for Nurses in the STD Area (Working hours: 200h). State Department of Health - PB (SES - PB), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1989
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Management/Leadership Human Relations Course (Working hours: 20h). National Commercial Learning Service (SENAC), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                    
+                    <li class="pl-4 mt-4 relative">    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Update to Assistant Nurse (Working hours: 54h). Dr. Francisco Porto Study Center (CEFP), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1987
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                VI National Update Course in Endocrinology (Working hours: 32h). Sandoz Research (PS), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1986
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                University Extension in Macroscopic Anatomy of the Nervous System (Working hours: 30h). Santa Emilia de Rodat Nursing School (EESER), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-row flex-nowrap items-start">
+                <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
+                    1985
+                </h3>
+    
+                <ul class="border-l-2 border-gray-400">
+                    <li class="pl-4 mt-4 relative">
+                        <span 
+                            class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
+                        ></span>
+    
+                        <p>
+                            {% blocktranslate trimmed %}
+                                Public Health Nursing. (Working hours: 30h). Achilles Leal Study Center (CEAL), Brazil.
+                            {% endblocktranslate %}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-50  border-t border-blue-200 mt-12 pb-12">
+        <h2 class="text-center text-2xl py-8 sm:text-3xl text-blue-950">
+            {% translate "Professional Activity" %}
+        </h2>
+
+        <div 
+            class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 px-4 mx-auto max-w-7xl"
+        >
+
             <div 
-                class="flex flex-col flex-nowrap justify-between items-center max-w-3xl w-full mx-auto sm:flex-row"
+                class="flex flex-col justify-evenly relative z-10 py-6 px-3 bg-white border border-gray-200 rounded overflow-hidden sm:py-2 shadow"
             >
-                <img 
-                    src="{% static 'users/_img/about/myself.webp' %}"
-                    alt="{% translate 'Myself picture' %}"
-                    class="w-full p-2 shadow-lg border border-gray-200 sm:w-60"
-                />
-                <p class="text-justify mt-4 sm:ml-8 sm:mt-0">
+                <p class="max-w-xs mx-auto text-gray-500 text-center [&>span]:text-gray-700 [&>span]:font-bold">
                     {% blocktranslate trimmed %}
-                        My name is Wandecleide Lucena Fernandes, I am a Nurse and Therapist with over 36 years of professional experience. Over the years I have looked for the best courses in Brazil and abroad. Below is my academic background that I have followed over the years, with the titles and institutions I studied with the aim of offering quality assistance.
+                        Since <span>2017</span> I'm working as a self-employed <span>Nurse and Holistic Therapist</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <a 
+                    href="{% url 'users:my-work' %}"
+                    class="flex justify-center mx-auto mb-2 mt-4 w-28 gap-2 py-2 font-sans text-xs font-bold uppercase text-orange-700/80 bg-red-100 rounded-sm border border-red-200 shadow transition-all hover:scale-105 lg:mt-0"
+                >
+                    {% translate 'Read More' %}
+                    <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2016 - 2016
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Paulista University (UNIP) 
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Guest</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        SIMPSE III Scientific Committee
                     {% endblocktranslate %}
                 </p>
             </div>
-        </section>
-
-        <section>
-            <h2 class="text-center text-2xl mb-8 mt-14 sm:text-3xl">
-                {% translate 'Academic Education' %}
-            </h2>
 
             <div 
-                class="flex flex-col flex-wrap justify-center items-stretch max-w-3xl mx-auto relative md:justify-between md:items-start sm:flex-row"
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
             >
-                <span class="absolute top-7 bottom-0 w-px left-1/2 -translate-x-1/2 bg-gray-400 hidden md:block"></span>
-                
-                <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%]">
-                    <div class="bg-sky-400 p-2 relative">
-                        <span 
-                            class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
-                        ></span>
-                        <span 
-                            class="absolute bg-sky-400 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
-                        ></span>
-
-                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
-                            {% translate '1st DEGREE' %}
-                        </h3>
-                    </div>
-
-                    <div class="bg-white p-2 text-sm">
-                        <p>
-                            {% blocktranslate trimmed %}   
-                                In 1987 I completed my first <strong>Graduation in Nursing</strong> at the Santa Emilia de Rodat School of Nursing (EESER), Brazil.
-                            {% endblocktranslate %}
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:mt-20">
-                    <div class="bg-emerald-400 p-2 relative">
-                        <span 
-                            class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
-                        ></span>
-                        <span 
-                            class="absolute bg-emerald-400 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
-                        ></span>
-
-                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
-                            {% translate '2nd Degree' %}
-                        </h3>
-                    </div>
-
-                    <div class="bg-white p-2 text-sm">
-                        <p>
-                            {% blocktranslate trimmed %}
-                                In 1988, I completed my second <strong>Degree in Nursing</strong> at the Federal University of Paraíba (UFPB), Brazil.
-                            {% endblocktranslate %}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:-mt-12">
-                    <div class="bg-blue-500 p-2 relative">
-                        <span 
-                            class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
-                        ></span>
-                        <span 
-                            class="absolute bg-blue-500 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
-                        ></span>
-
-                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
-                            {% translate "Master's degree" %}
-                        </h3>
-                    </div>
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
                     
-                    <div class="flex-1 flex items-center bg-white p-2 text-sm">
-                        <p>
-                            {% blocktranslate trimmed %}
-                                In 1995 I completed my <strong>Masters in Nursing</strong> at the Federal University of Paraíba (UFPB), Brazil. Title of work: Nursing care for young diabetics based on the theory of self-care.
-                            {% endblocktranslate %}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:mt-10">
-                    <div class="bg-teal-600 p-2 relative">
-                        <span 
-                            class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
-                        ></span>
-                        <span 
-                            class="absolute bg-teal-600 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
-                        ></span>
-
-                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
-                            {% translate "Doctorate degree" %}
-                        </h3>
-                    </div>
-
-                    <div class="bg-white p-2 text-sm">
-                        <p>
-                            {% blocktranslate trimmed %}
-                                In 2016 I completed my <strong>Doctorate Degree in Public Health</strong>at the Universidad de la Integración de las Américas (UNIDA), Paraguay. Title of work: SOMATIC EXPERIENCING® IN THE TREATMENT OF POST-TRAUMATIC STRESS DISORDER: discourse from federal public servants.
-                            {% endblocktranslate %}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%] md:-mt-28">
-                    <div class="bg-indigo-600 p-2 relative">
-                        <span 
-                            class="absolute top-1/2 -translate-y-1/2 -right-[67px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
-                        ></span>
-                        <span 
-                            class="absolute bg-indigo-600 w-6 h-6 -right-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
-                        ></span>
-
-                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
-                            {% translate "1st Specialization" %}
-                        </h3>
-                    </div>
-                    
-                    <div class="bg-white p-2 text-sm">
-                        <p>
-                            {% blocktranslate trimmed %}
-                                In 2017 I completed my first <strong>Specialization in Naturology - HUMAN AND HOLISTIC THERAPIES</strong> at Estratego Postgraduate National, EPN, Brazil. Title of work: Stress acquired in the Work Environment: treatment with Somatic Experiencing.
-                            {% endblocktranslate %}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="sm:max-w-xs shadow border border-gray-200 m-2 sm:basis-[45%]">
-                    <div class="bg-cyan-700 p-2 relative">
-                        <span 
-                            class="absolute top-1/2 -translate-y-1/2 -left-[57px] -translate-x-1/2 bg-gray-400 w-2.5 h-2.5 rounded-full hidden lg:table"
-                        ></span>
-                        <span 
-                            class="absolute bg-cyan-700 w-6 h-6 -left-2 top-1/2 -translate-y-1/2 rotate-45 hidden md:table"
-                        ></span>
-
-                        <h3 class="ml-2 font-thin text-xl text-white uppercase relative z-10">
-                            {% translate "2nd Specialization" %}
-                        </h3>
-                    </div>
-
-                    <div class="bg-white p-2 text-sm">
-                        <p>
-                            {% blocktranslate trimmed %}
-                                In 2019 I completed my second <strong>Specialization in Psychotrumatology</strong> at the Escola Bahiana de Medicina e Saúde Pública (EBMSP), Brazil. Title of work: Public Servants undergoing Somatic Experiencing Therapy.
-                            {% endblocktranslate %}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h2 class="text-center text-2xl mb-8 mt-14 sm:text-3xl">
-                {% translate "Complementary Education" %}
-            </h2>
-
-            <div class="max-w-3xl mx-auto w-11/12">
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1985
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Public Health Nursing. (Working hours: 30h). Achilles Leal Study Center (CEAL), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1986
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University Extension in Macroscopic Anatomy of the Nervous System (Working hours: 30h). Santa Emilia de Rodat Nursing School (EESER), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1987
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    VI National Update Course in Endocrinology (Working hours: 32h). Sandoz Research (PS), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1989
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Management/Leadership Human Relations Course (Working hours: 20h). National Commercial Learning Service (SENAC), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                        
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Update to Assistant Nurse (Working hours: 54h). Dr. Francisco Porto Study Center (CEFP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1992
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Technical Training for Nurses in the STD Area (Working hours: 200h). State Department of Health - PB (SES - PB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1995
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Introductory Course for Nurses (Working hours: 40h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1998
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Development of administrative skills (Working hours: 20h). Lauro Wanderley University Hospital (HU - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        1999
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Quality in Customer Service (Working hours: 20h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Advanced Life Support Course for Nurses (Working hours: 20h). Lauro Wanderley University Hospital (HU - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2001
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    TRAINING AND QUALIFICATION OF HUMAN RESOURCES (Working hours: 90h). Federal University of Paraíba (UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2002
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Overcoming Stress (Working hours: 20h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Mobilizing Teams (Working hours: 9pm). National School of Public Administration (ENAP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    How to speak in public (Working hours: 20h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Project Preparation (Working hours: 30h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2003
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Adelante 8 (Working hours: 285h). Anglo American Cultural Center Ltda (CCAA), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    The Pursuit of Excellence in Citizen Service (Working hours: 25h). National School of Public Administration (ENAP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2004
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    TIP Base Course - ADI (Working hours: 16h). Renate Jost de Moraes (RJM), Brazil
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2005
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    TECHNICAL TRAINING FOR NURSES IN THE AREA OF DO. (Working hours: 200h). STATE SECRETARIAT OF HEALTH OF PARAÍBA (SES-PB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Training for the Public Sector (Working hours: 40h). National School of Public Administration (ENAP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Facilitator, a producer of dreams (Working hours: 8h). Integrated Colleges of Patos (FIP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2006
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Update for UFPB Managers (Working hours: 32h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Ethics and Public Service (Working hours: 10h). National School of Public Administration (ENAP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    PowerPoint (Working hours: 15h). Superintendency of Human Resources (SRH - UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Strategic People Management and Career Plans (Working hours: 20h). National School of Public Administration (ENAP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                    
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2007
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Minotauro Project - Challenging Fears (Working hours: 16h). Human Center (HC), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University Extension in Law No. 8,112/90 Legal Regime for Federal Public Servants (Working hours: 80h).University of Brasília (UnB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University extension in BIODANZA FACILITATOR (Working hours: 432h). INTERNATIONAL BIOCENTRIC FOUNDATION (IBF), Chile.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2008
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Resolution Approach. Trauma. - N. Inter. I, II and III (Working hours: 72h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    EXCELLENCE IN CUSTOMER SERVICE (THEORY AND PRACTICE) (Working load: 30h). Federal University of Paraíba (UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    STRATEGIC PLANNING (THEORY AND PRACTICE) MODULE. (Working hours: 60h). Federal University of Paraíba (UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    ROUTINE MANAGEMENT (MODULE II) (Working hours: 30h). Federal University of Paraíba (UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Traumatic Resolution Approach - Intermediate Level II (Working hours: 24h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Traumatic Resolution Approach - Intermediate Level I (Working hours: 24h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2009
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Traumatic Resolution Approach - Advanced Level I and II (Working hours: 72h). Association of Somatic Experiencing in Brazil (ASEB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University Extension in Specialization Course in Minotauro Project (Court load: 90h). Center for Biodanza and Biocentric Activities of PE (CB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University Extension in TEACHING PROFESSOR OF BIODANZA (Course load: 180h). International Biocentric Foundation (IBF), Chile.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2010
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    BASIC NEUROSCIENCE COURSE - INTRODUCTION TO THE STUDY (Working hours: 60h). Federal University of Minas Gerais (UFMG), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University Extension in DRUG ADDICTION: A PROPOSAL FOR PREVENTION, REHABILITATION (Working hours: 56h). Federal University of Paraíba (UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2011
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    HEALING TRAUMA BY AWAKENING SPIRITUALITY (Working hours: 15h). INSTITUTE THE HUMANENRICHMENT (ITH), United States.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    II COURSE AND CONFERENCES IN NEUROSCIENCES AND BEHAVIOR (Working hours: 40h). Federal University of Paraíba (UFPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">   
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Client's Emotional and Behavioral Disorders (Working hours: 30h). Federal Nursing Council (COFEN), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2012
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    PROFESSIONAL TRAINING COURSE IN NATURAL THERAPIES (Working hours: 1370h). Union of Therapists of the State of Paraíba (SINTE-PB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Government Actions in Public Health Policies (Working hours: 30h). Federal Nursing Council (COFEN), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Preparation of scientific articles for review. (Working hours: 5h). American University (UA), Paraguay.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2013
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Somatic Experiencing® Practitioner (SEP) (Working hours: 216h). Somatic Experiencing® Trauma Institute (SETI), United States.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2014
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Free Cardiac Coherence Course. (Working hours: 20h). Coherence Space (EC), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Use of cardiofeedback in psychology (Working hours: 14h). Espaço Trauma (E.A), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    DISCOURSE ANALYSIS AS A RESEARCH METHODOLOGY (Working hours: 12h). Federal University of Rio Grande do Norte (UFRN), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">    
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    University extension in Natural and Holistic Therapies (Working hours: 1370h). State University of Paraíba (UEPB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2015
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Cardiovascular biofeedback (Working hours: 8h). CardioEmotion (C.E), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2016
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Scientific article: from preparation to submission (Working hours: 30h). Científica Saúde (CS), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2017
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    In-depth Course in Biodanza (Working hours: 18h). Museum of Afro-Brazilian Arts and Biodanza School of Pernanbuco (AARTB), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    HOW TO MAKE THE INVISIBLE VISIBLE (Working hours: 16h). INTELECTUS - Training and Courses (ITC), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    The Biodanza Process and Neurosciences (Working hours: 72h). Escola de Biodanza Sistema Rolando Toro - Belo Horizonte (EBSRT), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2018
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Integral Somatic Psychology Professional Training Module 1 (Working hours: 74h). Integral Somatic Psychology (ISP), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-
-                        <li class="pl-4 mt-4 relative">
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Enneaframa-Psychology of Enneatypes-Initial Diagnosis (Working hours: 20h). FUNDACION CLAUDIO NARANJO (FCN), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2020
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Training in Family Constellation (Working hours: 90h). UNIPAZ - Pernanbuco (UNIPAZ), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex flex-row flex-nowrap items-start">
-                    <h3 class="sticky mr-4 top-20 font-bold text-gray-500">
-                        2021
-                    </h3>
-        
-                    <ul class="border-l-2 border-gray-400">
-                        <li class="pl-4 mt-4 relative">
-                            <span 
-                                class="absolute -top-0.5 -left-[1px] -translate-x-1/2 table w-3 h-3 rounded-full bg-gray-400"
-                            ></span>
-        
-                            <p>
-                                {% blocktranslate trimmed %}
-                                    Kindness Program: Integral Mindfulness and Emotional Harmony (Working hours: 252h). Instituto de Ciência Contemplativa do Brasil (ICC), Brazil.
-                                {% endblocktranslate %}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-blue-50  border-t border-blue-200 mt-12">
-            <h2 class="text-center text-2xl py-8 sm:text-3xl text-blue-950">
-                {% translate "Professional Activity" %}
-            </h2>
-
-            <div 
-                class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 px-4 mx-auto max-w-7xl "
-            >
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                    
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1986 - 1987
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            General Edson Ramalho Hospital (HGER)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Nurse</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Internship in the Gynecology and Obstetrics Sector
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                    
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1987 - 1988
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            General Edson Ramalho Hospital (HGER)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Nurse</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            In the Intensive Care Center
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                    
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1989 - 1989
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Pension Institute of the State of Paraíba (IPEP)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Nurse</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Internship in the Diabetes Unit
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1989 - 1991
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            General Edson Ramalho Hospital (HGER)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Nurse</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Founder of the nursing service to assist diabetic patients at the hospital
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1991 - 2004
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Department of Health of the State of Paraíba (SES/PB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Was a <span>Member of the State Health Council</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Representing the follow-up of Health Workers through the Regional Nursing Council
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                    
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1995 - 2019
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Workedg as a <span>Nurse</span>
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-                
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                    
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        1997 - 1998
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Health Sciences Center (CCS - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Workedg as a <span>Substitute Teacher</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            I taught the subjects: Semiology and Semiotechnics in Nursing I and Clinical Nursing
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2000 - 2002 
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Regional Nursing Council of Paraíba (COREN-PB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as the <span>Editor</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Was the member of the Editorial Committee of the COREN-PB Newsletter
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2001 - 2002
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Universitary Hospital Lauro Wanderley (HU - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Nurse</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Worked in the Surgical Center caring for patients of all ages, including the elderly.
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2004 - 2006
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked in the <span>Probationary Internship Committee</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Probationary Internship Committee for Technical-Administrative Services
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-                
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2007 - 2007
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Director</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Director of the Selection and Improvement Division / Human Resources Superintendence (SRH)
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2008 - 2008
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as the <span>Commission President</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            President of the Commission for the implementation of UFPB Occupational Health and Assistance Policies
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2008 - 2008
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as the <span>Head of Training and Improvement</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Head of Training and Improvement / Selection and Improvement Division (DSA)
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2008 - 2009
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as the <span>Coordinator</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Coordinator of Comprehensive Care Program for Alcoholics and Other Drug Dependents (PAIAD) / Human Resources Superintendence (SRH)
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2014 - 2014
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Human Resources Superintendence (SRH - UFPB)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Visiting Professor</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Discipline: PSYCHONEUROIMMUNOLOGY
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2014 - 2014
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Amazon College (FAAM)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Visiting Professor</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Module of Ethics in Therapeutic Practice
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2016 - 2016
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Amazon College (FAAM)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Visiting Professor</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Module of Ethics in Therapeutic Practice
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2016 - 2016
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Amazon College (FAAM)
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Visiting Professor</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            Module of psychoneuroimmunology
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-                
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
-                >
-                    <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
-                        <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
-                       
-                        <p 
-                            class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
-                        >
-                            {% translate 'Brazil' %}
-                        </p>
-
-                        <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
-                    </span>
-
-                    <p class="text-gray-500">
-                        <i class="fa-regular fa-clock text-sm"></i>
-                        2016 - 2016
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-location-dot"></i>
-                        {% blocktranslate trimmed %}
-                            Paulista University (UNIP) 
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
-                        <i class="fa-solid fa-user-doctor"></i>
-                        {% blocktranslate trimmed %}
-                            Worked as a <span>Guest</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <p class="mt-2 text-gray-500">
-                        <i class="fa-solid fa-circle-info"></i>
-                        {% blocktranslate trimmed %}
-                            SIMPSE III Scientific Committee
-                        {% endblocktranslate %}
-                    </p>
-                </div>
-
-                <div 
-                    class="flex flex-col justify-evenly relative z-10 py-6 px-3 bg-white border border-gray-200 rounded overflow-hidden sm:py-2 shadow"
-                >
-                    <p class="max-w-xs mx-auto text-gray-500 text-center [&>span]:text-gray-700 [&>span]:font-bold">
-                        {% blocktranslate trimmed %}
-                            Since <span>2017</span> I'm working as a self-employed <span>Nurse and Holistic Therapist</span>
-                        {% endblocktranslate %}
-                    </p>
-
-                    <a 
-                        href="{% url 'users:my-work' %}"
-                        class="flex justify-center mx-auto mb-2 mt-4 w-28 gap-2 py-2 font-sans text-xs font-bold uppercase text-orange-700/80 bg-red-100 rounded-sm border border-red-200 shadow transition-all hover:scale-105 lg:mt-0"
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
                     >
-                        {% translate 'Read More' %}
-                        <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/>
-                        </svg>
-                    </a>
-                </div>
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2016 - 2016
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Amazon College (FAAM)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Visiting Professor</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Module of psychoneuroimmunology
+                    {% endblocktranslate %}
+                </p>
             </div>
-        </section>
-    </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2016 - 2016
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Amazon College (FAAM)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Visiting Professor</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Module of Ethics in Therapeutic Practice
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2014 - 2014
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Amazon College (FAAM)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Visiting Professor</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Module of Ethics in Therapeutic Practice
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2014 - 2014
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Visiting Professor</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Discipline: PSYCHONEUROIMMUNOLOGY
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2008 - 2009
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as the <span>Coordinator</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Coordinator of Comprehensive Care Program for Alcoholics and Other Drug Dependents (PAIAD) / Human Resources Superintendence (SRH)
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2008 - 2008
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as the <span>Head of Training and Improvement</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Head of Training and Improvement / Selection and Improvement Division (DSA)
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2008 - 2008
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as the <span>Commission President</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        President of the Commission for the implementation of UFPB Occupational Health and Assistance Policies
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2007 - 2007
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Director</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Director of the Selection and Improvement Division / Human Resources Superintendence (SRH)
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2004 - 2006
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked in the <span>Probationary Internship Committee</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Probationary Internship Committee for Technical-Administrative Services
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2001 - 2002
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Universitary Hospital Lauro Wanderley (HU - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Nurse</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Worked in the Surgical Center caring for patients of all ages, including the elderly.
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    2000 - 2002 
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Regional Nursing Council of Paraíba (COREN-PB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as the <span>Editor</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Was the member of the Editorial Committee of the COREN-PB Newsletter
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1997 - 1998
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Health Sciences Center (CCS - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Workedg as a <span>Substitute Teacher</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        I taught the subjects: Semiology and Semiotechnics in Nursing I and Clinical Nursing
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1995 - 2019
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Human Resources Superintendence (SRH - UFPB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Workedg as a <span>Nurse</span>
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1991 - 2004
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Department of Health of the State of Paraíba (SES/PB)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Was a <span>Member of the State Health Council</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Representing the follow-up of Health Workers through the Regional Nursing Council
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                    
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1989 - 1991
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        General Edson Ramalho Hospital (HGER)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Nurse</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Founder of the nursing service to assist diabetic patients at the hospital
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1989 - 1989
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        Pension Institute of the State of Paraíba (IPEP)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Nurse</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Internship in the Diabetes Unit
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                
+                    <p 
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1987 - 1988
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        General Edson Ramalho Hospital (HGER)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Nurse</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        In the Intensive Care Center
+                    {% endblocktranslate %}
+                </p>
+            </div>
+
+            <div 
+                class="flex flex-col justify-evenly relative z-10 py-2 px-3 bg-white border border-gray-200 shadow rounded"
+            >
+                <span class="absolute w-16 h-16 -right-2 -top-2 overflow-hidden">
+                    <span class="bg-cyan-900 table w-2 h-[8px] absolute top-0 left-px"></span>
+                
+                    <p
+                        class="relative w-24 text-center rotate-45 top-1/4 left-1/4 -translate-x-1/4 -translate-y-1/4 z-10 pl-1 text-white bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-600"
+                    >
+                        {% translate 'Brazil' %}
+                    </p>
+
+                    <span class="bg-cyan-900 table w-[8px] h-3 absolute bottom-0 right-0"></span>
+                </span>
+
+                <p class="text-gray-500">
+                    <i class="fa-regular fa-clock text-sm"></i>
+                    1986 - 1987
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-location-dot"></i>
+                    {% blocktranslate trimmed %}
+                        General Edson Ramalho Hospital (HGER)
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500 [&>span]:text-gray-800 [&>span]:font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    {% blocktranslate trimmed %}
+                        Worked as a <span>Nurse</span>
+                    {% endblocktranslate %}
+                </p>
+
+                <p class="mt-2 text-gray-500">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {% blocktranslate trimmed %}
+                        Internship in the Gynecology and Obstetrics Sector
+                    {% endblocktranslate %}
+                </p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 
 {% block footer %}
-    <div class="bg-blue-50 pt-10">
+    <div class="pt-10 bg-blue-50">
         {{ block.super }}
     </div>
 {% endblock %}

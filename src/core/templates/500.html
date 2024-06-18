@@ -1,0 +1,116 @@
+{% extends "core/base.html" %}
+{% load static i18n %}
+
+{% block title %}500{% endblock %}
+{% block menu %}{% endblock menu %}
+
+{% block extra_head %}
+    <style>
+        @keyframes drop {
+            0% {transform: translateY(0vh);}
+            75% {transform: translateY(100vh);}
+            100% {transform: translateY(100vh);}
+        }
+
+        @keyframes water {
+            0% {opacity: 1;}
+            65% {opacity: 1;}
+            75% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+
+        @keyframes splat {
+            0% {opacity: 1; transform: scale(0);}
+            80% {opacity: 1; transform: scale(0);}
+            90% {opacity: 0.5; transform: scale(1);}
+            100% {opacity: 0; transform: scale(1.5);}
+        }
+
+       #rain {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #202020, #111119);
+            z-index: -1;
+
+            .front-row, .back-row{
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                .drop {
+                    position: absolute;
+                    bottom: 100%;
+                    width: 15px;
+                    height: 120px;
+                    pointer-events: none;
+                    animation: drop 0.5s linear infinite;
+
+                    .water {
+                        width: 1px;
+                        height: 60%;
+                        margin-left: 7px;
+                        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+                        animation: water 0.5s linear infinite;
+                    }
+                    
+                    .splat {
+                        width: 15px;
+                        height: 10px;
+                        border-top: 2px dotted rgba(255, 255, 255, 0.5);
+                        border-radius: 50%;
+                        opacity: 1;
+                        transform: scale(0);
+                        animation: splat 0.5s linear infinite;
+                        transform: scale(1.5);
+                    }
+                }
+            }
+
+            .back-row{
+                bottom: 60px;
+                opacity: 0.5;
+                z-index: 1;
+            }
+       }
+    </style>
+    
+    <script src="{% static 'core/_js/errors/500.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+    <div 
+        id="rain"
+        class="absolute top-0 bottom-0 w-full overflow-hidden "
+    >
+        <div class="front-row"></div>
+
+        <div class="back-row"></div>
+    </div>
+
+
+    <div class="min-h-screen flex flex-col justify-center items-center max-w-lg mx-auto">
+        <h1 class="text-white text-7xl sm:text-8xl md:text-9xl">
+            500
+        </h1>
+
+        <p class="text-center text-xl text-gray-50 m-4">
+            Woops! {% translate 'Something went wrong' %}
+        </p>
+
+        <p class="text-center text-xl text-gray-400 mt-4 px-2"> 
+            {% blocktranslate trimmed %}
+                An error report has been sent to our team, we will resolve the issue as soon as possible
+            {% endblocktranslate %}
+        </p>
+
+        <a href="{% url 'users:index' %}" class="btn btn-warning my-8 mx-2">
+            {% translate "Back to start"%}
+        </a>
+    </div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock %}

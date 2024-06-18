@@ -1,10 +1,12 @@
+# Production repository
+src/.gitignore
+
 # Enviroment file
 **/.env
 
 # IDE directories 
 **/.idea
 **/.vscode
-
 
 # Virtual env
 **/venv

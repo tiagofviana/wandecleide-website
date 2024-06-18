@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.http import HttpResponse
 from django.views.generic import TemplateView
 
 class MessagesTemplateView(TemplateView):
@@ -12,3 +13,4 @@ class MessagesTemplateView(TemplateView):
             del self.request.session[settings.SESSION_REDIRECT_URL]
 
         return context
+    

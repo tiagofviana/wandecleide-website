@@ -20,6 +20,11 @@
 
         #clouds > div 
         {
+            position: absolute;
+            height: 4rem;
+            width: 12rem;
+            background: #fff;
+            border-radius: 9999px;
             animation-name: moveclouds;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -32,6 +37,29 @@
         #clouds > div:nth-of-type(5){animation-duration: 22s;}
         #clouds > div:nth-of-type(6){animation-duration: 48s;}
 
+
+        #clouds > div::after {
+            content: '';
+            width: 5rem;
+            height: 5rem;
+            background: #fff;
+            position: absolute;
+            right: 2rem;
+            top: -2.5rem;
+            border-radius: 9999px;
+        }
+
+        #clouds > div::before {
+            content: '';
+            width: 3.5rem;
+            height: 3.5rem;
+            background: #fff;
+            position: absolute;
+            left: 2.25rem;
+            top: -1.75rem;
+            border-radius: 9999px;
+        }
+
     </style>
 {% endblock extra_head %}
 
@@ -39,14 +67,7 @@
     <div class="relative min-h-screen overflow-hidden flex items-center justify-center bg-blue-400">
         <div 
             id="clouds"
-            class="absolute top-0 bottom-0 w-full overflow-hidden
-
-            [&>div]:absolute [&>div]:h-16 [&>div]:w-48 [&>div]:bg-white [&>div]:rounded-full [&>div]:transition-all [&>div]:ease-in [&>div]:duration-1000
-            
-            [&>div]:before:w-14 [&>div]:before:h-14 [&>div]:before:bg-white [&>div]:before:absolute [&>div]:before:left-9 [&>div]:before:-top-7 [&>div]:before:rounded-full
-
-            [&>div]:after:w-20 [&>div]:after:h-20 [&>div]:after:bg-white [&>div]:after:absolute [&>div]:after:right-8 [&>div]:after:-top-12 [&>div]:after:rounded-full
-            "
+            class="absolute top-0 bottom-0 w-full overflow-hidden"
         >
             <!-- Top clouds -->
             <div class="scale-50 opacity-80 top-12 left-24"></div>
@@ -58,19 +79,22 @@
             <div class="opacity-90 bottom-6 left-1/2"></div>
             <div class="scale-50 opacity-50 left-48 bottom-5 z-10"></div>
         </div>
+        
         <div class="text-center text-white uppercase max-w-sm w-11/12">
-            <h1 class="text-8xl sm:text-9xl border-b-4 border-white">
+            <h1 class="text-white text-7xl border-b-4 border-white sm:text-8xl md:text-9xl">
                 404
             </h1>
 
-            <div class="text-2xl px-4 mt-4">
+            <div class="text-xl sm:text-2xl px-2 mt-4">
                 {% translate "Page not found" %}
             </div>
 
-            <a href="/" class="btn btn-danger my-4 mx-auto">
+            <a href="{% url 'users:index' %}" class="btn btn-danger my-4 mx-auto">
                 {% translate "Back to start"%}
             </a>
         </div>
     </div>
 {% endblock content %}
 
+{% block footer %}
+{% endblock %}

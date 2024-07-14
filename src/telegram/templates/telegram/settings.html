@@ -1,0 +1,53 @@
+{% extends "core/base.html" %}
+{% load i18n static %}
+
+<!-- Title -->
+{% block title %}{% translate 'Settings' %}{% endblock title %}
+
+{% block extra_head %}
+    <script src="{% static 'telegram/_js/highlight/json.min.js' %}" defer></script>
+    <script src="{% static 'telegram/_js/settings.js' %}" defer></script>
+{% endblock extra_head %}
+
+<!-- Menu -->
+{% block menu %}{% endblock menu %}
+
+<!-- Content -->
+{% block content %}
+    <div class="min-h-screen p-2 bg-blue-400">
+        <button id="back-button" class="btn btn-light ml-auto">
+            {% translate "Back" %}
+        </button>
+    
+        <h1 class="text-center text-white text-5xl uppercase mt-4">
+            {% translate "Settings" %}
+        </h1>
+    
+        <div class="shadow">
+            <pre class="mt-12"><code class="hljs language-json">{{ telegram.settings }}</code></pre>
+    
+            <div id="setting-buttons" class="flex flex-col sm:flex-row bg-white">
+                <button
+                    url="{{ telegram.delete }}"
+                    class="btn btn-danger shadow m-4"
+                >
+                    {% translate 'Reset' %}
+                </button>
+
+                <button
+                    url="{{ telegram.setup }}" 
+                    class="btn btn-primary shadow m-4"
+                >
+                    {% translate 'Setup' %}
+                </button>        
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+<!-- Footer -->
+{% block footer %}{% endblock footer %}
+
+
+
+

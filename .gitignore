@@ -18,6 +18,9 @@ src/.gitignore
 # Staticfiles directory created by the command 'python manage.py collectstatic --noinput'
 **/staticfiles
 
+# Temporary directory
+**/temp
+
 # Sqlite
 **/*.sqlite3
 
@@ -28,5 +31,5 @@ src/.gitignore
 # Tailwind
 **/tailwind/**/output.css
 
-# Webpack
-**/_js/**/bundled
+# Rollup
+**/_js/**/*.min.js

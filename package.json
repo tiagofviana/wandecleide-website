@@ -1,11 +1,21 @@
 {
   "scripts": {
     "tw-dev": "tailwindcss --input src\\core\\static\\core\\_css\\tailwind\\input.css --output src\\core\\static\\core\\_css\\tailwind\\output.css --watch",
-    "tw-prod": "tailwindcss  --input src\\core\\static\\core\\_css\\tailwind\\input.css --output src\\core\\static\\core\\_css\\tailwind\\output.css --minify"
+    "tw-prod": "tailwindcss  --input src\\core\\static\\core\\_css\\tailwind\\input.css --output src\\core\\static\\core\\_css\\tailwind\\output.css --minify",
+    "rollup": "rollup --config rollup.config.js --watch"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "highlight.js": "^11.9.0",
+    "rollup": "^4.18.0",
+    "rollup-plugin-import-css": "^3.5.0"
   }
 }

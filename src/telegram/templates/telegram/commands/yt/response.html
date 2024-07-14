@@ -1,0 +1,7 @@
+{% extends "telegram/commands/base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <strong>{% translate "Click on the the link below to access the file" %} </strong>
+    <a href="{{ player_url }}">{% translate "Link" %}</a>
+{% endblock %}

@@ -2,14 +2,11 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model, admin as auth_admin
 from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
-
 from . import models
 
 
-admin.site.site_header = "Administração"
-admin.site.index_title = ""
-
 admin.site.unregister(Group)
+
 
 @admin.register(models.CustomGroup)
 class CustomGroupAdmin(admin.ModelAdmin):

@@ -1,0 +1,11 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block result_list %}
+    <div class="object-tools">
+        <a href="{% url 'admin:cm-remove-old-data' %}" class="btn btn-high btn-success">
+            {% translate 'Remove old data' %}
+        </a>
+    </div>
+    {{ block.super }}
+{% endblock %}

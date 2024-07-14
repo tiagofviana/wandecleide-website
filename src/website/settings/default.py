@@ -20,7 +20,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = os.environ['DJANGO_ALLOWED_HOSTS'].split(',')
-
+CSRF_TRUSTED_ORIGINS =  os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', []).split(',')
 
 # Application definition
 INSTALLED_APPS = [
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # APPS
     'core',
     'users',
+    'telegram',
 ]
 
 
@@ -238,3 +239,9 @@ LOGGING = {
 
 # Session variables
 SESSION_REDIRECT_URL = 'redirect_url'
+
+
+# Telegram Bot
+TELEGRAM_BOT_API_URL = "https://api.telegram.org/bot"
+TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']
+TELEGRAM_BOT_SECRET = os.environ['TELEGRAM_BOT_SECRET']

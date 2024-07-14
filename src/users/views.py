@@ -41,10 +41,6 @@ class MyWorkTemplateView(TemplateView):
     template_name='users/my-work.html'
 
     def get_context_data(self, **kwargs) -> dict:
-        print('--------------------------------')
-        for item in self.request.COOKIES:
-            print(item)
-
         context = super().get_context_data(**kwargs)
         context['like_dislike_1'] = models.LikeDislikeCounter.objects.get(id=1)
         context['like_dislike_2'] = models.LikeDislikeCounter.objects.get(id=2)

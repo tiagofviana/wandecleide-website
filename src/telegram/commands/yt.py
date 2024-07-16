@@ -1,5 +1,4 @@
 import re
-from concurrent.futures import ThreadPoolExecutor
 from django.template.loader import render_to_string
 from django.utils.translation import gettext as _
 from youtube import AudioDownloader

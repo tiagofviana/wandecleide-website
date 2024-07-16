@@ -20,7 +20,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = os.environ['DJANGO_ALLOWED_HOSTS'].split(',')
-CSRF_TRUSTED_ORIGINS =  os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', []).split(',')
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -217,22 +217,17 @@ LOGGING = {
     },
 
     'loggers': {
-        '': {
-            'handlers': ['console'],
-            'level': os.environ.get('DJANGO_LOG_LEVEL', 'INFO'),
-            'propagate': True,
-        },
-
-        'django': {
+        'root': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
         },
-        'django.server': {
+
+
+        '': {
             'handlers': ['console'],
             'level': os.environ.get('DJANGO_LOG_LEVEL', 'INFO'),
-            'filters': ['require_debug_true'],
-            'propagate': False,
+            'propagate': True,
         },
     },
 }

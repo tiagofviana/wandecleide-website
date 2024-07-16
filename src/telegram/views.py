@@ -128,7 +128,7 @@ class WebhookView(View):
                 'reply_to_message_id': retrived_data.message_id,
             })
         
-        if not command_manager.is_command_valid(retrived_data):
+        if not command_manager.is_command_valid(retrived_data.command):
             return JsonResponse({
                 'method': 'sendMessage',
                 'text':  self.ERROR_MESSAGES['invalid_command'],
@@ -136,7 +136,7 @@ class WebhookView(View):
                 'reply_to_message_id': retrived_data.message_id,
             })
         
-        TelegramChatMessage.objects.create(
+        telegram_chat_message = TelegramChatMessage.objects.create(
             TelegramAccount_telegram_id = retrived_data.telegram_account,
             update_id = retrived_data.update_id,
             message_id = retrived_data.message_id,
@@ -144,7 +144,7 @@ class WebhookView(View):
             request_data = telegram_form.cleaned_data['telegram_data']
         )
         
-        command_manager.execute(retrived_data)
+        command_manager.execute(telegram_chat_message)
 
         return JsonResponse({})
     

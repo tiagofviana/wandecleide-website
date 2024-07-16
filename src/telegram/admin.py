@@ -54,7 +54,7 @@ class TelegramChatMessageAdmin(admin.ModelAdmin):
         }),
 
         ('JSON', {
-            'fields': ('prettified_request_data', 'prettified_response_data'),
+            'fields': ('prettified_request_data',),
         }),
 
     )
@@ -86,23 +86,6 @@ class TelegramChatMessageAdmin(admin.ModelAdmin):
         ) 
     prettified_request_data.short_description = _("request data")
 
-
-    def prettified_response_data(self, obj):
-        indented_response_data = json.dumps(
-            obj.response_data,
-            sort_keys = True,
-            indent = 4,
-            ensure_ascii = False
-        )
-
-        return format_html(
-            # "telegram/_js/highlight/json.min.js" already imported at prettified_request_data
-            '''
-                <pre><code class="hljs language-json">{}</code></pre>
-            ''',
-            indented_response_data
-        ) 
-    prettified_response_data.short_description = _("response data")
 
     def get_urls(self):
         urls = super().get_urls()

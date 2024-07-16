@@ -2,7 +2,7 @@ from threading import Thread
 import os, importlib, logging
 from typing import Callable
 from django.utils.translation import gettext as _
-from telegram.retrived_data import RetrivedData
+from telegram.models import TelegramChatMessage
 from .base import BaseCommand
 
 
@@ -27,11 +27,11 @@ class CommandManager:
         return self._commands
 
 
-    def execute(self, retrived_data: RetrivedData) -> dict:
-        logger.debug(f'Starting to process the message: {retrived_data.message}')
-        command = retrived_data.message.split(' ')[0]
-
-        if not self.is_command_valid(retrived_data):
+    def execute(self, telegram_chat_message: TelegramChatMessage) -> dict:
+        logger.debug(f'Starting to process the message: {telegram_chat_message.message}')
+        command = telegram_chat_message.message.split(' ')[0]
+        
+        if not self.is_command_valid(command):
             raise RuntimeError(f'The command "{command}" is not valid')
 
         command_obj: BaseCommand = self.commands[command]()
@@ -39,34 +39,33 @@ class CommandManager:
         class RunnerThread(Thread):
             def __init__(
                 self, 
-                fn: Callable[[RetrivedData], None],
-                retrived_data: RetrivedData, 
+                fn: Callable[[TelegramChatMessage], None],
+                telegram_chat_message: TelegramChatMessage, 
                 group = None, *args, **kwargs
             ):
                 super().__init__(group, args, kwargs)
                 self._fn = fn
-                self._retrived_data = retrived_data
+                self._telegram_chat_message = telegram_chat_message
 
 
 
             def run(self) -> None:
                 try:
-                   self._fn(self._retrived_data)
+                   self._fn(self._telegram_chat_message)
                 except Exception as exception:
-                    text = f'Fail to run the message "{retrived_data.message}". Error: {exception}'
-                    logger.error(text)
-                    self._retrived_data.telegram_account.send_message(
+                    logger.error(f'Fail to run the chat message "{telegram_chat_message.update_id}". Error: {exception}')
+                    self._telegram_chat_message.TelegramAccount_telegram_id.send_message(
                         _('Something went wrong in processing. A report has been sent to our team and we will fix it as soon as possible.')
                     )
                 finally:
-                    del self._fn, self._retrived_data
+                    del self._fn, self._telegram_chat_message
 
-        runner_thread = RunnerThread(fn=command_obj.process, retrived_data=retrived_data)
+        runner_thread = RunnerThread(fn=command_obj.process, telegram_chat_message=telegram_chat_message)
         runner_thread.start()
 
     
-    def is_command_valid(self, retrived_data: RetrivedData) -> bool:
-        command = retrived_data.message.split(' ')[0]
+    def is_command_valid(self, command: str) -> bool:
+        ''' command example: `/example` '''
         if command not in self.commands:
             return False
         

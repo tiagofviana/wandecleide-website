@@ -40,6 +40,10 @@ class RetrivedData:
     def message(self) -> str:
         return self._message
     
+
+    @property
+    def command(self) -> str:
+        return self._message.split(' ')[0]
     
     @property
     def update_id(self) -> int:

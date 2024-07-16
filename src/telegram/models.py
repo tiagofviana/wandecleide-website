@@ -100,21 +100,12 @@ class TelegramAccount(models.Model):
 
 
 class TelegramChatMessage(models.Model):
-    TelegramAccount_telegram_id = models.ForeignKey(
-        TelegramAccount,
-        on_delete=models.RESTRICT,
-        verbose_name=_('telegram account'), 
-        db_column='TelegramAccount_telegram_id',
-        null=False,
-        db_index=True
-    )
-
     update_id = models.PositiveBigIntegerField(
+        primary_key=True,
         verbose_name=_('update ID'),
         help_text=_(
             "update's unique identifier, allows you to ignore repeated updates or to restore the correct update sequence"
         ),
-        primary_key=True,
         null=False,
         db_index=True,
     )
@@ -142,6 +133,15 @@ class TelegramChatMessage(models.Model):
         null=False,
         default=timezone.now,
         editable=False
+    )
+
+    TelegramAccount_telegram_id = models.ForeignKey(
+        TelegramAccount,
+        on_delete=models.RESTRICT,
+        verbose_name=_('telegram account'), 
+        db_column='TelegramAccount_telegram_id',
+        null=False,
+        db_index=True
     )
 
     class Meta:

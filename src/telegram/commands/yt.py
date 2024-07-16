@@ -3,16 +3,16 @@ from django.template.loader import render_to_string
 from django.utils.translation import gettext as _
 from youtube import AudioDownloader
 from youtube.exceptions import AudioStreamNotFoundError, InvalidUrlError, VideoAgeRestrictedError
-from telegram.retrived_data import RetrivedData
-from telegram.models import TelegramYoutubeDownload
+from telegram.models import TelegramYoutubeDownload, TelegramChatMessage
 from .base import BaseCommand
 
 class Command(BaseCommand):
-    def process(self, retrived_data: RetrivedData) -> None:
-        arguments = retrived_data.message.split(' ')[1:]
+    def process(self, telegram_chat_message: TelegramChatMessage) -> None:
+        telegram_account = telegram_chat_message.TelegramAccount_telegram_id
+        arguments = telegram_chat_message.message.split(' ')[1:]
         youtube_url = self._get_youtube_url(*arguments)
 
-        retrived_data.telegram_account.send_message(
+        telegram_account.send_message(
             _('We have received your request and started processing it. Remember that the larger the video size, the longer the processing time')
         )
         
@@ -21,7 +21,7 @@ class Command(BaseCommand):
             result = audio_downlaoder.download()
 
             telegram_youtube_download = TelegramYoutubeDownload.objects.create(
-                TelegramChatMessage_update_id__update_id = retrived_data.update_id,
+                TelegramChatMessage_update_id = telegram_chat_message,
                 url = youtube_url,
                 file_path = result['file_path'],
                 title = result['title'],
@@ -32,23 +32,23 @@ class Command(BaseCommand):
                 template_name = 'telegram/commands/yt/response.html',
                 context = {
                     'player_url' : telegram_youtube_download.generate_player_full_url()
-                    }
+                }
             )
 
-            retrived_data.telegram_account.send_message(text)
+            telegram_account.send_message(text)
         
 
         except InvalidUrlError:
-            retrived_data.telegram_account.send_message(
+            telegram_account.send_message(
                 _('This command doesn\'t have a supported youtube url')
             )
         except AudioStreamNotFoundError:
-            retrived_data.telegram_account.send_message(
+            telegram_account.send_message(
                 _('This url is doesn\'t have a supported audio stream')
             )
         
         except VideoAgeRestrictedError:
-            retrived_data.telegram_account.send_message(
+            telegram_account.send_message(
                 _('The video has an age restriction and can\'t be accessed')
             )
 

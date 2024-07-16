@@ -129,12 +129,12 @@ class WebhookView(View):
             })
         
         if not command_manager.is_command_valid(retrived_data):
-            return {
+            return JsonResponse({
                 'method': 'sendMessage',
                 'text':  self.ERROR_MESSAGES['invalid_command'],
                 'chat_id': retrived_data.telegram_id,
                 'reply_to_message_id': retrived_data.message_id,
-            }
+            })
         
         TelegramChatMessage.objects.create(
             TelegramAccount_telegram_id = retrived_data.telegram_account,

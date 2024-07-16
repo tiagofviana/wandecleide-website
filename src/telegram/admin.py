@@ -133,10 +133,10 @@ class TelegramChatMessageAdmin(admin.ModelAdmin):
 @admin.register(models.TelegramYoutubeDownload)
 class TelegramYoutubeDownloadAdmin(admin.ModelAdmin):
     change_list_template = 'telegram/admin/youtube-download-changelist.html'
-    list_display = ('id', 'TelegramAccount_telegram_id', 'file_path')
+    list_display = ('id', 'TelegramChatMessage_update_id', 'file_path')
     fieldsets = (        
         (_('Identifier'), {
-            'fields': ('id', 'TelegramAccount_telegram_id'),
+            'fields': ('id', 'TelegramChatMessage_update_id'),
         }),
 
         (_('Data'), {

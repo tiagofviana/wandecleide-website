@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 16:42-0300\n"
+"POT-Creation-Date: 2024-07-16 15:08-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,7 +98,7 @@ msgstr "Link do player"
 msgid "request data"
 msgstr "dados da requisição"
 
-#: .\telegram\admin.py:105 .\telegram\models.py:141
+#: .\telegram\admin.py:105
 msgid "response data"
 msgstr "dados da reposta"
 
@@ -124,21 +124,15 @@ msgid_plural "{amount} downloads were successfully removed."
 msgstr[0] "{amount} download foi removido com sucesso."
 msgstr[1] "{amount} downloads foram removidos com sucesso."
 
-#: .\telegram\commands\__init__.py:36
-msgid "This command is not valid"
-msgstr "Está comando não é válido"
-
-#: .\telegram\commands\__init__.py:45
-msgid "An error occurred while we were processing your request"
-msgstr "Um erro ocorreu enquanto processavamos a sua solicitação"
-
-#: .\telegram\commands\__init__.py:49
-msgid "A report has been sent to our team, we will fix it as soon as possible"
+#: .\telegram\commands\__init__.py:59
+msgid ""
+"Something went wrong in processing. A report has been sent to our team and "
+"we will fix it as soon as possible."
 msgstr ""
 "Um relatório de erro foi enviado para a nossa equipe, nós resolveremos o "
 "problema o mais rápido possível."
 
-#: .\telegram\commands\yt.py:15
+#: .\telegram\commands\yt.py:17
 msgid ""
 "We have received your request and started processing it. Remember that the "
 "larger the video size, the longer the processing time"
@@ -146,13 +140,19 @@ msgstr ""
 "Recebemos sua solicitação e começamos a processá-la. Lembre-se que quanto "
 "maior o tamanho do vídeo, maior será o tempo de processamento"
 
-#: .\telegram\commands\yt.py:24
+#: .\telegram\commands\yt.py:44
+msgid "This command doesn't have a supported youtube url"
+msgstr "Este comando não tem um URL do YouTube suportado"
+
+#: .\telegram\commands\yt.py:48
 msgid "This url is doesn't have a supported audio stream"
 msgstr "Este link não possui um streaming de audio suportado"
 
-#: .\telegram\commands\yt.py:31
-msgid "This command doesn't have a supported youtube url"
-msgstr "Este comando não tem um URL do YouTube suportado"
+#: .\telegram\commands\yt.py:53
+msgid ""
+"The video has an age restriction and can't be accessed"
+msgstr ""
+"Este vídeo tem uma restrição de idade e não pode ser acessado"
 
 #: .\telegram\models.py:14
 msgid "telegram ID"
@@ -198,7 +198,7 @@ msgstr "contas"
 msgid "fullname"
 msgstr "nome completo"
 
-#: .\telegram\models.py:106 .\telegram\models.py:210
+#: .\telegram\models.py:106 .\telegram\models.py:205
 msgid "telegram account"
 msgstr "conta no telegram"
 
@@ -224,39 +224,39 @@ msgstr "Identificador uninco da mensagem do chat"
 msgid "message"
 msgstr "mensagem"
 
-#: .\telegram\models.py:146 .\telegram\models.py:229
+#: .\telegram\models.py:141 .\telegram\models.py:224
 msgid "creation date"
 msgstr "data de criação"
 
-#: .\telegram\models.py:155
+#: .\telegram\models.py:150
 msgid "chat message"
 msgstr "mensagem da conversa"
 
-#: .\telegram\models.py:156
+#: .\telegram\models.py:151
 msgid "chat messages"
 msgstr "mensagens das conversas"
 
-#: .\telegram\models.py:188
+#: .\telegram\models.py:183
 msgid "Youtube url where file was downloaded from"
 msgstr "URL do Youtube onde o arquivo foi baixado"
 
-#: .\telegram\models.py:192
+#: .\telegram\models.py:187
 msgid "title"
 msgstr "títutlo"
 
-#: .\telegram\models.py:203
+#: .\telegram\models.py:198
 msgid "content type"
 msgstr "tipo do conteúdo"
 
-#: .\telegram\models.py:218
+#: .\telegram\models.py:213
 msgid "file path"
 msgstr "caminho do arquivo"
 
-#: .\telegram\models.py:238
+#: .\telegram\models.py:233
 msgid "Youtube download"
 msgstr "baixado do Youtube"
 
-#: .\telegram\models.py:239
+#: .\telegram\models.py:234
 msgid "Youtube downloads"
 msgstr "baixados do Youtube"
 
@@ -313,6 +313,10 @@ msgid "Your account was blocked, talk to the support team to find out more"
 msgstr ""
 "Sua conta foi bloqueada, entre em contato com a equipe de suporte para saber "
 "mais"
+
+#: .\telegram\views.py:80
+msgid "This command is not valid"
+msgstr "Está comando não é válido"
 
 #: .\users\admin.py:29 .\users\admin.py:42
 msgid "Login data"

@@ -77,6 +77,7 @@ class WebhookView(View):
     ERROR_MESSAGES = {
         'bot': _("We don't process commands from bots"),
         'blocked': _("Your account was blocked, talk to the support team to find out more"),
+        'invalid_command': _("This command is not valid"),
     }
 
     @csrf_exempt
@@ -126,8 +127,16 @@ class WebhookView(View):
                 'chat_id': retrived_data.telegram_id,
                 'reply_to_message_id': retrived_data.message_id,
             })
-
-        telegram_chat_message = TelegramChatMessage.objects.create(
+        
+        if not command_manager.is_command_valid(retrived_data):
+            return {
+                'method': 'sendMessage',
+                'text':  self.ERROR_MESSAGES['invalid_command'],
+                'chat_id': retrived_data.telegram_id,
+                'reply_to_message_id': retrived_data.message_id,
+            }
+        
+        TelegramChatMessage.objects.create(
             TelegramAccount_telegram_id = retrived_data.telegram_account,
             update_id = retrived_data.update_id,
             message_id = retrived_data.message_id,
@@ -135,10 +144,9 @@ class WebhookView(View):
             request_data = telegram_form.cleaned_data['telegram_data']
         )
         
-        telegram_chat_message.response_data = command_manager.execute(retrived_data)
-        telegram_chat_message.save(update_fields=['response_data'])
+        command_manager.execute(retrived_data)
 
-        return JsonResponse(telegram_chat_message.response_data)
+        return JsonResponse({})
     
 
 class PlayerView(TemplateView):

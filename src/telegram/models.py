@@ -83,7 +83,7 @@ class TelegramAccount(models.Model):
         return f"{self.username} ({self.telegram_id})"
     
 
-    def send_message(self, message: str):
+    def send_message(self, message: str, parse_mode = 'HTML'):
         telegram_send_message_url = '{telegram}{token}/sendMessage'.format(
             telegram = settings.TELEGRAM_BOT_API_URL,
             token = settings.TELEGRAM_BOT_TOKEN
@@ -92,9 +92,9 @@ class TelegramAccount(models.Model):
         requests.get(
             url=telegram_send_message_url,
             data={
-                'text':  f'<strong>{message}</strong>',
+                'text':  message,
                 'chat_id': self.telegram_id,
-                'parse_mode': 'HTML',
+                'parse_mode': parse_mode,
             }
         )
 
@@ -137,11 +137,6 @@ class TelegramChatMessage(models.Model):
         null=False
     )
 
-    response_data = models.JSONField(
-        verbose_name=_("response data"),
-        null=True,
-    )
-    
     creation_date = models.DateTimeField(
         verbose_name=_('creation date'),
         null=False,
@@ -204,16 +199,6 @@ class TelegramYoutubeDownload(models.Model):
         choices=CONTENT_TYPE
     )
 
-    TelegramAccount_telegram_id = models.ForeignKey(
-        TelegramAccount,
-        on_delete=models.RESTRICT,
-        verbose_name=_('telegram account'), 
-        db_column='TelegramAccount_telegram_id',
-        null=False,
-        blank=False,
-        db_index=True,
-    )
-
     file_path = models.FilePathField(
         verbose_name=_('file path'),
         path=(settings.BASE_DIR / 'temp' / 'youtube').resolve(),
@@ -230,6 +215,15 @@ class TelegramYoutubeDownload(models.Model):
         null=False,
         default=timezone.now,
         editable=False
+    )
+
+    TelegramChatMessage_update_id = models.OneToOneField(
+        TelegramChatMessage,
+        on_delete=models.CASCADE,
+        verbose_name=_('chat message'), 
+        db_column='TelegramChatMessage_update_id',
+        null=False,
+        blank=False,
     )
 
     class Meta:

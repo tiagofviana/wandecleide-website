@@ -24,7 +24,7 @@ class OthersSiteMap(Sitemap):
     i18n=True
 
     def items(self):
-        return ['about', 'contact']
+        return ['about', 'books', 'contact']
 
     def location(self, item):
         return reverse(f'users:{item}')

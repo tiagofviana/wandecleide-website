@@ -59,13 +59,6 @@ class TelegramChatMessageAdmin(admin.ModelAdmin):
 
     )
 
-    def player_link(self, obj):
-        return format_html(
-            '<a target="_blank" href="{}">Player</a>',
-            reverse('telegram:player', kwargs={'id': 1}),
-        )  
-    player_link.short_description = _("player link")
-
 
     def prettified_request_data(self, obj):
         indented_request_data = json.dumps(
@@ -150,13 +143,12 @@ class TelegramYoutubeDownloadAdmin(admin.ModelAdmin):
     def has_add_permission(self, request, obj=None) -> bool:
         return False
 
-
+    @admin.display(description=_("player link"))
     def player_link(self, obj):
         return format_html(
             '<a target="_blank" href="{}">Player</a>',
-            reverse('telegram:player', kwargs={'id': obj.id}),
-        )  
-    player_link.short_description = _("player link")
+            reverse('telegram:audio-player', kwargs={'ids_str': obj.id}),
+        )
 
 
     

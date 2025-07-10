@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-16 15:08-0300\n"
+"POT-Creation-Date: 2024-10-12 17:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgid ""
 "An error report has been sent to our team, we will resolve the issue as soon "
 "as possible"
 msgstr ""
-"Um relatório de erro foi enviado para a nossa equipe, nós resolveremos o "
+"Um relatório de erro foi enviado para a nossa equipe, resolveremos o "
 "problema o mais rápido possível."
 
 #: .\core\templates\core\admin\index.html:9
@@ -63,7 +63,7 @@ msgstr "Início"
 msgid "About"
 msgstr "Sobre"
 
-#: .\core\templatetags\core.py:22 .\users\templates\users\index.html:110
+#: .\core\templatetags\core.py:22 .\users\templates\users\index.html:137
 #: .\users\templates\users\my-work.html:5
 #: .\users\templates\users\my-work.html:41
 msgid "My work"
@@ -90,173 +90,220 @@ msgstr "Dados do sistema"
 msgid "Permissions"
 msgstr "Permissões"
 
-#: .\telegram\admin.py:67 .\telegram\admin.py:176
+#: .\telegram\admin.py:67 .\telegram\admin.py:159
 msgid "player link"
 msgstr "Link do player"
 
-#: .\telegram\admin.py:87 .\telegram\models.py:136
+#: .\telegram\admin.py:87 .\telegram\models.py:134
 msgid "request data"
 msgstr "dados da requisição"
 
-#: .\telegram\admin.py:105
-msgid "response data"
-msgstr "dados da reposta"
-
-#: .\telegram\admin.py:117
+#: .\telegram\admin.py:100
 #, python-brace-format
 msgid "{amount} chat message was successfully removed."
 msgid_plural "{amount} chat messages were successfully removed."
 msgstr[0] "{amount} mensagem do chat foi removido com sucesso."
 msgstr[1] "{amount} menssagens do chat foram removidos com sucesso."
 
-#: .\telegram\admin.py:138
+#: .\telegram\admin.py:121
 msgid "Identifier"
 msgstr "Identificador"
 
-#: .\telegram\admin.py:142
+#: .\telegram\admin.py:125
 msgid "Data"
 msgstr "Dado"
 
-#: .\telegram\admin.py:157
+#: .\telegram\admin.py:140
 #, python-brace-format
 msgid "{amount} download was successfully removed."
 msgid_plural "{amount} downloads were successfully removed."
 msgstr[0] "{amount} download foi removido com sucesso."
 msgstr[1] "{amount} downloads foram removidos com sucesso."
 
-#: .\telegram\commands\__init__.py:59
-msgid ""
-"Something went wrong in processing. A report has been sent to our team and "
-"we will fix it as soon as possible."
-msgstr ""
-"Um relatório de erro foi enviado para a nossa equipe, nós resolveremos o "
-"problema o mais rápido possível."
+#: .\telegram\commands\__init__.py:66
+msgid "We have received your request and started processing it"
+msgstr "Recebemos sua solicitação e começamos a processá-la"
 
-#: .\telegram\commands\yt.py:17
-msgid ""
-"We have received your request and started processing it. Remember that the "
-"larger the video size, the longer the processing time"
+#: .\telegram\commands\yt.py:47
+msgid "Remember that the larger the video size, the longer the processing time"
 msgstr ""
-"Recebemos sua solicitação e começamos a processá-la. Lembre-se que quanto "
-"maior o tamanho do vídeo, maior será o tempo de processamento"
+"Lembre-se que quanto maior o tamanho do vídeo, maior será o tempo de "
+"processamento"
 
-#: .\telegram\commands\yt.py:44
+#: .\telegram\commands\yt.py:51
+msgid "Youtube link could not be identified"
+msgstr ""
+
+#: .\telegram\commands\yt.py:77
+msgid "The url doesn't have a valid playlist identifier"
+msgstr ""
+
+#: .\telegram\commands\yt.py:92
+msgid "We could not connect to this <a href=\"{ video_link }\">video</a>"
+msgstr ""
+
+#: .\telegram\commands\yt.py:99
+msgid ""
+"Ths <a href=\"{ video_link }\">video</a> has an age restriction and can't be "
+"accessed"
+msgstr ""
+"Este <a href=\"{ video_link }\">video</a> tem uma restrição de idade e não "
+"pode ser acessado"
+
+#: .\telegram\commands\yt.py:106
+msgid ""
+"This <a href=\"{ video_link }\">video</a> doesn't have a supported audio "
+"stream"
+msgstr ""
+"Este <a href=\"{ video_link }\">video</a> não possui um streaming de audio "
+"suportado"
+
+#: .\telegram\commands\yt.py:112
+msgid ""
+"An unexpected error occurred while downloading the <a href="
+"\"{ video_link }\">video</a>. A report has been made to our team. This will "
+"not interfere with the download"
+msgstr ""
+
+#: .\telegram\commands\yt.py:129
+#, python-brace-format
+msgid "A total of {total_downloads} songs were downloaded"
+msgstr ""
+
+#: .\telegram\commands\yt.py:139
+msgid ""
+"You can access them on this this<a href=\"{ audio_player_url }\">link</a>"
+msgstr ""
+
+#: .\telegram\commands\yt.py:149
+msgid "The url doesn't have a valid video identifier"
+msgstr "Este link não possui um streaming de audio suportado"
+
+#: .\telegram\commands\yt.py:158
 msgid "This command doesn't have a supported youtube url"
 msgstr "Este comando não tem um URL do YouTube suportado"
 
-#: .\telegram\commands\yt.py:48
+#: .\telegram\commands\yt.py:163
+msgid "Couldn't connect to youtube, try again later"
+msgstr ""
+
+#: .\telegram\commands\yt.py:168
 msgid "This url is doesn't have a supported audio stream"
 msgstr "Este link não possui um streaming de audio suportado"
 
-#: .\telegram\commands\yt.py:53
-msgid ""
-"The video has an age restriction and can't be accessed"
-msgstr ""
-"Este vídeo tem uma restrição de idade e não pode ser acessado"
+#: .\telegram\commands\yt.py:173
+msgid "The video has an age restriction and can't be accessed"
+msgstr "Este vídeo tem uma restrição de idade e não pode ser acessado"
 
-#: .\telegram\models.py:14
+#: .\telegram\commands\yt.py:178
+msgid ""
+"An unexpected error occurred while downloading the video. A report has been "
+"made to our team."
+msgstr ""
+
+#: .\telegram\models.py:16
 msgid "telegram ID"
 msgstr "ID do telegram"
 
-#: .\telegram\models.py:23
+#: .\telegram\models.py:25
 msgid "first name"
 msgstr "nome"
 
-#: .\telegram\models.py:30
+#: .\telegram\models.py:32
 msgid "last name"
 msgstr "sobrenome"
 
-#: .\telegram\models.py:37
+#: .\telegram\models.py:39
 msgid "username"
 msgstr "nome de usuário"
 
-#: .\telegram\models.py:43
+#: .\telegram\models.py:45
 msgid "registration date"
 msgstr "data do cadastro"
 
-#: .\telegram\models.py:49
+#: .\telegram\models.py:51
 msgid "date of last message processed"
 msgstr "data da última mensagem processada"
 
-#: .\telegram\models.py:56
+#: .\telegram\models.py:58
 msgid "is a bot"
 msgstr "é um bot"
 
-#: .\telegram\models.py:63
+#: .\telegram\models.py:65
 msgid "is blocked"
 msgstr "está bloqueado"
 
-#: .\telegram\models.py:71
+#: .\telegram\models.py:73
 msgid "account"
 msgstr "conta"
 
-#: .\telegram\models.py:72
+#: .\telegram\models.py:74
 msgid "accounts"
 msgstr "contas"
 
-#: .\telegram\models.py:79
+#: .\telegram\models.py:81
 msgid "fullname"
 msgstr "nome completo"
 
-#: .\telegram\models.py:106 .\telegram\models.py:205
-msgid "telegram account"
-msgstr "conta no telegram"
+#: .\telegram\models.py:112 .\telegram\models.py:230
+msgid "telegram update ID"
+msgstr "ID do telegram"
 
-#: .\telegram\models.py:113
-msgid "update ID"
-msgstr "ID de atualização"
-
-#: .\telegram\models.py:115
+#: .\telegram\models.py:114
 msgid ""
 "update's unique identifier, allows you to ignore repeated updates or to "
 "restore the correct update sequence"
 msgstr "Atualiza o idenfificar"
 
-#: .\telegram\models.py:123
+#: .\telegram\models.py:121
 msgid "message ID"
 msgstr "Id da mensagem"
 
-#: .\telegram\models.py:125
+#: .\telegram\models.py:123
 msgid "unique message identifier inside the chat"
 msgstr "Identificador uninco da mensagem do chat"
 
-#: .\telegram\models.py:129
+#: .\telegram\models.py:127
 msgid "message"
 msgstr "mensagem"
 
-#: .\telegram\models.py:141 .\telegram\models.py:224
+#: .\telegram\models.py:139 .\telegram\models.py:221 .\users\models.py:124
 msgid "creation date"
 msgstr "data de criação"
 
-#: .\telegram\models.py:150
+#: .\telegram\models.py:148
+msgid "telegram account"
+msgstr "conta no telegram"
+
+#: .\telegram\models.py:157
 msgid "chat message"
 msgstr "mensagem da conversa"
 
-#: .\telegram\models.py:151
+#: .\telegram\models.py:158
 msgid "chat messages"
 msgstr "mensagens das conversas"
 
-#: .\telegram\models.py:183
+#: .\telegram\models.py:190
 msgid "Youtube url where file was downloaded from"
 msgstr "URL do Youtube onde o arquivo foi baixado"
 
-#: .\telegram\models.py:187
+#: .\telegram\models.py:194
 msgid "title"
 msgstr "títutlo"
 
-#: .\telegram\models.py:198
+#: .\telegram\models.py:205
 msgid "content type"
 msgstr "tipo do conteúdo"
 
-#: .\telegram\models.py:213
+#: .\telegram\models.py:210
 msgid "file path"
 msgstr "caminho do arquivo"
 
-#: .\telegram\models.py:233
+#: .\telegram\models.py:239
 msgid "Youtube download"
 msgstr "baixado do Youtube"
 
-#: .\telegram\models.py:234
+#: .\telegram\models.py:240
 msgid "Youtube downloads"
 msgstr "baixados do Youtube"
 
@@ -273,19 +320,30 @@ msgstr "Clique no link abaixo para acessar o arquivo"
 msgid "Link"
 msgstr "Link"
 
+#: .\telegram\templates\telegram\player-old.html:5
+#: .\telegram\templates\telegram\player-old.html:82
 #: .\telegram\templates\telegram\player.html:5
-#: .\telegram\templates\telegram\player.html:82
+#: .\telegram\templates\telegram\player.html:140
 #: .\users\templates\users\books.html:76
 msgid "Download"
 msgstr "Baixar"
 
-#: .\telegram\templates\telegram\player.html:24
-msgid "This file was removed"
-msgstr "Este arquivo foi removido"
+#: .\telegram\templates\telegram\player-old.html:24
+msgid "Youtube download not found"
+msgstr "Download do Youtube não encontrado"
 
-#: .\telegram\templates\telegram\player.html:71
+#: .\telegram\templates\telegram\player-old.html:71
+#: .\telegram\templates\telegram\player.html:35
 msgid "This is a temporary link, it will be removed on a few days"
 msgstr "Esse é um link temporário, ele será removido em poucos dias"
+
+#: .\telegram\templates\telegram\player.html:24
+msgid "Downloads not found"
+msgstr "Downloads não encontrados"
+
+#: .\telegram\templates\telegram\player.html:108
+msgid "Music list"
+msgstr "Lista de músicas"
 
 #: .\telegram\templates\telegram\settings.html:5
 #: .\telegram\templates\telegram\settings.html:23
@@ -304,17 +362,17 @@ msgstr "Resetar"
 msgid "Setup"
 msgstr "Configurar"
 
-#: .\telegram\views.py:78
+#: .\telegram\views.py:82
 msgid "We don't process commands from bots"
 msgstr "Nós não processamos comandos de bots"
 
-#: .\telegram\views.py:79
+#: .\telegram\views.py:83
 msgid "Your account was blocked, talk to the support team to find out more"
 msgstr ""
 "Sua conta foi bloqueada, entre em contato com a equipe de suporte para saber "
 "mais"
 
-#: .\telegram\views.py:80
+#: .\telegram\views.py:84
 msgid "This command is not valid"
 msgstr "Está comando não é válido"
 
@@ -362,11 +420,11 @@ msgstr ""
 "Leia sobre a minha formação acadêmica, formação complementar e atividade "
 "profissional."
 
-#: .\users\templates\users\about.html:22 .\users\templates\users\index.html:95
+#: .\users\templates\users\about.html:22 .\users\templates\users\index.html:122
 msgid "About myself"
 msgstr "Sobre mim"
 
-#: .\users\templates\users\about.html:30 .\users\templates\users\index.html:81
+#: .\users\templates\users\about.html:30 .\users\templates\users\index.html:108
 msgid "Myself picture"
 msgstr "Foto de mim mesmo"
 
@@ -433,12 +491,12 @@ msgstr "Doutorado"
 
 #: .\users\templates\users\about.html:136
 msgid ""
-"In 2016 I completed my <strong>Doctorate Degree in Public Health</strong> at "
-"the Universidad de la Integración de las Américas (UNIDA), Paraguay. Title "
-"of work: SOMATIC EXPERIENCING® IN THE TREATMENT OF POST-TRAUMATIC STRESS "
+"In 2016 I completed my <strong>Doctorate Degree in Nursing</strong> at the "
+"Universidad de la Integración de las Américas (UNIDA), Paraguay. Title of "
+"work: SOMATIC EXPERIENCING® IN THE TREATMENT OF POST-TRAUMATIC STRESS "
 "DISORDER: discourse from federal public servants."
 msgstr ""
-"Em 2016 finalizei meu <strong>Doutorado em Saúde Pública</strong> na "
+"Em 2016 finalizei meu <strong>Doutorado em Enfermagem</strong> na "
 "Universidad de la Integración de las Américas (UNIDA), Paraguai. Título do "
 "trabalho: SOMATIC EXPERIENCING® NO TRATAMENTO DO TRANSTORNO DO ESTRESSE PÓS-"
 "TRAUMÁTICO: discursividade de servidores públicos federais."
@@ -1387,16 +1445,15 @@ msgstr "Enviar"
 #: .\users\templates\users\index.html:5
 msgid ""
 "Wandecleide Lucena Fernandes is a Nurse and Therapist with over 36 years of "
-"professional experience who has a PHD in Public Health focused on the "
-"treatment of stress, trauma, phobias and anxiety disorders, for adults and "
-"the elderly."
+"professional experience who has a PHD in Nursing focused on the treatment of "
+"stress, trauma, phobias and anxiety disorders, for adults and the elderly."
 msgstr ""
 "Wandecleide Lucena Fernandes é uma Enfermeira e Terapeuta com mais de 36 "
-"anos de experiência professional que possui Doutora em Saúde Pública focada "
-"no tratamento de estresse, trauma, fobias e transtornos de ansiedade, para "
+"anos de experiência professional que possui Doutora em Enfermagem focada no "
+"tratamento de estresse, trauma, fobias e transtornos de ansiedade, para "
 "adultos e idosos."
 
-#: .\users\templates\users\index.html:50
+#: .\users\templates\users\index.html:77
 msgid ""
 "Shock, trauma, anxiety disorders and other types of stress can be overcome "
 "through <strong>Somatic Experiencing &reg;</strong>"
@@ -1404,29 +1461,29 @@ msgstr ""
 "Choque, trauma, transtornos de ansiedade e outros tipos de estresse podem "
 "ser superados através da <strong>Somatic Experiencing</strong>"
 
-#: .\users\templates\users\index.html:56
+#: .\users\templates\users\index.html:83
 msgid "Read more"
 msgstr "Ler mais"
 
-#: .\users\templates\users\index.html:69
+#: .\users\templates\users\index.html:96
 msgid "Dr."
 msgstr "Dra."
 
-#: .\users\templates\users\index.html:72
-msgid "PhD in Public Health"
-msgstr "Doutora em Saúde Pública"
+#: .\users\templates\users\index.html:99
+msgid "PhD in Nursing"
+msgstr "Doutorado em Enfermagem"
 
-#: .\users\templates\users\index.html:89
+#: .\users\templates\users\index.html:116
 msgid ""
-"I am a Nurse and Therapist, with a PhD in Public Health. I searched for the "
-"best courses in Brazil and abroad with the aim of helping my clients to lead "
-"a more harmonious and well-being life."
+"I am a Nurse and Therapist, with a PhD in Nursing. I searched for the best "
+"courses in Brazil and abroad with the aim of helping my clients to lead a "
+"more harmonious and well-being life."
 msgstr ""
-"Sou Enfermeira e Terapeuta, com Doutorado em Saúde Pública. Busquei os "
-"melhores cursos no Brasil e no exterior com a finalidade de contribuir com "
-"meus clientes para uma vida com mais equilíbrio e bem estar."
+"Sou Enfermeira e Terapeuta, com Doutorado em Enfermagem. Busquei os melhores "
+"cursos no Brasil e no exterior com a finalidade de contribuir com meus "
+"clientes para uma vida com mais equilíbrio e bem estar."
 
-#: .\users\templates\users\index.html:104
+#: .\users\templates\users\index.html:131
 msgid ""
 "My experience is focused on treating stress, trauma, phobias and anxiety "
 "disorders, for adults and seniors."
@@ -1786,14 +1843,18 @@ msgstr "meu-trabalho/"
 msgid "books/"
 msgstr "livros/"
 
+#: .\users\urls.py:17
+msgid "news/"
+msgstr "noticias/"
+
 #: .\users\views.py:36
 msgid "Message received, I will contact you as soon as possible."
 msgstr "Mensagem recebida, entrarei em contato o quanto antes."
 
-#: .\website\settings\default.py:140
+#: .\website\settings\default.py:142
 msgid "English"
 msgstr "Inglês"
 
-#: .\website\settings\default.py:141
+#: .\website\settings\default.py:143
 msgid "Brazilian Portuguese"
 msgstr "Portugês do Brasil"

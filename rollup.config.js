@@ -1,7 +1,7 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import css from "rollup-plugin-import-css";
-import terser from '@rollup/plugin-terser'; //  plugin to generate a minified bundle with terser
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import css from "rollup-plugin-import-css"
+import terser from '@rollup/plugin-terser' //  plugin to generate a minified bundle with terser
 
 
 export default [

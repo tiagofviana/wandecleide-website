@@ -1,5 +1,7 @@
+import logging
 from pathlib import Path
 from shutil import rmtree
+
 import requests
 from django.conf import settings
 from django.db import models
@@ -84,11 +86,16 @@ class TelegramAccount(models.Model):
     
 
     def send_message(self, message: str, parse_mode = 'HTML'):
+        logging.debug(f'Sending message to telegram user {self.telegram_id}. Message: {message}')
+
+        if settings.DEBUG:
+            return 
+        
         telegram_send_message_url = '{telegram}{token}/sendMessage'.format(
             telegram = settings.TELEGRAM_BOT_API_URL,
             token = settings.TELEGRAM_BOT_TOKEN
         )
-        
+
         requests.get(
             url=telegram_send_message_url,
             data={
@@ -102,7 +109,7 @@ class TelegramAccount(models.Model):
 class TelegramChatMessage(models.Model):
     update_id = models.PositiveBigIntegerField(
         primary_key=True,
-        verbose_name=_('update ID'),
+        verbose_name=_('telegram update ID'),
         help_text=_(
             "update's unique identifier, allows you to ignore repeated updates or to restore the correct update sequence"
         ),
@@ -191,7 +198,7 @@ class TelegramYoutubeDownload(models.Model):
     )
 
     CONTENT_TYPE =  [
-        (0, 'audio/mp3'),
+        (0, 'audio/mpeg'),
     ]
 
     content_type = models.PositiveSmallIntegerField(
@@ -217,10 +224,10 @@ class TelegramYoutubeDownload(models.Model):
         editable=False
     )
 
-    TelegramChatMessage_update_id = models.OneToOneField(
+    TelegramChatMessage_update_id = models.ForeignKey(
         TelegramChatMessage,
         on_delete=models.CASCADE,
-        verbose_name=_('chat message'), 
+        verbose_name=_('telegram update ID'), 
         db_column='TelegramChatMessage_update_id',
         null=False,
         blank=False,
@@ -234,16 +241,16 @@ class TelegramYoutubeDownload(models.Model):
 
 
     def __str__(self):
-        return f"{self.file_path}"
+        return f"{self.id}"
     
 
     def generate_player_full_url(self):
         return "https://{current_site}{path}".format(
             current_site = Site.objects.get_current(),
             path = reverse_lazy(
-                viewname='telegram:player',
+                viewname='telegram:audio-player',
                 kwargs={
-                    'id': self.id,
+                    'ids_str': self.id,
                 }
             )
         )

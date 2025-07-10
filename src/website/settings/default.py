@@ -5,12 +5,13 @@ from email.utils import getaddresses
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+
 # Get environment variables from .env file
 load_dotenv(dotenv_path=BASE_DIR / '.env')
-
 
 
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
@@ -106,6 +107,7 @@ AUTH_USER_MODEL = 'users.User'
 LOGIN_URL = '/login'
 
 
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -196,7 +198,7 @@ LOGGING = {
 
     'formatters': {
         'simple': {
-            'format': '[{asctime}] [{levelname}: {name}] – {message}',
+            'format': '[{asctime}] [{levelname}: {name}] - {message}',
             'datefmt': '%d/%B/%Y %H:%M:%S',
             'style': '{',
         }

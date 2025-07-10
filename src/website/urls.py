@@ -9,7 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
     path('telegram/', include('telegram.urls')),
-    path('error/test', lambda x:None),
 ]
 
 urlpatterns += i18n_patterns(

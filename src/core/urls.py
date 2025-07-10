@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from django.contrib.sitemaps.views import sitemap
 from django.utils.translation import gettext_lazy as _
 from django.conf.urls import handler404
-from .sitemaps import SITEMAPS
+from . sitemaps import SITEMAPS
 from . import views
 
 app_name = 'core'

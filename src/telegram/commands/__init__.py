@@ -1,7 +1,9 @@
 from threading import Thread
 import os, importlib, logging
 from typing import Callable
+
 from django.utils.translation import gettext as _
+
 from telegram.models import TelegramChatMessage
 from .base import BaseCommand
 
@@ -11,6 +13,32 @@ __all__ = ["command_manager"]
 
 logger = logging.getLogger(__name__)
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+class RunnerThread(Thread):
+    def __init__(
+        self, 
+        command_obj: BaseCommand,
+        group = None, *args, **kwargs
+    ):
+        super().__init__(group, args, kwargs)
+        self._command_obj = command_obj
+
+
+    def run(self) -> None:
+        self._command_obj.process()
+
+        # try:
+        #     self._command_obj.process()
+        # except Exception as exception:
+        #     chat_message_id = self._command_obj.telegram_chat_message
+        #     self._command_obj.telegram_account.send_message(
+        #         _('Something went wrong in processing. A report has been sent to our team and we will fix it as soon as possible.')
+        #     )
+        #     logger.error(f'Fail to run the chat message "{chat_message_id}". Error: {exception}')
+        # finally:
+        #     del self._command_obj
+                    
 
 
 class CommandManager:
@@ -33,34 +61,13 @@ class CommandManager:
         
         if not self.is_command_valid(command):
             raise RuntimeError(f'The command "{command}" is not valid')
+        
+        telegram_chat_message.TelegramAccount_telegram_id.send_message(
+            _('We have received your request and started processing it')
+        )
 
-        command_obj: BaseCommand = self.commands[command]()
-
-        class RunnerThread(Thread):
-            def __init__(
-                self, 
-                fn: Callable[[TelegramChatMessage], None],
-                telegram_chat_message: TelegramChatMessage, 
-                group = None, *args, **kwargs
-            ):
-                super().__init__(group, args, kwargs)
-                self._fn = fn
-                self._telegram_chat_message = telegram_chat_message
-
-
-
-            def run(self) -> None:
-                try:
-                   self._fn(self._telegram_chat_message)
-                except Exception as exception:
-                    logger.error(f'Fail to run the chat message "{telegram_chat_message.update_id}". Error: {exception}')
-                    self._telegram_chat_message.TelegramAccount_telegram_id.send_message(
-                        _('Something went wrong in processing. A report has been sent to our team and we will fix it as soon as possible.')
-                    )
-                finally:
-                    del self._fn, self._telegram_chat_message
-
-        runner_thread = RunnerThread(fn=command_obj.process, telegram_chat_message=telegram_chat_message)
+        command_obj: BaseCommand = self.commands[command](telegram_chat_message)
+        runner_thread = RunnerThread(command_obj=command_obj)
         runner_thread.start()
 
     

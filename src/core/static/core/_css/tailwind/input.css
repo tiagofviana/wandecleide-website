@@ -170,12 +170,12 @@
     }
       
     @keyframes fadeIn-bottom{
-        from {@apply relative -bottom-48 opacity-0;}
-        to {@apply relative bottom-0 opacity-100;}
+        from {@apply -bottom-48 opacity-0;}
+        to {@apply bottom-0 opacity-100;}
     }
     
     @keyframes fadeIn-right{
-        from {@apply relative left-48 opacity-0;}
-        to {@apply relative left-0 opacity-100;}
+        from {@apply left-48 opacity-0;}
+        to {@apply left-0 opacity-100;}
     }
 }

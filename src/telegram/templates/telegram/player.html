@@ -16,12 +16,12 @@
 {% block content %}
     <div class="flex flex-col justify-center items-center min-h-screen bg-gradient-to-l from-gray-100 via-blue-50 to-gray-100 p-2">
  
-        {% if not youtube_download %}
+        {% if not youtube_downloads %}
             <div 
                 class="max-w-2xl w-full py-4 px-3 shadow border border-white border-opacity-5 rounded-lg bg-white overflow-hidden"
             >
                 <p class="text-2xl sm:text-3xl text-center uppercase py-2">
-                    {% translate "This file was removed"%}
+                    {% translate "Downloads not found"%}
                 </p>
 
                 <hr class="w-full">
@@ -30,29 +30,64 @@
             </div>
         {% else %}
             <script src="{% static 'telegram/_js/player/audio.js' %}" defer></script>
+
+            <p class="text-center text-red-700">
+                {% blocktranslate trimmed %}
+                    This is a temporary link, it will be removed on a few days
+                {% endblocktranslate %}
+            </p>
+
             <div 
-                class="max-w-2xl w-full shadow border border-white border-opacity-5 rounded-lg bg-white overflow-hidden"
+                class="max-w-2xl w-full mt-8 shadow border border-white border-opacity-5 rounded-lg bg-white overflow-hidden"
             >
-                <h1 
-                    class="text-center text-xl font-bold px-4 py-6 bg-stone-300 overflow-hidden"
-                >
-                    {{ youtube_download.title }}
-                </h1>
+                <div class="relative bg-stone-300">
+                    {% if youtube_downloads|length > 1 %}
+                    <div class="absolute right-0 px-1 font-bold bg-stone-400 text-stone-800">
+                        <span id="audio-number">1</span> / {{ youtube_downloads|length }}
+                    </div>
+                    {% endif %}
+    
+                    <h1 
+                        id="current-audio-title"
+                        class="text-center text-xl font-bold px-4 py-6 overflow-hidden"
+                    >
+                        {% with youtube_downloads|first as first_download %}
+                            {{ first_download.title }}
+                        {% endwith %}
+                    </h1>
+                </div>
 
                 <div id="player" class="select-none">
-                    <audio 
-                        autobuffer 
-                        type="audio/mpeg"
-                        src="{% url 'telegram:download' id=id %}"
-                        id="audio"
-                    ></audio>
+                    {% for item in youtube_downloads %}
+                        <audio 
+                            id="audio_{{ item.id }}"
+                            title="{{ item.title }}"
+                            preload="metadata"
+                            type="audio/mp3"
+                            src="{% url 'telegram:get-file' id=item.id %}"
+                        ></audio>
+                    {% endfor %}
 
                     <div class="w-full flex flex-row items-center">
+                        <button
+                            id="backward-button"
+                            class="px-2 py-1"
+                        >
+                            <i class="fa-solid fa-backward"></i>
+                        </button>
+
                         <button 
                             id="play-pause-button"
-                            class="px-2 py-1 w-10 text-center"
+                            class="px-1 py-1 ml-px w-8 text-center"
                         >
                             <i class="fa-solid fa-play"></i>
+                        </button>
+
+                        <button
+                            id="forward-button"
+                            class="px-2 py-1 ml-px mr-1"
+                        >
+                            <i class="fa-solid fa-forward"></i>
                         </button>
     
                         <div id="progress-container" class="w-full h-2.5 bg-gray-200 cursor-pointer rounded-full overflow-hidden">
@@ -66,22 +101,46 @@
                     </div>
                 </div>
             </div>
+            
+            {% if youtube_downloads|length > 1 %}
+                <figure class="max-w-2xl w-full mt-8 shadow border border-white border-opacity-5 rounded-lg bg-white overflow-hidden">
+                    <figcaption class="text-center text-xl bg-stone-300 text-stone-700 p-2">
+                        {% translate 'Music list' %}
+                    </figcaption>
 
-            <p class="text-center text-red-700 mt-8">
-                {% blocktranslate trimmed %}
-                    This is a temporary link, it will be removed on a few days
-                {% endblocktranslate %}
-            </p>
+                    <ol 
+                        id="audio_title_list"
+                        class="list-decimal list-inside divide-y"
+                    >
+                        {% for item in youtube_downloads %}
+                            <li
+                                audio_element_id="audio_{{ item.id }}"
+                                class="cursor-pointer text-lg py-1 px-2 hover:font-bold"
+                            >
+                                {{ item.title }}
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </figure>
+            {% endif %}
 
+            
+            <!-- TODO download="musics.zip" -->
             <a 
                 download
-                href="{% url 'telegram:download' id=id %}"
-                class="btn btn-primary mx-auto my-4 shadow"
-            >   
+                {% if youtube_downloads|length == 1 %}
+                    href="{% url 'telegram:get-file' id=youtube_downloads.0.id %}"
+                {% else %}
+                    href="{% url 'telegram:multiple-audio-download' ids_str=ids_str %}"
+                {% endif %}
+
+                class="btn btn-primary mx-auto my-8 shadow"
+            >
                 <i class="fa-solid fa-download"></i>
-                {% translate "Download"%}
+                {% translate 'Download' %}
             </a>
 
+              
         {% endif %}
 
     </div>
